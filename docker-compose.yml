@@ -1,0 +1,93 @@
+# ═══════════════════════════════════════════════════════════════
+# Project Sid — Docker Compose
+# Runs Minecraft server + Ollama + the simulation
+# ═══════════════════════════════════════════════════════════════
+
+version: '3.8'
+
+services:
+  # ── Minecraft Server ──────────────────────────────────────────
+  minecraft:
+    image: itzg/minecraft-server:latest
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      VERSION: "1.20.4"
+      ONLINE_MODE: "false"
+      MAX_PLAYERS: 30
+      VIEW_DISTANCE: 8
+      SIMULATION_DISTANCE: 8
+      SPAWN_PROTECTION: 0
+      DIFFICULTY: "normal"
+      GAMEMODE: "survival"
+      PVP: "false"
+      ALLOW_FLIGHT: "true"
+      MAX_TICK_TIME: -1
+      MOTD: "Project Sid - AI Civilization"
+      MEMORY: "2G"
+    volumes:
+      - mc-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: mc-health
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # ── Ollama (LLM Server) ──────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+    # For GPU support, uncomment:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  # ── Model Puller (one-time setup) ────────────────────────────
+  ollama-setup:
+    image: ollama/ollama:latest
+    depends_on:
+      ollama:
+        condition: service_started
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        sleep 10
+        echo "Pulling qwen3.5:9b..."
+        ollama pull qwen3.5:9b
+        echo "Pulling nomic-embed-text..."
+        ollama pull nomic-embed-text
+        echo "Models ready!"
+    environment:
+      OLLAMA_HOST: "http://ollama:11434"
+    restart: "no"
+
+  # ── Project Sid Simulation ───────────────────────────────────
+  simulation:
+    build: .
+    ports:
+      - "3001:3001"
+    depends_on:
+      minecraft:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    environment:
+      MC_HOST: minecraft
+      MC_PORT: 25565
+      OLLAMA_HOST: http://ollama:11434
+    restart: unless-stopped
+
+volumes:
+  mc-data:
+  ollama-data:

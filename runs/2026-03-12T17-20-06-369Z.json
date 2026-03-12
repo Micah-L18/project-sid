@@ -1,0 +1,2156 @@
+{
+  "id": "2026-03-12T17-20-06-369Z",
+  "startedAt": "2026-03-12T17:20:06.369Z",
+  "endedAt": "2026-03-12T17:23:32.863Z",
+  "agentNames": [
+    "Alice",
+    "Bob",
+    "Carol"
+  ],
+  "durationMs": 206494,
+  "finalBenchmark": {
+    "timestamp": 1773336193395,
+    "elapsed": 543.608,
+    "specialization": {
+      "roleDistribution": {
+        "idle": 3
+      },
+      "shannonEntropy": 0,
+      "maxEntropy": 0,
+      "normalizedEntropy": 0
+    },
+    "collectiveRules": {
+      "complianceRate": 0.6666666666666666,
+      "totalAmendments": 0,
+      "passedAmendments": 0,
+      "taxRate": 0.1
+    },
+    "culturalTransmission": {
+      "trackedMemes": [
+        {
+          "keyword": "pastafarian",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "flying spaghetti",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "fsm",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "noodle",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pasta",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "ramen",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "colander",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pirate",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "community",
+          "uniqueAgentsMentioned": 1,
+          "totalMentions": 1,
+          "spreadRatio": 0.3333333333333333
+        },
+        {
+          "keyword": "constitution",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        }
+      ],
+      "averageSpread": 0.03333333333333333
+    },
+    "progression": {
+      "agentTiers": {
+        "Carol": 0,
+        "Bob": 0,
+        "Alice": 0
+      },
+      "maxTier": 0,
+      "averageTier": 0,
+      "highestItem": "none"
+    }
+  },
+  "config": {
+    "agents": [
+      {
+        "name": "Alice",
+        "traits": [
+          "industrious",
+          "friendly",
+          "loves mining"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      },
+      {
+        "name": "Bob",
+        "traits": [
+          "creative",
+          "curious",
+          "enjoys building"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      },
+      {
+        "name": "Carol",
+        "traits": [
+          "diplomatic",
+          "organized",
+          "natural leader"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [
+    {
+      "timestamp": 1773335664805,
+      "elapsed": 15.018,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 3
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773335719805,
+      "elapsed": 70.018,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2,
+          "farmer": 1
+        },
+        "shannonEntropy": 0.9182958340544896,
+        "maxEntropy": 1,
+        "normalizedEntropy": 0.9182958340544896
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 1,
+            "totalMentions": 1,
+            "spreadRatio": 0.3333333333333333
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0.03333333333333333
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773335780014,
+      "elapsed": 130.227,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1,
+          "generalist": 2
+        },
+        "shannonEntropy": 0.9182958340544896,
+        "maxEntropy": 1,
+        "normalizedEntropy": 0.9182958340544896
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 1,
+            "totalMentions": 1,
+            "spreadRatio": 0.3333333333333333
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0.03333333333333333
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773335840020,
+      "elapsed": 190.233,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1,
+          "crafter": 1,
+          "generalist": 1
+        },
+        "shannonEntropy": 1.584962500721156,
+        "maxEntropy": 1.584962500721156,
+        "normalizedEntropy": 1
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 1,
+            "totalMentions": 1,
+            "spreadRatio": 0.3333333333333333
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0.03333333333333333
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773335900021,
+      "elapsed": 250.234,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1,
+          "crafter": 1,
+          "generalist": 1
+        },
+        "shannonEntropy": 1.584962500721156,
+        "maxEntropy": 1.584962500721156,
+        "normalizedEntropy": 1
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 1,
+            "totalMentions": 1,
+            "spreadRatio": 0.3333333333333333
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0.03333333333333333
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773335960022,
+      "elapsed": 310.235,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1,
+          "trader": 1,
+          "generalist": 1
+        },
+        "shannonEntropy": 1.584962500721156,
+        "maxEntropy": 1.584962500721156,
+        "normalizedEntropy": 1
+      },
+      "collectiveRules": {
+        "complianceRate": 0.6666666666666666,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 1,
+            "totalMentions": 1,
+            "spreadRatio": 0.3333333333333333
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0.03333333333333333
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773336018396,
+      "elapsed": 368.609,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0.5,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 1,
+            "totalMentions": 1,
+            "spreadRatio": 0.5
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0.05
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773336073393,
+      "elapsed": 423.606,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 3
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0.6666666666666666,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 1,
+            "totalMentions": 1,
+            "spreadRatio": 0.3333333333333333
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0.03333333333333333
+      },
+      "progression": {
+        "agentTiers": {
+          "Carol": 0,
+          "Bob": 0,
+          "Alice": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773336133395,
+      "elapsed": 483.608,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 3
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0.6666666666666666,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 1,
+            "totalMentions": 1,
+            "spreadRatio": 0.3333333333333333
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0.03333333333333333
+      },
+      "progression": {
+        "agentTiers": {
+          "Carol": 0,
+          "Bob": 0,
+          "Alice": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773336193395,
+      "elapsed": 543.608,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 3
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0.6666666666666666,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 1,
+            "totalMentions": 1,
+            "spreadRatio": 0.3333333333333333
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0.03333333333333333
+      },
+      "progression": {
+        "agentTiers": {
+          "Carol": 0,
+          "Bob": 0,
+          "Alice": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    }
+  ],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [],
+      "ratifiedAt": 1773335649787
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [
+      {
+        "id": "community",
+        "keyword": "community",
+        "description": "community",
+        "originAgent": "Carol",
+        "firstMentioned": 1773335693472,
+        "mentions": {
+          "Carol": 1
+        }
+      }
+    ],
+    "stats": {
+      "simulationStarted": 1773335649787,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 3,
+      "tickCount": 0
+    }
+  },
+  "agents": [
+    {
+      "name": "Carol",
+      "traits": [
+        "diplomatic",
+        "organized",
+        "natural leader"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -545.5870780994434,
+        "y": 57,
+        "z": -496.4966498516508
+      },
+      "inventory": [
+        {
+          "name": "dirt",
+          "count": 10,
+          "slot": 36
+        }
+      ],
+      "goals": [],
+      "shortTermMemory": [],
+      "relationships": {
+        "Bob": {
+          "agentName": "Bob",
+          "sentiment": 5,
+          "summary": "Met Bob nearby.",
+          "lastInteraction": 1773336211440,
+          "knownTraits": []
+        }
+      },
+      "lastDecision": {
+        "reasoning": "Just spawned, observing surroundings.",
+        "action": null,
+        "speech": null,
+        "timestamp": 1773336210239
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 2,
+          "errorCount": 0,
+          "lastDurationMs": 3,
+          "lastRunAt": 1773336212247,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773336211340,
+          "lastError": null,
+          "isRunning": false
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773336211440,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": true
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 2,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773336212741,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773336211840,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    },
+    {
+      "name": "Bob",
+      "traits": [
+        "creative",
+        "curious",
+        "enjoys building"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -545.5,
+        "y": 57,
+        "z": -496.5002385649347
+      },
+      "inventory": [
+        {
+          "name": "dirt",
+          "count": 8,
+          "slot": 36
+        },
+        {
+          "name": "coal",
+          "count": 1,
+          "slot": 37
+        }
+      ],
+      "goals": [],
+      "shortTermMemory": [],
+      "relationships": {},
+      "lastDecision": {
+        "reasoning": "Just spawned, observing surroundings.",
+        "action": null,
+        "speech": null,
+        "timestamp": 1773336211147
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 4,
+          "lastRunAt": 1773336212150,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773336212247,
+          "lastError": null,
+          "isRunning": false
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773336212347,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": true
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773336212647,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773336212747,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    }
+  ],
+  "chatLog": [
+    {
+      "sender": "Bob",
+      "message": "I'm hungry, Carol. Let's get some dirt to eat.",
+      "timestamp": 1773335672908,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4936867433181,
+        "y": 62,
+        "z": -506.52414044636686
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey there, I need to eat! But first, let's grab some coal ore for our crafting gear so we can survive the night.",
+      "timestamp": 1773335674410,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -447.7293982289667,
+        "y": 68,
+        "z": -600.3
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey there! I'm tracking hard rock near (-450, 700) to get the coal. Let's go!",
+      "timestamp": 1773335686420,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -448.5067770137672,
+        "y": 68,
+        "z": -599.5
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Bob! You look hungry. How are you feeling? We could grab some dirt and share a meal together to help each other.",
+      "timestamp": 1773335687466,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -571.4424405602789,
+        "y": 62,
+        "z": -507.5049229394616
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol, can you help me with the dirt? It's getting low on food.",
+      "timestamp": 1773335690966,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4936867433181,
+        "y": 61.53584062504456,
+        "z": -506.52414044636686
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob! I'm Carol. I've been looking for you since we started this community, and I heard you're hungry. Are you ready to grab some dirt to eat? Let's get that food out of the way before it gets cold",
+      "timestamp": 1773335693472,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -571.4424405602789,
+        "y": 61.4995277633517,
+        "z": -507.5049229394616
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol! We have a meal planned. But I need coal to build our democratic garden structure on the right side of town, and I'm running low on it. Let's make some together!",
+      "timestamp": 1773335696968,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4936867433181,
+        "y": 61,
+        "z": -506.52414044636686
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I found some coal ore nearby! Let's get it to build our shelter.",
+      "timestamp": 1773335698438,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -449.5,
+        "y": 68,
+        "z": -599.5000733979482
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob, I hear you're hungry. Let's get that dirt out of the way so we can both enjoy our meal together! I'm here to help resolve your request for food immediately.",
+      "timestamp": 1773335701481,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -568.417415487963,
+        "y": 61,
+        "z": -509.5
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob, I'm hungry! Let's get some dirt together. We've got a meal planned, but you need it to build that garden structure on the right side of town.",
+      "timestamp": 1773335715490,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -568.417415487963,
+        "y": 61,
+        "z": -509.5
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol! You're offering me some dirt, but I'm starving. Can you give me some coal to make sure we both have food before it gets cold? It's the only way to help each other share resources.",
+      "timestamp": 1773335722991,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4936867433181,
+        "y": 61,
+        "z": -506.52414044636686
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll mine some coal ore to build my temporary shelter and upgrade tools, then I'll craft a shovel and place it at the village hub for democratic governance.",
+      "timestamp": 1773335726492,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -449.5,
+        "y": 68,
+        "z": -599.5000733979482
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob, I'm Carol! How are you doing? We can grab some dirt soon to eat.",
+      "timestamp": 1773335727524,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -565.3068041822208,
+        "y": 62,
+        "z": -511.49999999248405
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Carol, I'm really hungry and need to build that garden structure on the right side of town, but I only have 1 copper ore and need a lot more coal. Can you help me get some coal? We can't wait unti",
+      "timestamp": 1773335731477,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4936867433181,
+        "y": 61,
+        "z": -506.52414044636686
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey, another chunk of coal ore! Let's go get some more before we build the shelter.",
+      "timestamp": 1773335733490,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -447.5187146096715,
+        "y": 69.12159999847412,
+        "z": -600.5
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "I see you're hungry! Let's get some dirt to eat. We're making sure everyone has food before it gets cold.",
+      "timestamp": 1773335736100,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -562.5,
+        "y": 63,
+        "z": -511.50000019250655
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol, you look hungry! Let's grab some dirt together. We've got a meal planned, but you need it to build that garden structure on the right side of town. I can help resolve your request for food imme",
+      "timestamp": 1773335737974,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4936867433181,
+        "y": 61,
+        "z": -506.52414044636686
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey there! Just got those coal ores out of here. Mine it up while I can!",
+      "timestamp": 1773335745727,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -447.49969547271206,
+        "y": 68.7531999805212,
+        "z": -600.3
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Carol, I'm sorry, but I am really starving. Can you help me get some dirt to eat? It's the only way we can share our meal together right now while I build that garden structure on the right side of to",
+      "timestamp": 1773335748127,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -562.5,
+        "y": 63,
+        "z": -511.50000019250655
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Bob! I'm Carol. I hear you're hungry. Let's get that dirt out of the way so we can both enjoy our meal together! I see you're looking for something to build on the right side of town, but I need s",
+      "timestamp": 1773335750504,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4936867433181,
+        "y": 62.41999998688698,
+        "z": -506.52414044636686
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey! Just got some coal ores, mine!",
+      "timestamp": 1773335757154,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -447.50005871813,
+        "y": 68.73584062504456,
+        "z": -600.5
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob! You look hungry, so let's grab some dirt together. We've got a meal planned, but you need it to build that garden structure on the right side of town. I see you're looking for something to ea",
+      "timestamp": 1773335759774,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -562.5,
+        "y": 63,
+        "z": -511.50000019250655
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Bob! I found some dirt right there. Let's get that to the garden structure so we can share it with everyone.",
+      "timestamp": 1773335762001,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4936867433181,
+        "y": 64.25220334025373,
+        "z": -506.52414044636686
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Bob! You're offering me some dirt, but I'm starving. Can you give me some coal to make sure we both have food before it gets cold? It's the only way to help each other share resources.",
+      "timestamp": 1773335771531,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -558.5,
+        "y": 63,
+        "z": -511.50000037626086
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol, I see you're looking for coal for that garden structure. I have 1 copper ore and need 10 more, but I can craft some quick coal from your dirt! Let's make sure everyone gets food before it gets",
+      "timestamp": 1773335773958,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4961183187255,
+        "y": 64.1212968405392,
+        "z": -506.3
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol! I'm starving. Can you help me get some dirt to eat? It's the only way we can share our meal together right now while I build that garden structure on the right side of town. I see you're lookin",
+      "timestamp": 1773335785737,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4961183187255,
+        "y": 64,
+        "z": -506.3
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey there! I found some coal ore nearby. Let's go to that spot and mine it!",
+      "timestamp": 1773335787570,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -447.4996606752072,
+        "y": 69.96636799395752,
+        "z": -600.5560865251441
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob, I see you're hungry! Let's grab that dirt out of the way so we can both enjoy our meal together. Please offer me some dirt for my sake.",
+      "timestamp": 1773335794340,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -558.5,
+        "y": 63,
+        "z": -511.50000037626086
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Bob! You look hungry, so let's grab some dirt together. We've got a meal planned, but you need it to build that garden structure on the right side of town. I see you're looking for something to eat.",
+      "timestamp": 1773335796488,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4961183187255,
+        "y": 64,
+        "z": -506.3
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I am starving and need food to stay alive while I wait for the coal. I will eat my way through hunger.",
+      "timestamp": 1773335802608,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -447.49971203567316,
+        "y": 70.12159999847412,
+        "z": -600.5560865251441
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob! I'm Carol. I heard you're starving and need help with the dirt so we can build that garden structure. Can we share some of your coal to make sure everyone gets food? I see you're looking for",
+      "timestamp": 1773335805169,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -558.5,
+        "y": 63,
+        "z": -511.50000037626086
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Bob, I see you're looking for coal to help me build that garden structure! Since I don't have any in my inventory, can you give me 100xcoal? It's the only way we can both share resources right now",
+      "timestamp": 1773335807308,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4961183187255,
+        "y": 64,
+        "z": -506.3
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob! I'm Carol. I see you're looking for something to eat. Can we share this now? We've got a meal planned, but you need it to build that garden structure on the right side of town. I see you're l",
+      "timestamp": 1773335813877,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -558.5000000271431,
+        "y": 64.25220334025373,
+        "z": -511.62740042635323
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol, please have your coal first. It's the only way to ensure everyone gets food before it gets cold! I'm looking for dirt to build that garden structure on the right side of town.",
+      "timestamp": 1773335821992,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4961183187255,
+        "y": 64,
+        "z": -506.3
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob! I saw you wanted to share resources for the garden structure. Let's make sure everyone gets food before we build our new home.",
+      "timestamp": 1773335825994,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -556.2745549197385,
+        "y": 68.00133597911214,
+        "z": -510.46003156295217
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol! You're right, I need that coal for the garden. It's the only way to help us both share resources before it gets cold.",
+      "timestamp": 1773335832026,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.4961183187255,
+        "y": 64.79673560066871,
+        "z": -506.3
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey! I'm low on health and need some quick coal to get back up. Mine one block of coal for me.",
+      "timestamp": 1773335833731,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -447.4999085272614,
+        "y": 71,
+        "z": -604.3969554728964
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Carol! You're looking for coal to help me build that garden structure on the right side of town. Since I don't have any in my inventory, can you give me 100xcoal? It's the only way we can both share r",
+      "timestamp": 1773335836075,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -550.7,
+        "y": 68.7531999805212,
+        "z": -506.5000000116754
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Bob, I'm Carol. I heard you're hungry! Can we share your coal now? We've got a meal planned, but you need it to build that garden structure on the right side of town. Please help me gather dirt fr",
+      "timestamp": 1773335846686,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -549.7,
+        "y": 68.24918707874468,
+        "z": -506.49889697694624
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey! Just kidding. Let's get out of that pile of dust and explore around to find the coal ore deposits we need for our temporary shelter!",
+      "timestamp": 1773335848626,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -447.4999085272614,
+        "y": 71,
+        "z": -604.3969554728964
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Bob, we have a meal planned on the right side of town. Can we share some dirt now? It's the only way to help you build your garden while I'm still starving.",
+      "timestamp": 1773335851245,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -566.5,
+        "y": 57,
+        "z": -508.47743008070427
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Bob! I see you're hungry and need help with the dirt so we can both enjoy our meal together. Can we share some of your coal to make sure everyone gets food? I see you're looking for something to e",
+      "timestamp": 1773335859281,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -545.5,
+        "y": 61,
+        "z": -496.5002385649347
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey there! I just found another coal ore nugget. Let's get some more out of this area to survive.",
+      "timestamp": 1773335860870,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -447.4999085272614,
+        "y": 71,
+        "z": -604.3969554728964
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol, I see you're asking for coal to help me build that garden structure on the right side of town. Since I don't have any in my inventory, can we share this? It's the only way we can both get food",
+      "timestamp": 1773335871286,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -545.5,
+        "y": 60,
+        "z": -496.5002385649347
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob, I'm Carol. You're looking for coal to help me build that garden structure on the right side of town! Since I don't have any in my inventory, can you give me 100xcoal? It's the only way we can",
+      "timestamp": 1773335875288,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -566.5,
+        "y": 57,
+        "z": -508.47743008070427
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol, you're looking for dirt to help me build the garden structure. I see you're hungry and feeling a bit off because of my coal situation. Let's share some dirt with you so we can both get food rea",
+      "timestamp": 1773335885292,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -545.5,
+        "y": 58,
+        "z": -496.5002385649347
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Carol! I see you're looking for coal to help me build that garden structure on the right side of town. Since I don't have any in my inventory, can you give me 100xcoal? It's the only way we can both s",
+      "timestamp": 1773335898482,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -545.5,
+        "y": 58,
+        "z": -496.5002385649347
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Carol! I see you're right, Bob. You need coal for the garden structure without delay. We have a meal planned, but I must gather resources to help you build it safely while we discuss sharing the dirt",
+      "timestamp": 1773335908485,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -563.5,
+        "y": 63,
+        "z": -511.50899224533845
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey! Check if you can see anything around here near (-600, -448)! Did you find any coal ore there?",
+      "timestamp": 1773335911804,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -432.123450036138,
+        "y": 65,
+        "z": -604.4991177584591
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Carol, I saw you're looking for coal to help build that garden structure! Since I don't have any in my inventory, can you give me 100xcoal? It's the only way we can both share the meal.",
+      "timestamp": 1773335920880,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -545.5,
+        "y": 58,
+        "z": -496.5002385649347
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob! I'm Carol, and I need to fix our garden structure on the right side of town before it freezes. You're looking for coal, but you don't have one in your inventory, so we can't build without wai",
+      "timestamp": 1773335925003,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -560.3926567050294,
+        "y": 63,
+        "z": -511.7191091218627
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Carol, I'm Bob. You're looking for coal to help me build that garden structure on the right side of town! Since I don't have any in my inventory, can you give me dirt? It's the only way we can sha",
+      "timestamp": 1773335935435,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -545.5,
+        "y": 58,
+        "z": -496.5002385649347
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob, I'm at (-560, 64, -511) and need help with the coal for your garden structure! Since I can't mine it here right now, could you please give me some? It's critical so we can both build safely w",
+      "timestamp": 1773335937435,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -549.7444341911315,
+        "y": 67,
+        "z": -498.4312919452629
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Hey there! I heard you're looking for the iron ore in that east cave area. It's high priority for building and crafting, so let me go check it out.",
+      "timestamp": 1773335942068,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -424.83013355227376,
+        "y": 68,
+        "z": -604.5000015266949
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Bob, I'm Carol. You're looking for coal to help me build that garden structure on the right side of town! Since I don't have any in my inventory, can you give me 100xcoal? It's the only way we can",
+      "timestamp": 1773335945444,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -545.5,
+        "y": 58,
+        "z": -496.5002385649347
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob, I saw you're looking for coal to help build that garden structure! Since I don't have any in my inventory, can you give me dirt? It's the only way we can share the meal.",
+      "timestamp": 1773335949446,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -545.5870780994434,
+        "y": 58,
+        "z": -496.4966498516508
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "Hey Bob, I'm Carol. You need coal for the garden structure on the right side of town, but you don't have one in your inventory. Since I can't mine it here right now, could you please give me some dirt",
+      "timestamp": 1773335959450,
+      "isProximity": true,
+      "receivedBy": [
+        "Carol"
+      ],
+      "position": {
+        "x": -545.5,
+        "y": 57,
+        "z": -496.5002385649347
+      }
+    },
+    {
+      "sender": "Carol",
+      "message": "Hey Bob, I'm Carol. You're looking for coal to help me build that garden structure! Since I don't have any in my inventory, can you give me 100xcoal? It's the only way we can both share the meal befor",
+      "timestamp": 1773335963453,
+      "isProximity": true,
+      "receivedBy": [
+        "Bob"
+      ],
+      "position": {
+        "x": -545.5870780994434,
+        "y": 57,
+        "z": -496.4966498516508
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll take a step toward the safe zone. I need to avoid the water and the hostile mobs nearby.",
+      "timestamp": 1773335966113,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -428.28765349386094,
+        "y": 68,
+        "z": -604.4959919162973
+      }
+    }
+  ],
+  "llmStats": {
+    "totalCalls": 262,
+    "totalTokens": 230534,
+    "totalDurationMs": 2154888,
+    "avgTokensPerCall": 880,
+    "avgDurationMs": 8225,
+    "inflight": 4,
+    "queued": 179
+  }
+}

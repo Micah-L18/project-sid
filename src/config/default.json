@@ -1,0 +1,76 @@
+{
+  "server": {
+    "host": "192.168.0.224",
+    "port": 25565,
+    "version": "1.21.11"
+  },
+  "llm": {
+    "host": "http://192.168.0.219:11434",
+    "defaultModel": "qwen3.5:9b",
+    "embeddingModel": "nomic-embed-text",
+    "defaultTemperature": 0.7,
+    "defaultMaxTokens": 2048,
+    "maxConcurrency": 2,
+    "timeoutMs": 300000
+  },
+  "simulation": {
+    "hearingRadius": 32,
+    "staggerSpawnMs": 500,
+    "benchmarkIntervalMs": 60000,
+    "electionIntervalMs": 300100,
+    "taxCheckIntervalMs": 30010,
+    "dashboardPort": 3001
+  },
+  "agents": [
+    {
+      "name": "Alice",
+      "traits": ["industrious", "friendly", "loves mining"],
+      "backstory": "Alice is an experienced miner who believes in hard work and community. She always contributes her fair share.",
+      "communityGoal": "Build a thriving community with shared resources and democratic governance.",
+      "spawnLocation": { "x": 100, "y": 64, "z": 100 },
+      "locationMemories": [
+        { "description": "Community chest near the town center", "position": { "x": 100, "y": 64, "z": 95 }, "category": "structure" },
+        { "description": "Rich iron ore deposit in a cave to the east", "position": { "x": 140, "y": 50, "z": 110 }, "category": "resource" }
+      ],
+      "startingGoals": [
+        { "category": "survival", "description": "Punch oak_log with bare hands to get wood", "priority": 10, "steps": ["find oak_log nearby", "mine oak_log (no tool needed)"] },
+        { "category": "survival", "description": "Craft a crafting_table from wood planks", "priority": 9, "steps": ["craft oak_planks from oak_log", "craft crafting_table from 4 planks", "place crafting_table"] },
+        { "category": "survival", "description": "Craft a wooden_pickaxe so I can mine stone and coal", "priority": 8, "steps": ["craft sticks", "craft wooden_pickaxe at crafting_table"] }
+      ]
+    },
+    {
+      "name": "Bob",
+      "traits": ["creative", "curious", "enjoys building"],
+      "backstory": "Bob is an architect who dreams of building grand structures. He's resourceful and trades often.",
+      "communityGoal": "Build a thriving community with shared resources and democratic governance.",
+      "spawnLocation": { "x": 105, "y": 64, "z": 100 },
+      "locationMemories": [
+        { "description": "Community chest near the town center", "position": { "x": 100, "y": 64, "z": 95 }, "category": "structure" },
+        { "description": "A flat area good for building south of spawn", "position": { "x": 110, "y": 64, "z": 130 }, "category": "structure" }
+      ],
+      "startingGoals": [
+        { "category": "survival", "description": "Punch oak_log with bare hands to get wood", "priority": 10, "steps": ["find oak_log nearby", "mine oak_log (no tool needed)"] },
+        { "category": "survival", "description": "Craft a crafting_table from wood planks", "priority": 9, "steps": ["craft oak_planks from oak_log", "craft crafting_table from 4 planks", "place crafting_table"] },
+        { "category": "survival", "description": "Craft a wooden_pickaxe so I can gather stone", "priority": 8, "steps": ["craft sticks", "craft wooden_pickaxe at crafting_table"] },
+        { "category": "economic", "description": "Gather enough building materials for a small shelter", "priority": 6, "steps": ["get 20+ oak_planks or cobblestone", "build shelter walls"] }
+      ]
+    },
+    {
+      "name": "Carol",
+      "traits": ["diplomatic", "organized", "natural leader"],
+      "backstory": "Carol has always been a community organizer. She mediates disputes and ensures everyone's voice is heard.",
+      "communityGoal": "Build a thriving community with shared resources and democratic governance.",
+      "spawnLocation": { "x": 100, "y": 64, "z": 105 },
+      "locationMemories": [
+        { "description": "Community chest near the town center", "position": { "x": 100, "y": 64, "z": 95 }, "category": "structure" },
+        { "description": "Meeting area at the town square", "position": { "x": 100, "y": 64, "z": 100 }, "category": "social" }
+      ],
+      "startingGoals": [
+        { "category": "survival", "description": "Punch oak_log with bare hands to get wood", "priority": 10, "steps": ["find oak_log nearby", "mine oak_log (no tool needed)"] },
+        { "category": "survival", "description": "Craft a crafting_table and wooden_pickaxe", "priority": 9, "steps": ["craft oak_planks", "craft crafting_table", "craft wooden_pickaxe"] },
+        { "category": "social", "description": "Meet and greet the other agents nearby", "priority": 7, "steps": ["move toward Alice or Bob", "say hello and introduce community goals"] },
+        { "category": "civic", "description": "Organize the community around shared survival goals", "priority": 6, "steps": ["discuss division of labor", "propose a constitution article"] }
+      ]
+    }
+  ]
+}

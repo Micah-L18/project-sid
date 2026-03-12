@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["ES2022"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+      "@agent/*": ["agent/*"],
+      "@modules/*": ["modules/*"],
+      "@skills/*": ["skills/*"],
+      "@orchestrator/*": ["orchestrator/*"],
+      "@governance/*": ["governance/*"],
+      "@benchmarks/*": ["benchmarks/*"],
+      "@llm/*": ["llm/*"],
+      "@dashboard/*": ["dashboard/*"],
+      "@config/*": ["config/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}
