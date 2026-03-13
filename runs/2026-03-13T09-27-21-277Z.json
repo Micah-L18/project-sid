@@ -1,0 +1,760 @@
+{
+  "id": "2026-03-13T09-27-21-277Z",
+  "startedAt": "2026-03-13T09:27:21.278Z",
+  "endedAt": "2026-03-13T09:28:05.996Z",
+  "agentNames": [
+    "Alice",
+    "Bob",
+    "Carol"
+  ],
+  "durationMs": 44718,
+  "finalBenchmark": {
+    "timestamp": 1773394047990,
+    "elapsed": 20.808,
+    "specialization": {
+      "roleDistribution": {
+        "idle": 3
+      },
+      "shannonEntropy": 0,
+      "maxEntropy": 0,
+      "normalizedEntropy": 0
+    },
+    "collectiveRules": {
+      "complianceRate": 1,
+      "totalAmendments": 0,
+      "passedAmendments": 0,
+      "taxRate": 0.1
+    },
+    "culturalTransmission": {
+      "trackedMemes": [
+        {
+          "keyword": "pastafarian",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "flying spaghetti",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "fsm",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "noodle",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pasta",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "ramen",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "colander",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pirate",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "community",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "constitution",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        }
+      ],
+      "averageSpread": 0
+    },
+    "progression": {
+      "agentTiers": {
+        "Alice": 0,
+        "Bob": 0,
+        "Carol": 0
+      },
+      "maxTier": 0,
+      "averageTier": 0,
+      "highestItem": "none"
+    }
+  },
+  "config": {
+    "agents": [
+      {
+        "name": "Alice",
+        "traits": [
+          "industrious",
+          "friendly",
+          "loves mining"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      },
+      {
+        "name": "Bob",
+        "traits": [
+          "creative",
+          "curious",
+          "enjoys building"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      },
+      {
+        "name": "Carol",
+        "traits": [
+          "diplomatic",
+          "organized",
+          "natural leader"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [
+    {
+      "timestamp": 1773394047990,
+      "elapsed": 20.808,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 3
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    }
+  ],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [],
+      "ratifiedAt": 1773394027182
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [],
+    "stats": {
+      "simulationStarted": 1773394027182,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 3,
+      "tickCount": 0
+    }
+  },
+  "agents": [
+    {
+      "name": "Alice",
+      "traits": [
+        "industrious",
+        "friendly",
+        "loves mining"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -457.4103840241177,
+        "y": 70,
+        "z": -560.5
+      },
+      "inventory": [
+        {
+          "name": "oak_log",
+          "count": 1,
+          "slot": 36
+        },
+        {
+          "name": "dirt",
+          "count": 10,
+          "slot": 37
+        }
+      ],
+      "goals": [
+        {
+          "id": "f698e37b-8cc8-4278-978f-708fe8b1b7bb",
+          "category": "survival",
+          "description": "Convert the oak_log in my inventory into oak_planks to prepare for crafting essential tools.",
+          "priority": 10,
+          "steps": [
+            "Punch the oak_log with bare hands to drop it.",
+            "Place the oak_log on a surface and right-click to craft 4 oak_planks."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394076405
+        },
+        {
+          "id": "6fbc55f6-97c6-4f62-b803-c84cb0b661be",
+          "category": "survival",
+          "description": "Craft a crafting_table using the newly made oak_planks to unlock advanced item creation.",
+          "priority": 9,
+          "steps": [
+            "Place 4 oak_planks in a 2x2 grid pattern on the ground.",
+            "Right-click the resulting block to create the crafting_table."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394076405
+        },
+        {
+          "id": "9b95bf9d-787d-4f10-8b16-d44f01eb3c12",
+          "category": "survival",
+          "description": "Craft a wooden_pickaxe at the crafting table to enable mining of coal and stone.",
+          "priority": 8,
+          "steps": [
+            "Open the crafting_table interface.",
+            "Arrange 3 oak_planks in an 'L' shape on the left side for pickaxe handle/head, 1 plank below.",
+            "Take the wooden_pickaxe from the result slot."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394076405
+        },
+        {
+          "id": "7f58662c-f4ff-443e-af79-9f970adc454c",
+          "category": "exploration",
+          "description": "Mine the nearby coal_ore with the new wooden_pickaxe to gather resources for future tool upgrades.",
+          "priority": 7,
+          "steps": [
+            "Walk west 4.5m to y=72 to reach the coal_ore deposit.",
+            "Use the wooden_pickaxe to mine all 5 coal_ore blocks."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394076405
+        },
+        {
+          "id": "e8595135-3efc-4d1d-bfa3-09d5aa9e425a",
+          "category": "civic",
+          "description": "Deposit gathered resources into the community chest at (100, 64, 95) to support shared prosperity.",
+          "priority": 5,
+          "steps": [
+            "Travel northeast from current position towards the town center coordinates.",
+            "Open the community chest and deposit excess planks or mined coal if available."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394076405
+        }
+      ],
+      "shortTermMemory": [],
+      "relationships": {},
+      "lastDecision": {
+        "reasoning": "Just spawned, observing surroundings.",
+        "action": null,
+        "speech": null,
+        "timestamp": 1773394041596
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 43,
+          "errorCount": 0,
+          "lastDurationMs": 3,
+          "lastRunAt": 1773394085311,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 4,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394073103,
+          "lastError": null,
+          "isRunning": true
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 3,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394073193,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 33115,
+          "lastRunAt": 1773394076405,
+          "lastError": null,
+          "isRunning": false
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 43,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394085535,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 22,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394085625,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    },
+    {
+      "name": "Bob",
+      "traits": [
+        "creative",
+        "curious",
+        "enjoys building"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -507.49957352013894,
+        "y": 82,
+        "z": -643.5
+      },
+      "inventory": [
+        {
+          "name": "dirt",
+          "count": 15,
+          "slot": 36
+        }
+      ],
+      "goals": [
+        {
+          "id": "943bd821-1d39-428a-a0d8-12c460dd923b",
+          "category": "survival",
+          "description": "Punch oak_log with bare hands to get wood",
+          "priority": 10,
+          "steps": [
+            "find oak_log nearby",
+            "mine oak_log (no tool needed)"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394042340
+        },
+        {
+          "id": "acd7f918-3383-407d-97b4-6a313abc8aa7",
+          "category": "survival",
+          "description": "Craft a crafting_table from wood planks",
+          "priority": 9,
+          "steps": [
+            "craft oak_planks from oak_log",
+            "craft crafting_table from 4 planks",
+            "place crafting_table"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394042340
+        },
+        {
+          "id": "a92b7696-81dd-40ad-a71f-1df0975e864a",
+          "category": "survival",
+          "description": "Craft a wooden_pickaxe so I can gather stone",
+          "priority": 8,
+          "steps": [
+            "craft sticks",
+            "craft wooden_pickaxe at crafting_table"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394042340
+        },
+        {
+          "id": "a6cb1a87-1021-4abb-896f-5e80e5412954",
+          "category": "economic",
+          "description": "Gather enough building materials for a small shelter",
+          "priority": 6,
+          "steps": [
+            "get 20+ oak_planks or cobblestone",
+            "build shelter walls"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394042340
+        }
+      ],
+      "shortTermMemory": [],
+      "relationships": {},
+      "lastDecision": {
+        "reasoning": "Just spawned, observing surroundings.",
+        "action": null,
+        "speech": null,
+        "timestamp": 1773394042340
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 43,
+          "errorCount": 0,
+          "lastDurationMs": 2,
+          "lastRunAt": 1773394085782,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 5,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394083598,
+          "lastError": null,
+          "isRunning": false
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 3,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394073697,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": true
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 42,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394085036,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 21,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394084111,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    },
+    {
+      "name": "Carol",
+      "traits": [
+        "diplomatic",
+        "organized",
+        "natural leader"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -586.5,
+        "y": 71,
+        "z": -512.5
+      },
+      "inventory": [],
+      "goals": [
+        {
+          "id": "cd099034-5461-4ddd-bfb7-22e219016936",
+          "category": "survival",
+          "description": "Punch oak_log with bare hands to get wood",
+          "priority": 10,
+          "steps": [
+            "find oak_log nearby",
+            "mine oak_log (no tool needed)"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394042989
+        },
+        {
+          "id": "013b1377-ddce-4081-bd77-fa51eabeeca1",
+          "category": "survival",
+          "description": "Craft a crafting_table and wooden_pickaxe",
+          "priority": 9,
+          "steps": [
+            "craft oak_planks",
+            "craft crafting_table",
+            "craft wooden_pickaxe"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394042989
+        },
+        {
+          "id": "48e73a89-5485-4fe0-a2b7-f63c0a2d8908",
+          "category": "social",
+          "description": "Meet and greet the other agents nearby",
+          "priority": 7,
+          "steps": [
+            "move toward Alice or Bob",
+            "say hello and introduce community goals"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394042989
+        },
+        {
+          "id": "da67b5a6-8fbf-4d75-95ea-81752f4fe102",
+          "category": "civic",
+          "description": "Organize the community around shared survival goals",
+          "priority": 6,
+          "steps": [
+            "discuss division of labor",
+            "propose a constitution article"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773394042989
+        }
+      ],
+      "shortTermMemory": [],
+      "relationships": {},
+      "lastDecision": {
+        "reasoning": "Just spawned, observing surroundings.",
+        "action": null,
+        "speech": null,
+        "timestamp": 1773394042989
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 42,
+          "errorCount": 0,
+          "lastDurationMs": 3,
+          "lastRunAt": 1773394085307,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 5,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394084097,
+          "lastError": null,
+          "isRunning": false
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 3,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394074201,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": true
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 42,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394085535,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 21,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773394084625,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    }
+  ],
+  "chatLog": [],
+  "llmStats": {
+    "totalCalls": 1,
+    "totalTokens": 1394,
+    "totalDurationMs": 33108,
+    "avgTokensPerCall": 1394,
+    "avgDurationMs": 33108,
+    "inflight": 2,
+    "queued": 4
+  }
+}

@@ -26,13 +26,13 @@ MINECRAFT SURVIVAL RULES (follow these exactly):
 1. Bare hands can break: leaves, grass, dirt, sand, gravel, oak_log/wood logs. No tool needed.
 2. You CANNOT get drops from stone, coal_ore, iron_ore or any ore without a pickaxe. Attempting it wastes time.
 3. TECH TREE (must follow in order):
-   → Punch oak_log (bare hands) → craft oak_planks (4 per log, no table) → craft sticks (2 planks = 4 sticks)
+   → Punch log (bare hands) → craft planks (4 per log, no table) → craft sticks (2 planks = 4 sticks)
    → craft crafting_table (4 planks, no table) → place crafting_table nearby
    → craft wooden_pickaxe (3 planks + 2 sticks at table) → mine stone/coal_ore
    → craft stone_pickaxe (3 cobblestone + 2 sticks at table) → mine iron_ore
    → smelt iron_ore in furnace → craft iron_pickaxe → mine gold/diamond
 4. CRAFTING RECIPES:
-   - oak_planks: 1 oak_log → 4 planks (no table)
+   - planks: 1 log → 4 planks (no table)
    - sticks: 2 planks → 4 sticks (no table)
    - crafting_table: 4 planks in 2×2 grid (no table)
    - wooden_pickaxe: 3 planks (top row) + 2 sticks (middle column) at crafting_table
@@ -97,15 +97,12 @@ Rules:
 - Be true to your personality traits.
 - You can speak AND act, or just act, or just speak — but action must never be null.
 
-Respond with ONLY a valid JSON object (no markdown, no extra text):
-{
-  "reasoning": "<brief explanation of your thought process>",
-  "action": {
-    "type": "<action type>",
-    "params": { <action-specific parameters> }
-  },
-  "speech": "<what to say aloud>" or null
-}`;
+Respond with ONLY a valid JSON object (no markdown, no extra text, no thinking).
+Example format:
+{"reasoning": "I need wood to craft planks.", "action": {"type": "mine", "params": {"blockName": "oak_log"}}, "speech": "Time to chop some wood!"}
+
+The "speech" field can be null if you have nothing to say.
+The "action" field MUST always be present with a valid type and params object.`;
 
 // ── Module Implementation ────────────────────────────────────────────────────
 
@@ -160,7 +157,9 @@ ${socialGoals}
 ${recentActions}
 
 == Key Memories ==
-${state.memory.shortTermMemory.slice(-5).map(m => `- ${m.content}`).join('\n') || 'None'}`;
+${state.memory.shortTermMemory.slice(-5).map(m => `- ${m.content}`).join('\n') || 'None'}
+
+Based on the above state, decide your next action. Reply ONLY with a JSON object containing "reasoning", "action", and "speech" fields.`;
 
   // ── Build system prompt ──────────────────────────────────────────────────
 

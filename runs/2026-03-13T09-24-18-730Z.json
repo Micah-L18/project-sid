@@ -1,0 +1,1008 @@
+{
+  "id": "2026-03-13T09-24-18-730Z",
+  "startedAt": "2026-03-13T09:24:18.730Z",
+  "endedAt": "2026-03-13T09:26:37.800Z",
+  "agentNames": [
+    "Alice",
+    "Bob",
+    "Carol"
+  ],
+  "durationMs": 139070,
+  "finalBenchmark": {
+    "timestamp": 1773393981698,
+    "elapsed": 153.29,
+    "specialization": {
+      "roleDistribution": {
+        "miner": 1,
+        "idle": 2
+      },
+      "shannonEntropy": 0.9182958340544896,
+      "maxEntropy": 1,
+      "normalizedEntropy": 0.9182958340544896
+    },
+    "collectiveRules": {
+      "complianceRate": 1,
+      "totalAmendments": 0,
+      "passedAmendments": 0,
+      "taxRate": 0.1
+    },
+    "culturalTransmission": {
+      "trackedMemes": [
+        {
+          "keyword": "pastafarian",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "flying spaghetti",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "fsm",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "noodle",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pasta",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "ramen",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "colander",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pirate",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "community",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "constitution",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        }
+      ],
+      "averageSpread": 0
+    },
+    "progression": {
+      "agentTiers": {
+        "Alice": 0,
+        "Bob": 0,
+        "Carol": 0
+      },
+      "maxTier": 0,
+      "averageTier": 0,
+      "highestItem": "none"
+    }
+  },
+  "config": {
+    "agents": [
+      {
+        "name": "Alice",
+        "traits": [
+          "industrious",
+          "friendly",
+          "loves mining"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      },
+      {
+        "name": "Bob",
+        "traits": [
+          "creative",
+          "curious",
+          "enjoys building"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      },
+      {
+        "name": "Carol",
+        "traits": [
+          "diplomatic",
+          "organized",
+          "natural leader"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [
+    {
+      "timestamp": 1773393866366,
+      "elapsed": 37.958,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 3
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773393921366,
+      "elapsed": 92.958,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1,
+          "idle": 2
+        },
+        "shannonEntropy": 0.9182958340544896,
+        "maxEntropy": 1,
+        "normalizedEntropy": 0.9182958340544896
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773393981698,
+      "elapsed": 153.29,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1,
+          "idle": 2
+        },
+        "shannonEntropy": 0.9182958340544896,
+        "maxEntropy": 1,
+        "normalizedEntropy": 0.9182958340544896
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0,
+          "Bob": 0,
+          "Carol": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    }
+  ],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [],
+      "ratifiedAt": 1773393828408
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [],
+    "stats": {
+      "simulationStarted": 1773393828408,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 3,
+      "tickCount": 0
+    }
+  },
+  "agents": [
+    {
+      "name": "Alice",
+      "traits": [
+        "industrious",
+        "friendly",
+        "loves mining"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -457.4103840241177,
+        "y": 70,
+        "z": -560.5
+      },
+      "inventory": [
+        {
+          "name": "oak_log",
+          "count": 1,
+          "slot": 36
+        },
+        {
+          "name": "dirt",
+          "count": 7,
+          "slot": 37
+        }
+      ],
+      "goals": [
+        {
+          "id": "2528c407-c046-4932-afc8-dcdb8e811d33",
+          "category": "economic",
+          "description": "Harvest wood from the nearby oak_log and craft planks to unlock tool creation.",
+          "priority": 10,
+          "steps": [
+            "Punch oak_log with bare hands to harvest wood",
+            "Craft oak_planks using harvested logs"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393970779
+        },
+        {
+          "id": "6de61018-0f52-4015-ad79-bfe6c932b53f",
+          "category": "economic",
+          "description": "Build a crafting_table to enable the creation of essential tools like pickaxes.",
+          "priority": 9,
+          "steps": [
+            "Arrange oak_planks in a 2x2 grid on the ground to craft crafting_table"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393970779
+        },
+        {
+          "id": "d4fc1e5c-69c8-4eb1-80d2-f68ef6735420",
+          "category": "economic",
+          "description": "Craft a wooden_pickaxe to begin mining stone and coal ore.",
+          "priority": 8,
+          "steps": [
+            "Craft wooden_pickaxe using oak_planks at the crafting_table"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393970779
+        }
+      ],
+      "shortTermMemory": [
+        {
+          "id": "0d79d21f-3467-4a0c-af3c-73d85352c24b",
+          "type": "action",
+          "content": "Attempted mine: Mined 1 oak_log",
+          "timestamp": 1773393901648,
+          "importance": 1
+        }
+      ],
+      "relationships": {
+        "DeGoldenLLama": {
+          "agentName": "DeGoldenLLama",
+          "sentiment": 5,
+          "summary": "Met DeGoldenLLama nearby.",
+          "lastInteraction": 1773393921571,
+          "knownTraits": []
+        }
+      },
+      "lastDecision": {
+        "reasoning": "I am at Tech tier 0 with an empty inventory and no tools. The highest priority goal is survival: harvesting wood. I cannot mine the coal_ore nearby without a wooden pickaxe, and I have no planks or crafting table yet. I must first locate and punch an oak_log on the surface to get wood.",
+        "action": {
+          "type": "explore",
+          "params": {
+            "direction": "north"
+          }
+        },
+        "speech": "I need to find some oak trees to punch for wood first.",
+        "timestamp": 1773393955672
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 128,
+          "errorCount": 0,
+          "lastDurationMs": 3,
+          "lastRunAt": 1773393997473,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 6,
+          "errorCount": 0,
+          "lastDurationMs": 45720,
+          "lastRunAt": 1773393957191,
+          "lastError": null,
+          "isRunning": true
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 6,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393936572,
+          "lastError": null,
+          "isRunning": true
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 2,
+          "errorCount": 0,
+          "lastDurationMs": 57944,
+          "lastRunAt": 1773393970779,
+          "lastError": null,
+          "isRunning": false
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 2,
+          "errorCount": 0,
+          "lastDurationMs": 60925,
+          "lastRunAt": 1773393955672,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 98,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393997307,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 66,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393997146,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    },
+    {
+      "name": "Bob",
+      "traits": [
+        "creative",
+        "curious",
+        "enjoys building"
+      ],
+      "isAlive": false,
+      "position": {
+        "x": -507.49957348059587,
+        "y": 81,
+        "z": -642.7
+      },
+      "inventory": [
+        {
+          "name": "dirt",
+          "count": 4,
+          "slot": 36
+        }
+      ],
+      "goals": [
+        {
+          "id": "f178dc68-0cee-46f9-909f-58b94d6e4347",
+          "category": "survival",
+          "description": "Punch an oak_log to harvest wood for basic tools and shelter.",
+          "priority": 10,
+          "steps": [
+            "Locate and punch an oak_log with bare hands.",
+            "Collect the dropped wood blocks."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393910079
+        },
+        {
+          "id": "df07f578-8287-4595-bd48-38b0f1baf7dc",
+          "category": "survival",
+          "description": "Convert wood into planks and craft a crafting_table to unlock advanced recipes.",
+          "priority": 9,
+          "steps": [
+            "Craft oak_planks from harvested wood.",
+            "Place 4 wood blocks in the 2x2 grid of the inventory to create a crafting_table."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393910079
+        },
+        {
+          "id": "72958246-0f48-4c3d-9136-6b04a00d0b6f",
+          "category": "survival",
+          "description": "Craft a wooden_pickaxe to mine stone and coal ore found nearby.",
+          "priority": 8,
+          "steps": [
+            "Place oak_planks in the top row of the crafting_grid to craft a wooden_pickaxe.",
+            "Use the new tool to mine coal_ore and stone."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393910079
+        },
+        {
+          "id": "055c293e-3808-470a-8423-22ceb22cc1f9",
+          "category": "economic",
+          "description": "Gather necessary building materials to construct a small shelter for the rainy weather.",
+          "priority": 6,
+          "steps": [
+            "Mine gathered coal and stone for structural blocks.",
+            "Collect additional wood and leaves from nearby trees.",
+            "Begin laying out the foundation for a shelter."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393910079
+        }
+      ],
+      "shortTermMemory": [],
+      "relationships": {},
+      "lastDecision": {
+        "reasoning": "I am at Tech tier 0 with only dirt in my inventory. The immediate survival priority is to harvest wood to start the tech tree. There are no oak logs visible in my immediate vicinity, so I must move on the surface to find a tree. I cannot mine the coal_ore nearby without a pickaxe.",
+        "action": {
+          "type": "move",
+          "params": {
+            "x": -490,
+            "y": 82,
+            "z": -635
+          }
+        },
+        "speech": "It's raining and I need wood urgently. Let me move around to find a tree.",
+        "timestamp": 1773393980427
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 125,
+          "errorCount": 0,
+          "lastDurationMs": 3,
+          "lastRunAt": 1773393994839,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 13,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393983193,
+          "lastError": null,
+          "isRunning": true
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 9,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393982518,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 47907,
+          "lastRunAt": 1773393910079,
+          "lastError": null,
+          "isRunning": true
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 2,
+          "errorCount": 0,
+          "lastDurationMs": 58422,
+          "lastRunAt": 1773393980427,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 58,
+          "errorCount": 0,
+          "lastDurationMs": 70848,
+          "lastRunAt": 1773393990286,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 65,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393995673,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    },
+    {
+      "name": "Carol",
+      "traits": [
+        "diplomatic",
+        "organized",
+        "natural leader"
+      ],
+      "isAlive": false,
+      "position": {
+        "x": -589.5,
+        "y": 51,
+        "z": -489.51470960465866
+      },
+      "inventory": [
+        {
+          "name": "dirt",
+          "count": 2,
+          "slot": 36
+        }
+      ],
+      "goals": [
+        {
+          "id": "fe6e2a79-1032-4e0f-8f5e-ec58bea4a744",
+          "category": "survival",
+          "description": "Obtain wood and craft essential tools to survive the rain and prepare for community expansion.",
+          "priority": 10,
+          "steps": [
+            "Punch oak_log with bare hands to collect logs.",
+            "Convert logs to oak_planks in a crafting grid.",
+            "Craft a wooden_pickaxe."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393939405
+        },
+        {
+          "id": "db910ae3-b60f-4e42-9d52-a31c78241c8d",
+          "category": "survival",
+          "description": "Establish a central crafting station at the town square for community resource management.",
+          "priority": 9,
+          "steps": [
+            "Craft a crafting_table using oak_planks.",
+            "Place the crafting_table at the meeting area (100, 64, 100)."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393939405
+        },
+        {
+          "id": "224f2c41-f2c7-4e0a-9d16-b19a56282a66",
+          "category": "social",
+          "description": "Initiate contact with nearby agents to discuss shared survival needs and resource pooling.",
+          "priority": 7,
+          "steps": [
+            "Navigate to the location of Tropical Fish or other nearby agents.",
+            "Introduce myself as Carol and ask about their current status."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393939405
+        },
+        {
+          "id": "62d2735a-7d88-445e-9d51-ce9e8205ca81",
+          "category": "civic",
+          "description": "Propose a community agreement to gather shared resources in the town center.",
+          "priority": 6,
+          "steps": [
+            "Identify a central location near the Community chest.",
+            "Gather consensus from agents to establish a 'shared stash' rule."
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773393939405
+        }
+      ],
+      "shortTermMemory": [],
+      "relationships": {},
+      "lastDecision": {
+        "reasoning": "I am at Tech tier 0 with no tools and only dirt in my inventory. My highest priority survival goal is to obtain wood by punching an oak_log nearby. I will search the surface for a tree and mine it with bare hands.",
+        "action": {
+          "type": "mine",
+          "params": {
+            "blockName": "oak_log"
+          }
+        },
+        "speech": "I need to find a tree to punch for wood.",
+        "timestamp": 1773393946950
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 83,
+          "errorCount": 0,
+          "lastDurationMs": 3,
+          "lastRunAt": 1773393945129,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 9,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393942483,
+          "lastError": null,
+          "isRunning": false
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 6,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393937569,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 76740,
+          "lastRunAt": 1773393939405,
+          "lastError": null,
+          "isRunning": false
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 1,
+          "errorCount": 0,
+          "lastDurationMs": 84185,
+          "lastRunAt": 1773393946950,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 83,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393945179,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 42,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773393945126,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    }
+  ],
+  "chatLog": [
+    {
+      "sender": "Alice",
+      "message": "I need wood first! Let's punch some oak logs.",
+      "timestamp": 1773393891989,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -475.40991455105967,
+        "y": 69,
+        "z": -532.4104184428271
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "I need to find a tree to punch for wood.",
+      "timestamp": 1773393920504,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -499.3,
+        "y": 82.02442408821369,
+        "z": -639.6329371175674
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I need to find some oak trees to punch for wood first.",
+      "timestamp": 1773393956530,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -459.5348306018372,
+        "y": 67.76636799395752,
+        "z": -521.6806388953313
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "It's raining and I need wood urgently. Let me move around to find a tree.",
+      "timestamp": 1773393982681,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -507.530914119178,
+        "y": 84,
+        "z": -643.5041006966837
+      }
+    }
+  ],
+  "llmStats": {
+    "totalCalls": 10,
+    "totalTokens": 14607,
+    "totalDurationMs": 227771,
+    "avgTokensPerCall": 1461,
+    "avgDurationMs": 22777,
+    "inflight": 2,
+    "queued": 4
+  }
+}

@@ -4,7 +4,7 @@
   "description": "Many-agent simulations toward AI civilization — Replication of Project Sid using PIANO architecture",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp -r src/config dist/config",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
     "dev:watch": "nodemon --exec ts-node src/index.ts",

@@ -108,6 +108,10 @@ export const PerceptionModule: PianoModule = async (
 
   // ── Build perception update ──────────────────────────────────────────────
 
+  // ── Water / oxygen detection ─────────────────────────────────────────────
+  const isInWater = Boolean((bot.entity as any).isInWater);
+  const oxygenLevel: number = (bot as any).oxygenLevel ?? 300;
+
   const perception: AgentPerception = {
     nearbyEntities,
     nearbyBlocks,
@@ -120,6 +124,8 @@ export const PerceptionModule: PianoModule = async (
     gameTime: bot.time?.age ?? 0,
     // Keep existing chat — it's managed by the CommunicationBus
     recentChat: state.perception.recentChat.slice(-MAX_RECENT_CHAT),
+    isInWater,
+    oxygenLevel,
     lastUpdated: Date.now(),
   };
 
@@ -136,6 +142,10 @@ export function summarizePerception(perception: AgentPerception): string {
 
   lines.push(`Position: (${Math.round(perception.position.x)}, ${Math.round(perception.position.y)}, ${Math.round(perception.position.z)})`);
   lines.push(`Health: ${perception.health}/20 | Food: ${perception.food}/20`);
+  if (perception.isInWater) {
+    const oxygenPct = Math.round((perception.oxygenLevel / 300) * 100);
+    lines.push(`⚠️ IN WATER! Oxygen: ${oxygenPct}% ${perception.oxygenLevel <= 0 ? '— DROWNING, TAKING DAMAGE!' : perception.oxygenLevel < 100 ? '— LOW, get to surface NOW!' : ''}`);
+  }
   lines.push(`Time: ${perception.isDay ? 'Day' : 'Night'} | Weather: ${perception.isRaining ? 'Raining' : 'Clear'}`);
 
   if (perception.nearbyEntities.length > 0) {

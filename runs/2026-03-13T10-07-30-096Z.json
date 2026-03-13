@@ -1,0 +1,553 @@
+{
+  "id": "2026-03-13T10-07-30-096Z",
+  "startedAt": "2026-03-13T10:07:30.097Z",
+  "endedAt": "2026-03-13T10:09:13.703Z",
+  "agentNames": [
+    "Alice"
+  ],
+  "durationMs": 103606,
+  "finalBenchmark": {
+    "timestamp": 1773396510375,
+    "elapsed": 65.1,
+    "specialization": {
+      "roleDistribution": {
+        "idle": 1
+      },
+      "shannonEntropy": 0,
+      "maxEntropy": 0,
+      "normalizedEntropy": 0
+    },
+    "collectiveRules": {
+      "complianceRate": 1,
+      "totalAmendments": 0,
+      "passedAmendments": 0,
+      "taxRate": 0.1
+    },
+    "culturalTransmission": {
+      "trackedMemes": [
+        {
+          "keyword": "pastafarian",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "flying spaghetti",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "fsm",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "noodle",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pasta",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "ramen",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "colander",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pirate",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "community",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "constitution",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        }
+      ],
+      "averageSpread": 0
+    },
+    "progression": {
+      "agentTiers": {
+        "Alice": 0
+      },
+      "maxTier": 0,
+      "averageTier": 0,
+      "highestItem": "none"
+    }
+  },
+  "config": {
+    "agents": [
+      {
+        "name": "Alice",
+        "traits": [
+          "industrious",
+          "friendly",
+          "loves mining"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [
+    {
+      "timestamp": 1773396455376,
+      "elapsed": 10.101,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773396510375,
+      "elapsed": 65.1,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    }
+  ],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [],
+      "ratifiedAt": 1773396445275
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [],
+    "stats": {
+      "simulationStarted": 1773396445275,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 1,
+      "tickCount": 0
+    }
+  },
+  "agents": [
+    {
+      "name": "Alice",
+      "traits": [
+        "industrious",
+        "friendly",
+        "loves mining"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -336.0444624704669,
+        "y": 48,
+        "z": -677.2099041525308
+      },
+      "inventory": [
+        {
+          "name": "crafting_table",
+          "count": 1,
+          "slot": 36
+        },
+        {
+          "name": "oak_log",
+          "count": 2,
+          "slot": 37
+        },
+        {
+          "name": "jungle_log",
+          "count": 1,
+          "slot": 38
+        },
+        {
+          "name": "oak_planks",
+          "count": 2,
+          "slot": 39
+        },
+        {
+          "name": "oak_sapling",
+          "count": 2,
+          "slot": 40
+        },
+        {
+          "name": "stick",
+          "count": 5,
+          "slot": 41
+        }
+      ],
+      "goals": [],
+      "shortTermMemory": [
+        {
+          "id": "f40474aa-c353-4953-be1a-0f84fd6ea83c",
+          "type": "observation",
+          "content": "Nearby agents: DeGoldenLLama at position (-336, 48, -677)",
+          "timestamp": 1773396490485,
+          "importance": null,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -336.0444624704669,
+            "y": 48,
+            "z": -677.2099041525308
+          }
+        },
+        {
+          "id": "48de22ed-2470-429c-aae3-7a8ef04fa384",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft wooden_pickaxe — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773396528087,
+          "importance": null
+        },
+        {
+          "id": "b1b4caef-1fbe-4d6f-99bd-e4a618d78a29",
+          "type": "observation",
+          "content": "Nearby agents: DeGoldenLLama at position (-336, 48, -677)",
+          "timestamp": 1773396528835,
+          "importance": null,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -336.0444624704669,
+            "y": 48,
+            "z": -677.2099041525308
+          }
+        }
+      ],
+      "relationships": {
+        "DeGoldenLLama": {
+          "agentName": "DeGoldenLLama",
+          "sentiment": null,
+          "summary": "Met DeGoldenLLama nearby.",
+          "lastInteraction": 1773396541004,
+          "knownTraits": []
+        }
+      },
+      "lastDecision": {
+        "reasoning": "No reasoning provided.",
+        "action": {
+          "type": "craft",
+          "params": {
+            "itemName": "wooden_pickaxe",
+            "count": 1
+          }
+        },
+        "speech": "I'm on the verge of crafting that wooden_pickaxe but I need a crafting table first. I'll start by placing a crafting table!",
+        "timestamp": 1773396534983
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 103,
+          "errorCount": 0,
+          "lastDurationMs": 4,
+          "lastRunAt": 1773396553140,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 6,
+          "errorCount": 0,
+          "lastDurationMs": 9879,
+          "lastRunAt": 1773396538714,
+          "lastError": null,
+          "isRunning": true
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 6,
+          "errorCount": 0,
+          "lastDurationMs": 6320,
+          "lastRunAt": 1773396541004,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 2,
+          "errorCount": 0,
+          "lastDurationMs": 35613,
+          "lastRunAt": 1773396518569,
+          "lastError": null,
+          "isRunning": true
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 4,
+          "errorCount": 0,
+          "lastDurationMs": 4645,
+          "lastRunAt": 1773396534983,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 103,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773396553151,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 52,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773396553070,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    }
+  ],
+  "chatLog": [
+    {
+      "sender": "Alice",
+      "message": "I'm on the verge of crafting that wooden_pickaxe but I need a crafting table first. I'll start by placing a crafting table!",
+      "timestamp": 1773396535056,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -336.0444624704669,
+        "y": 48,
+        "z": -677.2099041525308
+      }
+    }
+  ],
+  "llmStats": {
+    "totalCalls": 11,
+    "totalTokens": 12307,
+    "totalDurationMs": 133109,
+    "avgTokensPerCall": 1119,
+    "avgDurationMs": 12101,
+    "inflight": 2,
+    "queued": 1
+  }
+}

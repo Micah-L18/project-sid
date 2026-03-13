@@ -61,7 +61,7 @@ export const DEFAULT_LLM_CONFIG: LLMConfig = {
   defaultModel: 'qwen3.5:9b',
   embeddingModel: 'nomic-embed-text',
   defaultTemperature: 0.7,
-  defaultMaxTokens: 1024,
+  defaultMaxTokens: 2024,
   maxConcurrency: 8,
   timeoutMs: 60_000,
 };
@@ -194,7 +194,12 @@ export class LLMClient {
       }
 
       // Strip thinking model artifacts (<think>...</think>) before any parse attempt.
-      const stripped = raw.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+      // Also handle unclosed think tags (model ran out of tokens mid-think).
+      let stripped = raw.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+      if (!stripped && raw.includes('<think>')) {
+        // Think block was never closed — strip everything from <think> onward
+        stripped = raw.replace(/<think>[\s\S]*/gi, '').trim();
+      }
 
       // If the model returned only a think block with no JSON, retry immediately.
       if (!stripped) {
@@ -207,6 +212,8 @@ export class LLMClient {
         return JSON.parse(stripped) as T;
       } catch {
         this.logger.warn(`Failed to parse JSON response, attempting extraction...`);
+        this.logger.warn(`Raw response (first 500 chars): ${raw.substring(0, 500)}`);
+        this.logger.warn(`Stripped response (first 500 chars): ${stripped.substring(0, 500)}`);
         // Strategy 1: Extract from markdown code blocks
         const codeBlock = stripped.match(/```(?:json)?\s*([\s\S]*?)```/);
         if (codeBlock) {

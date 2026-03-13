@@ -6,7 +6,7 @@
  * Uses a skill library of predefined functions wrapping Mineflayer APIs.
  */
 
-import { AgentState, ActionAwareness, ActionIntent, ActionResult } from '../agent/AgentState';
+import { AgentState, ActionAwareness, ActionIntent, ActionResult, ActionType } from '../agent/AgentState';
 import { PianoModule, ModuleContext } from '../agent/ModuleRunner';
 import { Skills } from '../skills/Skills';
 import { Logger } from '../utils/Logger';
@@ -50,6 +50,41 @@ export function createActionModule(): PianoModule {
       }
       // Still executing, don't start new action
       return {};
+    }
+
+    // ── DROWNING OVERRIDE — highest priority survival action ────────────
+    const isInWater = state.perception.isInWater;
+    const oxygenLevel = state.perception.oxygenLevel;
+    if (isInWater && oxygenLevel < 200) {
+      logger.warn(`DROWNING OVERRIDE — oxygen ${oxygenLevel}/300, forcing swim to surface`);
+      const swimAction: ActionIntent = { type: 'custom' as ActionType, params: { skill: 'swimToSurface' } };
+      const startTime = Date.now();
+      try {
+        const skills = new Skills(context.bot);
+        const outcome = await skills.swimToSurface();
+        const result: ActionResult = { action: swimAction, success: true, outcome, timestamp: Date.now(), durationMs: Date.now() - startTime };
+        return {
+          actionAwareness: {
+            ...actionAwareness,
+            isBusy: false,
+            busySince: null,
+            lastResult: result,
+            recentResults: [...actionAwareness.recentResults, result].slice(-MAX_RECENT_RESULTS),
+          },
+        };
+      } catch (error) {
+        const errMsg = error instanceof Error ? error.message : String(error);
+        const result: ActionResult = { action: swimAction, success: false, outcome: errMsg, timestamp: Date.now(), durationMs: Date.now() - startTime };
+        return {
+          actionAwareness: {
+            ...actionAwareness,
+            isBusy: false,
+            busySince: null,
+            lastResult: result,
+            recentResults: [...actionAwareness.recentResults, result].slice(-MAX_RECENT_RESULTS),
+          },
+        };
+      }
     }
 
     const action = cognitiveDecision.action;

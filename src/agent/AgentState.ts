@@ -100,6 +100,10 @@ export interface AgentPerception {
   gameTime: number;
   /** Recent chat messages (heard within proximity or whispered) */
   recentChat: ChatEntry[];
+  /** Whether the agent is currently in water */
+  isInWater: boolean;
+  /** Oxygen level (0-300 ticks, 300 = full, 0 = drowning) */
+  oxygenLevel: number;
   /** Timestamp of last perception update */
   lastUpdated: number;
 }
@@ -277,6 +281,8 @@ export function createDefaultAgentState(identity: AgentIdentity): AgentState {
       isRaining: false,
       gameTime: 0,
       recentChat: [],
+      isInWater: false,
+      oxygenLevel: 300,
       lastUpdated: now,
     },
     social: {

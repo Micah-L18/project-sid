@@ -65,6 +65,14 @@ export class Skills {
     this.bot = bot;
   }
 
+  /** Create Movements config that avoids water pathing. */
+  private createMovements(): Movements {
+    const movements = new Movements(this.bot);
+    (movements as any).liquidCost = 9999;  // Strongly avoid pathing through water
+    movements.allowSprinting = true;
+    return movements;
+  }
+
   // ── Movement ─────────────────────────────────────────────────────────────
 
   async moveTo(x: number, y: number, z: number): Promise<string> {
@@ -72,7 +80,7 @@ export class Skills {
     this.ensurePathfinder();
 
     const mcData = require('minecraft-data')(this.bot.version);
-    const movements = new Movements(this.bot);
+    const movements = this.createMovements();
     this.bot.pathfinder.setMovements(movements);
 
     await this.bot.pathfinder.goto(new Goals.GoalNear(x, y, z, 2));
@@ -85,7 +93,7 @@ export class Skills {
 
     this.ensurePathfinder();
     const mcData = require('minecraft-data')(this.bot.version);
-    const movements = new Movements(this.bot);
+    const movements = this.createMovements();
     this.bot.pathfinder.setMovements(movements);
 
     await this.bot.pathfinder.goto(
@@ -100,7 +108,7 @@ export class Skills {
 
     this.ensurePathfinder();
     const mcData = require('minecraft-data')(this.bot.version);
-    const movements = new Movements(this.bot);
+    const movements = this.createMovements();
     this.bot.pathfinder.setMovements(movements);
 
     this.bot.pathfinder.setGoal(new Goals.GoalFollow(entity, 3), true);
@@ -109,6 +117,70 @@ export class Skills {
     await new Promise(r => setTimeout(r, 5000));
     this.bot.pathfinder.stop();
     return `Followed ${name} for a few seconds`;
+  }
+
+  /**
+   * Emergency: swim upward toward the surface and move to solid ground.
+   */
+  async swimToSurface(): Promise<string> {
+    const bot = this.bot;
+    const startY = bot.entity.position.y;
+
+    // Look straight up and hold jump + forward to swim up
+    bot.setControlState('jump', true);
+    bot.setControlState('forward', true);
+
+    // Swim upward for up to 8 seconds or until we're out of water
+    const start = Date.now();
+    while (Date.now() - start < 8000) {
+      await new Promise(r => setTimeout(r, 250));
+      if (!(bot.entity as any).isInWater) break;
+    }
+
+    bot.setControlState('jump', false);
+    bot.setControlState('forward', false);
+
+    // Try to pathfind to nearby land
+    try {
+      this.ensurePathfinder();
+      const movements = new Movements(bot);
+      (movements as any).liquidCost = 9999;
+      bot.pathfinder.setMovements(movements);
+
+      // Find the nearest solid block at or above surface level
+      const pos = bot.entity.position;
+      let bestLand: Vec3 | null = null;
+      let bestDist = Infinity;
+      for (let dx = -15; dx <= 15; dx += 2) {
+        for (let dz = -15; dz <= 15; dz += 2) {
+          for (let dy = -3; dy <= 5; dy++) {
+            const checkPos = pos.offset(dx, dy, dz);
+            try {
+              const block = bot.blockAt(checkPos);
+              const blockAbove = bot.blockAt(checkPos.offset(0, 1, 0));
+              if (block && block.name !== 'water' && block.name !== 'air' && block.name !== 'lava'
+                  && blockAbove && (blockAbove.name === 'air' || blockAbove.name === 'cave_air')) {
+                const dist = pos.distanceTo(checkPos);
+                if (dist < bestDist) {
+                  bestDist = dist;
+                  bestLand = checkPos;
+                }
+              }
+            } catch { /* out of range */ }
+          }
+        }
+      }
+
+      if (bestLand) {
+        await bot.pathfinder.goto(new Goals.GoalNear(bestLand.x, bestLand.y + 1, bestLand.z, 2));
+        return `Escaped water! Swam from y=${Math.round(startY)} to land at y=${Math.round(bot.entity.position.y)}`;
+      }
+    } catch { /* pathfinder failed, we at least swam up */ }
+
+    const escaped = !(bot.entity as any).isInWater;
+    return escaped
+      ? `Reached surface at y=${Math.round(bot.entity.position.y)}`
+      : `Swimming upward from y=${Math.round(startY)} to y=${Math.round(bot.entity.position.y)} — still in water`;
   }
 
   async explore(direction?: string): Promise<string> {
@@ -165,7 +237,7 @@ export class Skills {
 
       // Move close enough to mine
       this.ensurePathfinder();
-      const movements = new Movements(this.bot);
+      const movements = this.createMovements();
       this.bot.pathfinder.setMovements(movements);
 
       try {
@@ -229,7 +301,7 @@ export class Skills {
     // Navigate to crafting table if needed
     if (useTable && craftingTable) {
       this.ensurePathfinder();
-      const movements = new Movements(this.bot);
+      const movements = this.createMovements();
       this.bot.pathfinder.setMovements(movements);
       try {
         await this.bot.pathfinder.goto(
@@ -276,7 +348,7 @@ export class Skills {
     // Move close
     this.ensurePathfinder();
     const mcData = require('minecraft-data')(this.bot.version);
-    const movements = new Movements(this.bot);
+    const movements = this.createMovements();
     this.bot.pathfinder.setMovements(movements);
 
     try {
