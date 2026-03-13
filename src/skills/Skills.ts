@@ -325,18 +325,46 @@ export class Skills {
     const item = this.bot.inventory.items().find(i => i.name === blockName);
     if (!item) return `Don't have ${blockName} in inventory`;
 
-    // Find a suitable placement position (adjacent to where we're looking)
-    const targetBlock = this.bot.blockAtCursor(5);
-    if (!targetBlock) return 'No block surface to place on';
+    await this.bot.equip(item, 'hand');
 
-    try {
-      await this.bot.equip(item, 'hand');
-      const faceVector = new Vec3(0, 1, 0); // Place on top
-      await this.bot.placeBlock(targetBlock, faceVector);
-      return `Placed ${blockName}`;
-    } catch (err) {
-      return `Failed to place ${blockName}: ${err}`;
+    // Strategy: find a solid reference block near the bot's feet to place
+    // against. This avoids the unreliable "blockAtCursor" approach and the
+    // impossible "jump and place under yourself" pillar technique.
+    const botPos = this.bot.entity.position;
+    const feetBlock = this.bot.blockAt(botPos.offset(0, -1, 0));
+
+    // 1) Try placing on top of the block directly below (most common)
+    if (feetBlock && feetBlock.name !== 'air' && feetBlock.name !== 'water') {
+      try {
+        await this.bot.placeBlock(feetBlock, new Vec3(0, 1, 0));
+        return `Placed ${blockName}`;
+      } catch { /* fall through to adjacent search */ }
     }
+
+    // 2) Search nearby for a valid solid reference block we can place against
+    const offsets: [number, number, number, Vec3][] = [
+      // [dx, dy, dz, faceVector] — face vector points from ref block toward placement
+      [ 1, -1,  0, new Vec3(0, 1, 0)],  // ground +x
+      [-1, -1,  0, new Vec3(0, 1, 0)],  // ground -x
+      [ 0, -1,  1, new Vec3(0, 1, 0)],  // ground +z
+      [ 0, -1, -1, new Vec3(0, 1, 0)],  // ground -z
+      [ 1,  0,  0, new Vec3(-1, 0, 0)], // wall +x, place on -x face
+      [-1,  0,  0, new Vec3(1, 0, 0)],  // wall -x, place on +x face
+      [ 0,  0,  1, new Vec3(0, 0, -1)], // wall +z
+      [ 0,  0, -1, new Vec3(0, 0, 1)],  // wall -z
+    ];
+
+    for (const [dx, dy, dz, face] of offsets) {
+      const refBlock = this.bot.blockAt(botPos.offset(dx, dy, dz));
+      if (refBlock && refBlock.name !== 'air' && refBlock.name !== 'water' && refBlock.name !== 'cave_air') {
+        try {
+          await this.bot.placeBlock(refBlock, face);
+          return `Placed ${blockName}`;
+        } catch { continue; }
+      }
+    }
+
+    return 'No suitable surface to place block on — move to open ground';
   }
 
   // ── Combat ───────────────────────────────────────────────────────────────
@@ -497,13 +525,66 @@ export class Skills {
   // ── Building ─────────────────────────────────────────────────────────────
 
   async buildStructure(description: string): Promise<string> {
-    // Simplified building — place available blocks in a basic pattern
     const blocks = this.bot.inventory.items()
-      .filter(i => i.name.includes('planks') || i.name.includes('cobblestone') || i.name.includes('stone'));
+      .filter(i => i.name.includes('planks') || i.name.includes('cobblestone') || i.name.includes('stone') || i.name.includes('bricks'));
 
     if (blocks.length === 0) return 'No building materials in inventory';
 
-    return `Building attempt: ${description} (simplified — placed available blocks)`;
+    const material = blocks[0];
+    const available = blocks.reduce((s, b) => s + b.count, 0);
+    let placed = 0;
+
+    // Place blocks in a flat ring around the bot (simple foundation/wall)
+    const botPos = this.bot.entity.position.floored();
+    const offsets = [
+      // 5×5 foundation ring
+      [-2,-2],[-1,-2],[0,-2],[1,-2],[2,-2],
+      [-2,-1],                      [2,-1],
+      [-2, 0],                      [2, 0],
+      [-2, 1],                      [2, 1],
+      [-2, 2],[-1, 2],[0, 2],[1, 2],[2, 2],
+    ];
+
+    await this.bot.equip(material, 'hand');
+
+    for (const [dx, dz] of offsets) {
+      if (placed >= available) break;
+      const placePos = botPos.offset(dx, -1, dz);
+      const refBlock = this.bot.blockAt(placePos);
+
+      // Only place if there's a solid block we can build against
+      if (refBlock && refBlock.name !== 'air') {
+        // Check if air above so we can stack on top
+        const above = this.bot.blockAt(placePos.offset(0, 1, 0));
+        if (above && above.name === 'air') {
+          try {
+            // Navigate close enough
+            this.ensurePathfinder();
+            const movements = this.createMovements();
+            this.bot.pathfinder.setMovements(movements);
+            await this.bot.pathfinder.goto(
+              new Goals.GoalNear(placePos.x, placePos.y + 1, placePos.z, 4)
+            );
+          } catch { /* close enough */ }
+
+          // Re-equip in case pathfinder changed held item
+          const freshItem = this.bot.inventory.items().find(i => i.name === material.name);
+          if (!freshItem) break;
+          await this.bot.equip(freshItem, 'hand');
+
+          try {
+            await this.bot.placeBlock(refBlock, new Vec3(0, 1, 0));
+            placed++;
+          } catch { /* skip this position */ }
+        }
+      }
+      // Small delay to avoid server kick
+      await new Promise(r => setTimeout(r, 150));
+    }
+
+    return placed > 0
+      ? `Built foundation — placed ${placed} ${material.name} blocks (${description})`
+      : `Could not place any blocks for: ${description}`;
   }
 
   // ── Helpers ──────────────────────────────────────────────────────────────

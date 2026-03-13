@@ -10,6 +10,8 @@
  *   npm run dev -- --agents 5            # Override agent count
  */
 
+import 'dotenv/config';
+
 import { LLMClient, LLMConfig } from './llm/LLMClient';
 import { CommunicationBus } from './orchestrator/CommunicationBus';
 import { Spawner, AgentProfile, ServerConfig } from './orchestrator/Spawner';
@@ -84,7 +86,7 @@ async function main(): Promise<void> {
   logger.info('Checking LLM availability...');
   const llmAvailable = await llm.isAvailable();
   if (!llmAvailable) {
-    logger.error('❌ LLM (Ollama) is not available. Please ensure Ollama is running.');
+    logger.error('❌ LLM (Cerebras) is not available. Check your API key and network connection.');
     process.exit(1);
   }
   const models = await llm.listModels();
@@ -164,36 +166,63 @@ async function main(): Promise<void> {
   };
 
   // Register start/stop callbacks with the dashboard
+  // Phase 1: "Start" sets up the run and transitions to 'spawned' (config view)
+  // NO agents are connected to MC yet — the user picks which ones to start.
   dashboard.onStartRequested(async () => {
     if (simRunning) return;
     simRunning = true;
     runId = SimulationStore.generateId();
     runStartedAt = new Date();
-    dashboard.setSimulationState('starting', runId);
 
-    logger.info(`Starting run ${runId} with ${config.agents.length} agents...`);
-    try {
-      await spawner.spawnAgents(config.agents, config.simulation.staggerSpawnMs);
-    } catch (error) {
-      logger.error(`Failed to spawn agents: ${error}`);
-      simRunning = false;
-      dashboard.setSimulationState('idle');
-      return;
-    }
+    dashboard.setAgentProfiles(config.agents);
+    dashboard.setSimulationState('spawned', runId);
+    dashboard.startUpdates(2000);
 
-    spawner.startAll();
+    logger.info('════════════════════════════════════════════════');
+    logger.info(`🔵 Run ${runId} — ${config.agents.length} agents ready to configure`);
+    logger.info('   Start agents individually or press Start All in the dashboard.');
+    logger.info('════════════════════════════════════════════════');
+  });
+
+  // Phase 2a: "Start All" spawns + connects + starts every agent at once
+  dashboard.onStartAllRequested(async () => {
+    logger.info('Starting all agents...');
+    await spawner.spawnAndStartAll(config.agents, config.simulation.staggerSpawnMs);
+    worldState.stats.agentsAlive = spawner.getAgentCount();
     electionManager.start();
     taxCollector.start(config.simulation.taxCheckIntervalMs);
     benchmarkRunner.start(config.simulation.benchmarkIntervalMs);
-    dashboard.startUpdates(2000);
-
-    worldState.stats.agentsAlive = spawner.getAgentCount();
-    dashboard.setSimulationState('running', runId);
+    dashboard.setSimulationState('running', runId!);
 
     logger.info('════════════════════════════════════════════════');
     logger.info(`✅ Run ${runId} — ${spawner.getAgentCount()} agents active`);
     logger.info(`📊 Dashboard: http://localhost:${config.simulation.dashboardPort}`);
     logger.info('════════════════════════════════════════════════');
+  });
+
+  // Phase 2b: Start a single agent (spawn + connect + start AI)
+  dashboard.onStartAgentRequested(async (name: string) => {
+    const profile = config.agents.find(a => a.name === name);
+    if (!profile) return false;
+    // Already spawned?
+    if (spawner.getAgent(name)) return false;
+
+    const ok = await spawner.spawnAndStartAgent(profile);
+    if (ok) {
+      worldState.stats.agentsAlive = spawner.getAgentCount();
+      logger.info(`▶ Agent ${name} spawned and started`);
+
+      // If all agents are now running, transition to 'running' and start governance
+      const allConnected = config.agents.every(a => spawner.getAgent(a.name));
+      if (allConnected && dashboard.getSimulationState() === 'spawned') {
+        electionManager.start();
+        taxCollector.start(config.simulation.taxCheckIntervalMs);
+        benchmarkRunner.start(config.simulation.benchmarkIntervalMs);
+        dashboard.setSimulationState('running', runId!);
+        logger.info('All agents now running — transitioning to running state');
+      }
+    }
+    return ok;
   });
 
   dashboard.onStopRequested(() => stopSimulation('manual'));

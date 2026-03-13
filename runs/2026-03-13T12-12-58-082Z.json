@@ -1,0 +1,237 @@
+{
+  "id": "2026-03-13T12-12-58-082Z",
+  "startedAt": "2026-03-13T12:12:58.083Z",
+  "endedAt": "2026-03-13T12:13:06.270Z",
+  "agentNames": [
+    "Alice",
+    "Bob the builder"
+  ],
+  "durationMs": 8187,
+  "finalBenchmark": null,
+  "config": {
+    "agents": [
+      {
+        "name": "Alice",
+        "traits": [
+          "industrious",
+          "friendly",
+          "loves mining"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      },
+      {
+        "name": "Bob the builder",
+        "traits": [
+          "methodical",
+          "creative",
+          "skilled builder"
+        ],
+        "communityGoal": "Design and construct a safe, comfortable shelter for the community, ensuring everyone has a place to stay."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [],
+      "ratifiedAt": 1773403966261
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [],
+    "stats": {
+      "simulationStarted": 1773403966261,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 0,
+      "tickCount": 0
+    }
+  },
+  "agents": [
+    {
+      "name": "Alice",
+      "traits": [
+        "industrious",
+        "friendly",
+        "loves mining"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": 100,
+        "y": 64,
+        "z": 100
+      },
+      "inventory": [],
+      "goals": [
+        {
+          "id": "035bfcc5-5296-49db-9dd1-b482cbeb3aed",
+          "category": "survival",
+          "description": "Punch oak_log with bare hands to get wood",
+          "priority": 10,
+          "steps": [
+            "find oak_log nearby",
+            "mine oak_log (no tool needed)"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773403978499
+        },
+        {
+          "id": "b4ea7cac-6535-479b-8492-71c123dee057",
+          "category": "survival",
+          "description": "Craft a crafting_table from wood planks",
+          "priority": 9,
+          "steps": [
+            "craft oak_planks from oak_log",
+            "craft crafting_table from 4 planks",
+            "place crafting_table"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773403978499
+        },
+        {
+          "id": "82fc1fa1-2d49-49b6-843e-aabe1182b8fa",
+          "category": "survival",
+          "description": "Craft a wooden_pickaxe so I can mine stone and coal",
+          "priority": 8,
+          "steps": [
+            "craft sticks",
+            "craft wooden_pickaxe at crafting_table"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773403978499
+        }
+      ],
+      "shortTermMemory": [],
+      "relationships": {},
+      "lastDecision": {
+        "reasoning": "Just spawned, observing surroundings.",
+        "action": null,
+        "speech": null,
+        "timestamp": 1773403978499
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": false
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": false
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 0,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 0,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    }
+  ],
+  "chatLog": [],
+  "llmStats": {
+    "provider": "ollama",
+    "model": "Sweaterdog/Andy-4:latest",
+    "totalCalls": 0,
+    "totalTokens": 0,
+    "totalDurationMs": 0,
+    "avgTokensPerCall": 0,
+    "avgDurationMs": 0,
+    "inflight": 0,
+    "queued": 0
+  }
+}

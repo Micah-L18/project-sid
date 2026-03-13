@@ -10,18 +10,18 @@ import express from 'express';
 import { WebSocketServer, WebSocket } from 'ws';
 import http from 'http';
 import path from 'path';
-import { Spawner, SpawnedAgent } from '../orchestrator/Spawner';
+import { Spawner, SpawnedAgent, AgentProfile } from '../orchestrator/Spawner';
 import { WorldState } from '../orchestrator/WorldState';
 import { CommunicationBus } from '../orchestrator/CommunicationBus';
 import { BenchmarkRunner } from '../benchmarks/BenchmarkRunner';
 import { SimulationStore } from '../simulation/SimulationStore';
 import { InventoryItem, Goal, SocialRelationship } from '../agent/AgentState';
-import { LLMClient } from '../llm/LLMClient';
+import { LLMClient, LLMProvider } from '../llm/LLMClient';
 import { Logger } from '../utils/Logger';
 
 // ── Dashboard Server ─────────────────────────────────────────────────────────
 
-export type SimulationState = 'idle' | 'starting' | 'running' | 'stopping';
+export type SimulationState = 'idle' | 'starting' | 'spawned' | 'running' | 'stopping';
 
 export class Dashboard {
   private app: express.Express;
@@ -41,6 +41,11 @@ export class Dashboard {
   private currentRunId: string | null = null;
   private startCallback: (() => Promise<void>) | null = null;
   private stopCallback: (() => void) | null = null;
+  private startAllCallback: (() => Promise<void>) | null = null;
+  private startAgentCallback: ((name: string) => Promise<boolean>) | null = null;
+
+  /** Agent profiles from config — available before agents are spawned */
+  private agentProfiles: AgentProfile[] = [];
 
   constructor(
     spawner: Spawner,
@@ -90,11 +95,21 @@ export class Dashboard {
 
   onStartRequested(cb: () => Promise<void>): void { this.startCallback = cb; }
   onStopRequested(cb: () => void): void { this.stopCallback = cb; }
+  onStartAllRequested(cb: () => Promise<void>): void { this.startAllCallback = cb; }
+  onStartAgentRequested(cb: (name: string) => Promise<boolean>): void { this.startAgentCallback = cb; }
+
+  setAgentProfiles(profiles: AgentProfile[]): void {
+    this.agentProfiles = profiles;
+  }
 
   setSimulationState(state: SimulationState, runId?: string): void {
     this.simulationState = state;
     this.currentRunId = runId ?? this.currentRunId;
     this.broadcast(this.getFullState());
+  }
+
+  getSimulationState(): SimulationState {
+    return this.simulationState;
   }
 
   stopUpdates(): void {
@@ -165,12 +180,35 @@ export class Dashboard {
     });
 
     this.app.post('/api/stop', (_req, res) => {
-      if (this.simulationState !== 'running') {
+      if (this.simulationState !== 'running' && this.simulationState !== 'spawned') {
         res.status(409).json({ error: 'No simulation is running' });
         return;
       }
       res.json({ ok: true });
       if (this.stopCallback) this.stopCallback();
+    });
+
+    // ── Staged start: start all agents or a single agent ─────────────────
+    this.app.post('/api/start-all-agents', async (_req, res) => {
+      if (this.simulationState !== 'spawned') {
+        res.status(409).json({ error: 'Agents are not in spawned state' });
+        return;
+      }
+      res.json({ ok: true });
+      if (this.startAllCallback) await this.startAllCallback();
+    });
+
+    this.app.post('/api/start-agent/:name', async (req, res) => {
+      if (this.simulationState !== 'spawned' && this.simulationState !== 'running') {
+        res.status(409).json({ error: 'Agents are not in spawned state' });
+        return;
+      }
+      const name = req.params.name;
+      if (this.startAgentCallback) {
+        const ok = await this.startAgentCallback(name);
+        if (!ok) { res.status(404).json({ error: `Agent "${name}" not found or already started` }); return; }
+      }
+      res.json({ ok: true, agentName: name });
     });
 
     // ── Past runs endpoints ─────────────────────────────────────────────────
@@ -224,6 +262,81 @@ export class Dashboard {
       res.setHeader('Content-Type', 'application/json');
       res.json(results);
     });
+
+    // ── LLM provider / model switching endpoints ───────────────────────────
+    this.app.get('/api/llm-config', (_req, res) => {
+      const config = this.llm.getConfig();
+      res.json({
+        provider: this.llm.getProvider(),
+        model: this.llm.getModel(),
+        ollamaHost: config.ollamaHost,
+        cerebrasHost: config.host,
+      });
+    });
+
+    this.app.get('/api/llm-models', async (_req, res) => {
+      const [cerebrasModels, ollamaModels] = await Promise.all([
+        this.llm.listCerebrasModels(),
+        this.llm.listOllamaModels(),
+      ]);
+      res.json({ cerebras: cerebrasModels, ollama: ollamaModels });
+    });
+
+    this.app.post('/api/llm-provider', (req, res) => {
+      const { provider } = req.body;
+      if (provider !== 'cerebras' && provider !== 'ollama') {
+        res.status(400).json({ error: 'Invalid provider. Use "cerebras" or "ollama".' });
+        return;
+      }
+      this.llm.setProvider(provider as LLMProvider);
+      res.json({ ok: true, provider });
+    });
+
+    this.app.post('/api/llm-model', (req, res) => {
+      const { model } = req.body;
+      if (!model || typeof model !== 'string') {
+        res.status(400).json({ error: 'Missing model name.' });
+        return;
+      }
+      this.llm.setModel(model);
+      res.json({ ok: true, model });
+    });
+
+    // ── Per-agent model/provider switching ─────────────────────────────────
+    // Works on both spawned agents (live) and unspawned profiles (config)
+    this.app.post('/api/agent-model', (req, res) => {
+      const { agentName, provider, model } = req.body;
+      if (!agentName || typeof agentName !== 'string') {
+        res.status(400).json({ error: 'Missing agentName.' });
+        return;
+      }
+
+      // Try live agent first
+      const agent = this.spawner.getAgent(agentName);
+      // Also find the profile in our stored list (so changes persist before spawn)
+      const profile = this.agentProfiles.find(p => p.name === agentName);
+
+      if (!agent && !profile) {
+        res.status(404).json({ error: `Agent "${agentName}" not found.` });
+        return;
+      }
+
+      if (provider && (provider === 'cerebras' || provider === 'ollama')) {
+        if (profile) profile.provider = provider;
+        if (agent) { agent.profile.provider = provider; agent.runner.getContext().agentProvider = provider; }
+      }
+      if (model && typeof model === 'string') {
+        if (profile) profile.model = model;
+        if (agent) { agent.profile.model = model; agent.runner.getContext().agentModel = model; }
+      }
+      const { host: newHost } = req.body;
+      if (newHost !== undefined && typeof newHost === 'string') {
+        if (profile) profile.host = newHost || undefined;
+        if (agent) { agent.profile.host = newHost || undefined; agent.runner.getContext().agentHost = newHost || undefined; }
+      }
+      const effectiveProfile = agent?.profile || profile;
+      res.json({ ok: true, agentName, provider: effectiveProfile?.provider, model: effectiveProfile?.model, host: effectiveProfile?.host });
+    });
   }
 
   // ── Live Updates ─────────────────────────────────────────────────────────
@@ -242,27 +355,96 @@ export class Dashboard {
   // ── State Aggregation ────────────────────────────────────────────────────
 
   private getFullState(): object {
-    const agents = this.spawner.getAllAgents().map((a: SpawnedAgent) => {
-      const state = a.runner.getState();
-      return {
-        name: a.profile.name,
-        traits: a.profile.traits,
-        position: state.perception.position
-          ? { x: Math.round(state.perception.position.x), y: Math.round(state.perception.position.y), z: Math.round(state.perception.position.z) }
-          : null,
-        health: state.perception.health,
-        food: state.perception.food,
-        isAlive: state.isAlive,
-        decision: state.cognitiveDecision.reasoning,
-        speech: state.cognitiveDecision.speech,
-        inventoryCount: state.perception.inventory.reduce((s: number, i: InventoryItem) => s + i.count, 0),
-        activeGoals: state.goals.currentGoals.filter((g: Goal) => g.active && !g.completed).length,
-        relationships: Object.fromEntries(
-          (Array.from(state.social.relationships.entries()) as [string, SocialRelationship][])
-            .map(([k, v]) => [k, v.sentiment])
-        ),
-      };
+    // Build agent list: merge live spawned agents with unspawned profiles
+    const spawnedMap = new Map<string, SpawnedAgent>();
+    for (const a of this.spawner.getAllAgents()) spawnedMap.set(a.profile.name, a);
+
+    // Use profiles as the canonical list so we show all agents even before spawn
+    const profileList = this.agentProfiles.length > 0 ? this.agentProfiles : [];
+
+    const agents = profileList.map(profile => {
+      const spawned = spawnedMap.get(profile.name);
+      if (spawned) {
+        // Agent is connected to MC
+        const state = spawned.runner.getState();
+        return {
+          name: spawned.profile.name,
+          traits: spawned.profile.traits,
+          provider: spawned.profile.provider || this.llm.getProvider(),
+          model: spawned.profile.model || this.llm.getModel(),
+          host: spawned.profile.host || '',
+          connected: true,
+          started: spawned.runner.isRunning(),
+          position: state.perception.position
+            ? { x: Math.round(state.perception.position.x), y: Math.round(state.perception.position.y), z: Math.round(state.perception.position.z) }
+            : null,
+          health: state.perception.health,
+          food: state.perception.food,
+          isAlive: state.isAlive,
+          decision: state.cognitiveDecision.reasoning,
+          speech: state.cognitiveDecision.speech,
+          inventory: state.perception.inventory,
+          inventoryCount: state.perception.inventory.reduce((s: number, i: InventoryItem) => s + i.count, 0),
+          activeGoals: state.goals.currentGoals.filter((g: Goal) => g.active && !g.completed).length,
+          relationships: Object.fromEntries(
+            (Array.from(state.social.relationships.entries()) as [string, SocialRelationship][])
+              .map(([k, v]) => [k, v.sentiment])
+          ),
+        };
+      } else {
+        // Agent is not yet connected — show profile data only
+        return {
+          name: profile.name,
+          traits: profile.traits,
+          provider: profile.provider || this.llm.getProvider(),
+          model: profile.model || this.llm.getModel(),
+          host: profile.host || '',
+          connected: false,
+          started: false,
+          position: null,
+          health: 0,
+          food: 0,
+          isAlive: false,
+          decision: '',
+          speech: null,
+          inventory: [],
+          inventoryCount: 0,
+          activeGoals: 0,
+          relationships: {},
+        };
+      }
     });
+
+    // Also include any spawned agents not in profiles (shouldn't happen, but safety)
+    for (const [name, spawned] of spawnedMap) {
+      if (!profileList.find(p => p.name === name)) {
+        const state = spawned.runner.getState();
+        agents.push({
+          name: spawned.profile.name,
+          traits: spawned.profile.traits,
+          provider: spawned.profile.provider || this.llm.getProvider(),
+          model: spawned.profile.model || this.llm.getModel(),
+          host: spawned.profile.host || '',
+          connected: true,
+          started: spawned.runner.isRunning(),
+          position: state.perception.position
+            ? { x: Math.round(state.perception.position.x), y: Math.round(state.perception.position.y), z: Math.round(state.perception.position.z) }
+            : null,
+          health: state.perception.health,
+          food: state.perception.food,
+          isAlive: state.isAlive,
+          decision: state.cognitiveDecision.reasoning,
+          speech: state.cognitiveDecision.speech,
+          inventory: state.perception.inventory,
+          inventoryCount: state.perception.inventory.reduce((s: number, i: InventoryItem) => s + i.count, 0),
+          activeGoals: state.goals.currentGoals.filter((g: Goal) => g.active && !g.completed).length,
+          relationships: Object.fromEntries(
+            (Array.from(state.social.relationships.entries()) as [string, SocialRelationship][])
+              .map(([k, v]) => [k, v.sentiment])
+          ),
+        });
+      }
+    }
 
     return {
       timestamp: Date.now(),
@@ -296,6 +478,7 @@ export class Dashboard {
     .pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
     .pill-idle    { background: #2a2a2a; color: #888; }
     .pill-starting{ background: #1e3a1e; color: #81c784; }
+    .pill-spawned { background: #1e2a3e; color: #4fc3f7; border: 1px solid #4fc3f7; }
     .pill-running { background: #1a3a1a; color: #4caf50; border: 1px solid #4caf50; }
     .pill-stopping{ background: #3a1a1a; color: #ef9a9a; }
     .btn { padding: 6px 16px; border-radius: 5px; font-size: 12px; font-family: inherit; cursor: pointer; border: 1px solid transparent; transition: opacity .15s; }
@@ -306,10 +489,19 @@ export class Dashboard {
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px; }
     .panel { background: #151515; border: 1px solid #2a2a2a; border-radius: 8px; padding: 16px; overflow: auto; max-height: 400px; }
     .panel h2 { font-size: 13px; color: #4fc3f7; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
-    .agent-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 6px; padding: 10px; margin-bottom: 8px; }
+    .agent-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 6px; padding: 10px; margin-bottom: 8px; cursor: pointer; transition: border-color .15s; }
+    .agent-card:hover { border-color: #4fc3f7; }
     .agent-card .name { color: #81c784; font-weight: bold; }
     .agent-card .meta { font-size: 11px; color: #888; margin-top: 4px; }
     .agent-card .decision { font-size: 11px; color: #aaa; margin-top: 4px; font-style: italic; }
+    .inventory-panel { display: none; margin-top: 8px; padding: 8px; background: #111; border-radius: 4px; border: 1px solid #222; }
+    .agent-card.expanded .inventory-panel { display: block; }
+    .inv-header { font-size: 10px; color: #4fc3f7; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+    .inv-grid { display: flex; flex-wrap: wrap; gap: 4px; }
+    .inv-item { font-size: 11px; background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 4px; padding: 3px 8px; white-space: nowrap; }
+    .inv-item .inv-name { color: #81c784; }
+    .inv-item .inv-count { color: #888; margin-left: 4px; }
+    .inv-empty { font-size: 11px; color: #555; font-style: italic; }
     .chat-entry { font-size: 12px; margin-bottom: 4px; }
     .chat-entry .sender { color: #ffb74d; font-weight: bold; }
     .chat-entry .msg { color: #ccc; }
@@ -383,6 +575,37 @@ export class Dashboard {
     .modal-bench-row { display:flex; gap:8px; font-size:11px; padding:5px 0; border-bottom:1px solid #1a1a1a; }
     .modal-bench-row .bh-t { color:#555; width:160px; flex-shrink:0; }
     .modal-bench-row .bh-v { color:#81c784; }
+    /* LLM selector styles */
+    .llm-selectors { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+    .llm-selectors label { font-size:11px; color:#888; }
+    .llm-selectors select { background:#1a1a1a; color:#e0e0e0; border:1px solid #333; border-radius:4px; padding:4px 8px; font-size:11px; font-family:inherit; cursor:pointer; outline:none; }
+    .llm-selectors select:focus { border-color:#4fc3f7; }
+    .llm-selectors select option { background:#1a1a1a; color:#e0e0e0; }
+    .llm-badge { font-size:10px; padding:2px 8px; border-radius:10px; background:#1e3a5f; color:#4fc3f7; white-space:nowrap; }
+    /* Spawned state panel */
+    #spawnedPanel { display:none; position:fixed; inset:0; background:#0a0a0a; z-index:90; flex-direction:column; overflow:hidden; }
+    #spawnedPanel.visible { display:flex; }
+    #spawnedHeader { padding:16px 24px; border-bottom:1px solid #222; display:flex; align-items:center; gap:16px; }
+    #spawnedHeader h2 { color:#4fc3f7; font-size:17px; flex:1; }
+    .btn-start-all { padding:10px 28px; font-size:14px; border-radius:7px; background:#1e3a1e; color:#81c784; border:1px solid #4caf50; font-family:inherit; cursor:pointer; }
+    .btn-start-all:hover { background:#2e4a2e; }
+    .btn-start-single { padding:5px 14px; font-size:11px; border-radius:5px; background:#1e3a1e; color:#81c784; border:1px solid #4caf50; font-family:inherit; cursor:pointer; white-space:nowrap; }
+    .btn-start-single:hover { background:#2e4a2e; }
+    .btn-start-single:disabled { opacity:.4; cursor:default; }
+    .btn-start-single.started { background:#1a1a1a; color:#4caf50; border-color:#333; cursor:default; }
+    #spawnedBody { flex:1; overflow-y:auto; padding:24px; display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:16px; align-content:start; }
+    .spawn-card { background:#151515; border:1px solid #2a2a2a; border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:10px; }
+    .spawn-card .sc-header { display:flex; align-items:center; gap:10px; }
+    .spawn-card .sc-name { font-size:15px; font-weight:bold; color:#81c784; flex:1; }
+    .spawn-card .sc-status { font-size:10px; padding:2px 8px; border-radius:10px; }
+    .spawn-card .sc-status.spawned { background:#1e2a3e; color:#4fc3f7; }
+    .spawn-card .sc-status.running { background:#1a3a1a; color:#4caf50; }
+    .spawn-card .sc-traits { font-size:11px; color:#888; }
+    .spawn-card .sc-row { display:flex; gap:8px; align-items:center; }
+    .spawn-card .sc-row label { font-size:11px; color:#888; min-width:55px; }
+    .spawn-card .sc-row select, .spawn-card .sc-row input { background:#1a1a1a; color:#e0e0e0; border:1px solid #333; border-radius:4px; padding:4px 8px; font-size:11px; font-family:inherit; flex:1; min-width:0; }
+    .spawn-card .sc-row select:focus, .spawn-card .sc-row input:focus { border-color:#4fc3f7; outline:none; }
+    .spawn-card .sc-actions { display:flex; justify-content:flex-end; margin-top:4px; }
   </style>
 </head>
 <body>
@@ -418,8 +641,20 @@ export class Dashboard {
     </div>
     <div id="splashBody">
       <div id="splashLeft">
-        <p>Start a new simulation run when your Minecraft server is ready.</p>
-        <button class="btn-start-big" id="splashStartBtn">▶ Start Simulation</button>
+        <p>Start a new simulation run when your Minecraft server is ready.</p>        <div class="llm-selectors" style="flex-direction:column;width:100%;gap:6px;">
+          <div style="display:flex;gap:8px;align-items:center;width:100%;">
+            <label>Provider:</label>
+            <select id="splashProviderSelect" onchange="switchProvider(this.value)" style="flex:1;">
+              <option value="cerebras">Cerebras</option>
+              <option value="ollama">Ollama</option>
+            </select>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;width:100%;">
+            <label>Model:</label>
+            <select id="splashModelSelect" onchange="switchModel(this.value)" style="flex:1;"></select>
+          </div>
+          <span class="llm-badge" id="splashLlmBadge" style="align-self:flex-start;">cerebras / gpt-oss-120b</span>
+        </div>        <button class="btn-start-big" id="splashStartBtn">▶ Start Simulation</button>
         <div id="splashStatus"></div>
       </div>
       <div id="splashRight">
@@ -429,9 +664,30 @@ export class Dashboard {
     </div>
   </div>
 
+  <!-- Spawned panel: agents connected but AI not running yet -->
+  <div id="spawnedPanel">
+    <div id="spawnedHeader">
+      <h2>Agents Spawned — Configure &amp; Start</h2>
+      <span class="pill pill-spawned">spawned</span>
+      <button class="btn-start-all" id="startAllBtn" onclick="startAllAgents()">▶ Start All Agents</button>
+      <button class="btn btn-stop" onclick="stopSim()">■ Stop</button>
+    </div>
+    <div id="spawnedBody"></div>
+  </div>
+
   <div class="header">
     <h1>Project Sid — Simulation Dashboard</h1>
     <div class="header-right">
+      <div class="llm-selectors">
+        <label>Provider:</label>
+        <select id="providerSelect" onchange="switchProvider(this.value)">
+          <option value="cerebras">Cerebras</option>
+          <option value="ollama">Ollama</option>
+        </select>
+        <label>Model:</label>
+        <select id="modelSelect" onchange="switchModel(this.value)"></select>
+        <span class="llm-badge" id="llmBadge">cerebras / gpt-oss-120b</span>
+      </div>
       <span class="pill pill-idle" id="statePill">idle</span>
       <span class="stats" id="headerStats"></span>
       <button class="btn btn-start" id="startBtn" onclick="startSim()">▶ Start</button>
@@ -498,10 +754,14 @@ export class Dashboard {
       const startBtn = document.getElementById('startBtn');
       const stopBtn  = document.getElementById('stopBtn');
       startBtn.disabled = state !== 'idle';
-      stopBtn.disabled  = state !== 'running';
+      stopBtn.disabled  = state !== 'running' && state !== 'spawned';
       // Toggle idle splash
       const splash = document.getElementById('idleSplash');
       splash.style.display = state === 'idle' ? 'flex' : 'none';
+      // Toggle spawned panel
+      const spawnedPanel = document.getElementById('spawnedPanel');
+      if (state === 'spawned') { spawnedPanel.classList.add('visible'); }
+      else { spawnedPanel.classList.remove('visible'); }
       // Reload runs list after a run ends
       if (state === 'idle') loadRuns();
     }
@@ -696,6 +956,70 @@ export class Dashboard {
     function updateDashboard(data) {
       setUiState(data.simulationState || 'idle');
 
+      // Render spawned panel agent cards
+      if (data.simulationState === 'spawned' || data.simulationState === 'running') {
+        const spawnedBody = document.getElementById('spawnedBody');
+        if (spawnedBody && data.simulationState === 'spawned') {
+          spawnedBody.innerHTML = (data.agents || []).map(a => {
+            const safeName = a.name.replace(/"/g, '&quot;');
+            const isConnected = a.connected;
+            const isStarted = a.started;
+            // Status: NOT CONNECTED → CONNECTING → RUNNING
+            let statusClass, statusText, btnClass, btnText, btnDisabled;
+            if (isStarted) {
+              statusClass = 'running'; statusText = 'RUNNING';
+              btnClass = 'btn-start-single started'; btnText = '✓ Running'; btnDisabled = true;
+            } else if (isConnected) {
+              statusClass = 'running'; statusText = 'CONNECTED';
+              btnClass = 'btn-start-single started'; btnText = '✓ Connected'; btnDisabled = true;
+            } else {
+              statusClass = 'spawned'; statusText = 'READY';
+              btnClass = 'btn-start-single'; btnText = '▶ Start'; btnDisabled = false;
+            }
+            const traits = (a.traits || []).join(', ');
+            // Disable config controls once the agent is already connected
+            const configDisabled = isConnected ? 'disabled' : '';
+            return \`
+            <div class="spawn-card" data-agent="\${safeName}">
+              <div class="sc-header">
+                <span class="sc-name">\${a.name}</span>
+                <span class="sc-status \${statusClass}">\${statusText}</span>
+              </div>
+              <div class="sc-traits">\${traits}</div>
+              <div class="sc-row">
+                <label>Provider:</label>
+                <select onchange="switchSpawnProvider('\${safeName}',this.value)" \${configDisabled}>
+                  <option value="cerebras" \${a.provider==='cerebras'?'selected':''}>Cerebras</option>
+                  <option value="ollama" \${a.provider==='ollama'?'selected':''}>Ollama</option>
+                </select>
+              </div>
+              <div class="sc-row">
+                <label>Model:</label>
+                <select class="spawn-model-sel" data-agent="\${safeName}" onchange="switchSpawnModel('\${safeName}',this.value)" \${configDisabled}>
+                </select>
+              </div>
+              <div class="sc-row">
+                <label>Host:</label>
+                <input type="text" class="spawn-host-input" data-agent="\${safeName}" value="\${a.host || ''}" placeholder="default (use global)" onchange="switchSpawnHost('\${safeName}',this.value)" \${configDisabled} />
+              </div>
+              \${a.position ? \`<div class="sc-traits">Position: (\${a.position.x}, \${a.position.y}, \${a.position.z}) | HP: \${a.health}/20</div>\` : ''}
+              <div class="sc-actions">
+                <button class="\${btnClass}" onclick="startSingleAgent('\${safeName}')" \${btnDisabled ? 'disabled' : ''}>\${btnText}</button>
+              </div>
+            </div>\`;
+          }).join('');
+          // Populate model selects for spawn cards
+          document.querySelectorAll('.spawn-model-sel').forEach(sel => {
+            const agentName = sel.getAttribute('data-agent');
+            const agentData = (data.agents || []).find(a => a.name === agentName);
+            if (!agentData) return;
+            const prov = agentData.provider || 'ollama';
+            const models = prov === 'cerebras' ? _allModels.cerebras : _allModels.ollama;
+            sel.innerHTML = models.map(m => '<option value="' + m + '"' + (m === agentData.model ? ' selected' : '') + '>' + m + '</option>').join('');
+          });
+        }
+      }
+
       document.getElementById('headerStats').textContent =
         data.simulationState === 'running'
           ? \`Run: \${data.currentRunId || ''} | Agents: \${data.agentCount} | LLM calls: \${data.llmStats?.totalCalls || 0} | Tokens: \${(data.llmStats?.totalTokens || 0).toLocaleString()}\`
@@ -703,17 +1027,49 @@ export class Dashboard {
 
       // Agent list
       const agentList = document.getElementById('agentList');
-      agentList.innerHTML = (data.agents || []).map(a => \`
-        <div class="agent-card">
-          <div class="name">\${a.name} \${a.isAlive ? '🟢' : '🔴'}</div>
+      agentList.innerHTML = (data.agents || []).map(a => {
+        const invItems = (a.inventory || []).map(i =>
+          \`<span class="inv-item"><span class="inv-name">\${i.name.replace(/_/g,' ')}</span><span class="inv-count">\u00d7\${i.count}</span></span>\`
+        ).join('');
+        const invPanel = invItems
+          ? \`<div class="inv-header">Inventory (\${a.inventoryCount} items)</div><div class="inv-grid">\${invItems}</div>\`
+          : \`<div class="inv-empty">Empty inventory</div>\`;
+        const safeName = a.name.replace(/"/g, '&quot;');
+        const modelBadge = \`<span class="llm-badge" style="margin-left:8px;font-size:9px">\${a.provider}/\${a.model}</span>\`;
+        const modelPanel = \`<div class="agent-model-panel" style="margin-top:8px;padding-top:8px;border-top:1px solid #222;">
+          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
+            <label style="font-size:10px;color:#888;">Provider:</label>
+            <select class="agent-provider-sel" data-agent="\${safeName}" onchange="switchAgentProvider('\${safeName}',this.value)" style="background:#1a1a1a;color:#e0e0e0;border:1px solid #333;border-radius:3px;padding:2px 6px;font-size:10px;font-family:inherit;">
+              <option value="cerebras" \${a.provider==='cerebras'?'selected':''}>Cerebras</option>
+              <option value="ollama" \${a.provider==='ollama'?'selected':''}>Ollama</option>
+            </select>
+            <label style="font-size:10px;color:#888;">Model:</label>
+            <select class="agent-model-sel" data-agent="\${safeName}" onchange="switchAgentModel('\${safeName}',this.value)" style="background:#1a1a1a;color:#e0e0e0;border:1px solid #333;border-radius:3px;padding:2px 6px;font-size:10px;font-family:inherit;max-width:180px;">
+            </select>
+          </div>
+        </div>\`;
+        return \`
+        <div class="agent-card" onclick="if(event.target.tagName!=='SELECT')this.classList.toggle('expanded')" data-agent-name="\${safeName}">
+          <div class="name">\${a.name} \${a.isAlive ? '🟢' : '🔴'}\${modelBadge}</div>
           <div class="meta">
             HP: \${a.health}/20 | Food: \${a.food}/20 | Items: \${a.inventoryCount} | Goals: \${a.activeGoals}
             \${a.position ? \` | Pos: (\${a.position.x}, \${a.position.y}, \${a.position.z})\` : ''}
           </div>
           <div class="decision">\${a.decision || 'Idle'}</div>
           \${a.speech ? \`<div class="decision">💬 "\${a.speech}"</div>\` : ''}
-        </div>
-      \`).join('') || '<div style="color:#555;font-size:12px">No agents spawned</div>';
+          <div class="inventory-panel">\${invPanel}\${modelPanel}</div>
+        </div>\`;
+      }).join('') || '<div style="color:#555;font-size:12px">No agents spawned</div>';
+
+      // Populate agent model selects with available models
+      document.querySelectorAll('.agent-model-sel').forEach(sel => {
+        const agentName = sel.getAttribute('data-agent');
+        const agentData = (data.agents || []).find(a => a.name === agentName);
+        if (!agentData) return;
+        const prov = agentData.provider || 'ollama';
+        const models = prov === 'cerebras' ? _allModels.cerebras : _allModels.ollama;
+        sel.innerHTML = models.map(m => '<option value="' + m + '"' + (m === agentData.model ? ' selected' : '') + '>' + m + '</option>').join('');
+      });
 
       // Map
       const map = document.getElementById('map');
@@ -768,6 +1124,8 @@ export class Dashboard {
       // LLM Stats
       const llm = data.llmStats;
       document.getElementById('llmStats').innerHTML = llm ? \`
+        <div class="metric"><span class="label">Provider</span><span class="value">\${llm.provider || '?'}</span></div>
+        <div class="metric"><span class="label">Model</span><span class="value">\${llm.model || '?'}</span></div>
         <div class="metric"><span class="label">Total Calls</span><span class="value">\${llm.totalCalls}</span></div>
         <div class="metric"><span class="label">Total Tokens</span><span class="value">\${llm.totalTokens.toLocaleString()}</span></div>
         <div class="metric"><span class="label">Avg Tokens/Call</span><span class="value">\${llm.avgTokensPerCall}</span></div>
@@ -776,6 +1134,12 @@ export class Dashboard {
         <div class="metric"><span class="label">Queued</span><span class="value">\${llm.queued}</span></div>
       \` : '';
 
+      // Update LLM badge and selects from live data
+      if (llm) {
+        updateLlmBadge(llm.provider, llm.model);
+        syncProviderSelects(llm.provider);
+      }
+
       // Constitution
       document.getElementById('constitution').textContent = data.constitution || '';
     }
@@ -783,6 +1147,150 @@ export class Dashboard {
     // Init: show splash immediately
     setUiState('idle');
     document.getElementById('splashStartBtn').addEventListener('click', startSim);
+
+    // ── LLM provider / model switching ────────────────────────────────────
+    let _allModels = { cerebras: [], ollama: [] };
+    let _currentProvider = 'cerebras';
+    let _currentModel = 'gpt-oss-120b';
+
+    function updateLlmBadge(provider, model) {
+      const text = provider + ' / ' + model;
+      const el1 = document.getElementById('llmBadge');
+      const el2 = document.getElementById('splashLlmBadge');
+      if (el1) el1.textContent = text;
+      if (el2) el2.textContent = text;
+    }
+
+    function syncProviderSelects(provider) {
+      ['providerSelect', 'splashProviderSelect'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.value !== provider) el.value = provider;
+      });
+    }
+
+    function populateModelSelects(models) {
+      ['modelSelect', 'splashModelSelect'].forEach(id => {
+        const sel = document.getElementById(id);
+        if (!sel) return;
+        const prev = sel.value;
+        sel.innerHTML = models.map(m => '<option value=\"' + m + '\">' + m + '</option>').join('');
+        // Restore selection if still available
+        if (models.includes(prev)) sel.value = prev;
+        else if (models.includes(_currentModel)) sel.value = _currentModel;
+      });
+    }
+
+    async function loadModels() {
+      try {
+        _allModels = await fetch('/api/llm-models').then(r => r.json());
+        const models = _currentProvider === 'cerebras' ? _allModels.cerebras : _allModels.ollama;
+        populateModelSelects(models);
+      } catch(e) { console.error('Failed to load models', e); }
+    }
+
+    async function loadLlmConfig() {
+      try {
+        const cfg = await fetch('/api/llm-config').then(r => r.json());
+        _currentProvider = cfg.provider;
+        _currentModel = cfg.model;
+        syncProviderSelects(cfg.provider);
+        updateLlmBadge(cfg.provider, cfg.model);
+        await loadModels();
+        // Set model select to current
+        ['modelSelect', 'splashModelSelect'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.value = cfg.model;
+        });
+      } catch(e) { console.error('Failed to load LLM config', e); }
+    }
+
+    async function switchProvider(provider) {
+      _currentProvider = provider;
+      syncProviderSelects(provider);
+      // Update model list for this provider
+      const models = provider === 'cerebras' ? _allModels.cerebras : _allModels.ollama;
+      populateModelSelects(models);
+      // Auto-select first model
+      const firstModel = models[0] || '';
+      _currentModel = firstModel;
+      updateLlmBadge(provider, firstModel);
+      // Push to server
+      await fetch('/api/llm-provider', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({provider}) });
+      if (firstModel) {
+        await fetch('/api/llm-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({model:firstModel}) });
+      }
+    }
+
+    async function switchModel(model) {
+      _currentModel = model;
+      updateLlmBadge(_currentProvider, model);
+      // Sync both selects
+      ['modelSelect', 'splashModelSelect'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = model;
+      });
+      await fetch('/api/llm-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({model}) });
+    }
+
+    // ── Per-agent model/provider switching ──────────────────────────────
+    async function switchAgentProvider(agentName, provider) {
+      // Update model list for this agent's provider
+      const models = provider === 'cerebras' ? _allModels.cerebras : _allModels.ollama;
+      const firstModel = models[0] || '';
+      // Update the agent's model select
+      document.querySelectorAll('.agent-model-sel[data-agent="' + agentName + '"]').forEach(sel => {
+        sel.innerHTML = models.map(m => '<option value="' + m + '"' + (m === firstModel ? ' selected' : '') + '>' + m + '</option>').join('');
+      });
+      await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, provider, model: firstModel}) });
+    }
+
+    async function switchAgentModel(agentName, model) {
+      await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, model}) });
+    }
+
+    // ── Spawned-state controls ─────────────────────────────────────────
+    async function startAllAgents() {
+      document.getElementById('startAllBtn').disabled = true;
+      document.getElementById('startAllBtn').textContent = 'Connecting all…';
+      // Disable all individual start buttons and config controls
+      document.querySelectorAll('.spawn-card .btn-start-single').forEach(btn => { btn.disabled = true; btn.textContent = 'Connecting…'; });
+      document.querySelectorAll('.spawn-card select, .spawn-card input').forEach(el => el.disabled = true);
+      document.querySelectorAll('.sc-status').forEach(el => { el.textContent = 'CONNECTING'; el.className = 'sc-status spawned'; });
+      await fetch('/api/start-all-agents', { method: 'POST' });
+    }
+
+    async function startSingleAgent(name) {
+      const card = document.querySelector('.spawn-card[data-agent="' + name + '"]');
+      const btn = card ? card.querySelector('.btn-start-single') : null;
+      const status = card ? card.querySelector('.sc-status') : null;
+      if (btn) { btn.disabled = true; btn.textContent = 'Connecting…'; }
+      if (status) { status.textContent = 'CONNECTING'; status.className = 'sc-status spawned'; }
+      // Disable config controls immediately
+      if (card) {
+        card.querySelectorAll('select, input').forEach(el => el.disabled = true);
+      }
+      await fetch('/api/start-agent/' + encodeURIComponent(name), { method: 'POST' });
+    }
+
+    async function switchSpawnProvider(agentName, provider) {
+      const models = provider === 'cerebras' ? _allModels.cerebras : _allModels.ollama;
+      const firstModel = models[0] || '';
+      document.querySelectorAll('.spawn-model-sel[data-agent="' + agentName + '"]').forEach(sel => {
+        sel.innerHTML = models.map(m => '<option value="' + m + '"' + (m === firstModel ? ' selected' : '') + '>' + m + '</option>').join('');
+      });
+      await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, provider, model: firstModel}) });
+    }
+
+    async function switchSpawnModel(agentName, model) {
+      await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, model}) });
+    }
+
+    async function switchSpawnHost(agentName, host) {
+      await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, host}) });
+    }
+
+    // Load LLM config + models on page load
+    loadLlmConfig();
   </script>
 </body>
 </html>`;

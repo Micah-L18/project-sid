@@ -121,7 +121,7 @@ export const MemoryModule: PianoModule = async (
       const result = await context.llm.promptJSON<{ importance: number; summary: string }>(
         IMPORTANCE_PROMPT,
         entry.content,
-        { maxTokens: 128, temperature: 0.3 }
+        { maxTokens: 128, temperature: 0.3, model: context.agentModel, provider: context.agentProvider, host: context.agentHost }
       );
       entry.importance = Math.max(1, Math.min(10, result.importance));
       // Optionally replace content with summary for compactness

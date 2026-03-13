@@ -30,6 +30,12 @@ export interface AgentProfile {
   backstory?: string;
   communityGoal: string;
   spawnLocation: { x: number; y: number; z: number };
+  /** Per-agent LLM provider override (defaults to global) */
+  provider?: 'cerebras' | 'ollama';
+  /** Per-agent LLM model override (defaults to global) */
+  model?: string;
+  /** Per-agent LLM host override (e.g. a different Ollama instance URL) */
+  host?: string;
   inventory?: Record<string, number>;
   locationMemories?: Array<{
     description: string;
@@ -61,6 +67,8 @@ export interface SpawnedAgent {
 
 export class Spawner {
   private agents: Map<string, SpawnedAgent> = new Map();
+  private reconnectTimers: Set<ReturnType<typeof setTimeout>> = new Set();
+  private stopped = false;
   private commBus: CommunicationBus;
   private llm: LLMClient;
   private serverConfig: ServerConfig;
@@ -74,6 +82,7 @@ export class Spawner {
   }
 
   async spawnAgents(profiles: AgentProfile[], staggerMs: number = 500): Promise<void> {
+    this.stopped = false; // Reset for new simulation run
     this.logger.info(`Spawning ${profiles.length} agents (stagger: ${staggerMs}ms)...`);
 
     for (let i = 0; i < profiles.length; i++) {
@@ -116,6 +125,9 @@ export class Spawner {
       communityGoal: profile.communityGoal,
       spawnLocation: new Vec3(profile.spawnLocation.x, profile.spawnLocation.y, profile.spawnLocation.z),
       backstory: profile.backstory || `${profile.name} is a member of the community.`,
+      provider: profile.provider,
+      model: profile.model,
+      host: profile.host,
     };
 
     const state = createDefaultAgentState(identity);
@@ -156,6 +168,9 @@ export class Spawner {
       },
       simTime: Date.now(),
       agentName: profile.name,
+      agentProvider: profile.provider,
+      agentModel: profile.model,
+      agentHost: profile.host,
     };
 
     const runner = new ModuleRunner(state, context);
@@ -194,6 +209,34 @@ export class Spawner {
     });
     bot.on('error', (err: Error) => { this.logger.error(`${profile.name} error: ${err.message}`); });
 
+    // ── Listen to Minecraft server chat (captures human player messages) ────
+    // The CommunicationBus only handles inter-agent chat. This listener
+    // picks up messages from human players so the agent can hear and respond.
+    const allAgentNames = new Set<string>();
+    // We'll also add this bot's own name so we can filter it out
+    allAgentNames.add(profile.name);
+
+    bot.on('chat' as any, (username: string, message: string) => {
+      // Skip our own messages
+      if (username === profile.name || username === bot.username) return;
+      // Skip messages from other registered agents (already handled by CommunicationBus)
+      if (this.agents.has(username)) return;
+
+      // This is a human player message — inject into agent's perception
+      const agentState = runner.getMutableState();
+      const entry: ChatEntry = {
+        sender: username,
+        message,
+        timestamp: Date.now(),
+        isProximity: true,
+      };
+      agentState.perception.recentChat.push(entry);
+      if (agentState.perception.recentChat.length > 30) {
+        agentState.perception.recentChat = agentState.perception.recentChat.slice(-20);
+      }
+      this.logger.info(`${profile.name} heard player ${username}: "${message.substring(0, 80)}"`);
+    });
+
     // Anti-idle heartbeat: prevent Minecraft server from kicking idle bots
     const heartbeat = setInterval(() => {
       if (!state.isAlive) { clearInterval(heartbeat); return; }
@@ -215,7 +258,59 @@ export class Spawner {
     this.logger.info(`Started all ${this.agents.size} agent module runners`);
   }
 
+  startAgent(name: string): boolean {
+    const agent = this.agents.get(name);
+    if (!agent) return false;
+    agent.runner.start();
+    this.logger.info(`Started agent module runner: ${name}`);
+    return true;
+  }
+
+  /** Spawn a single agent into MC, connect, and start its AI loop in one step. */
+  async spawnAndStartAgent(profile: AgentProfile): Promise<boolean> {
+    if (this.agents.has(profile.name)) {
+      this.logger.warn(`${profile.name} is already spawned — skipping`);
+      return false;
+    }
+    this.stopped = false;
+    try {
+      const spawned = await this.spawnAgent(profile);
+      spawned.runner.start();
+      this.logger.info(`Spawned and started agent: ${profile.name}`);
+      return true;
+    } catch (error) {
+      this.logger.error(`Failed to spawn+start ${profile.name}:`, error);
+      return false;
+    }
+  }
+
+  /** Spawn and start all agents from a list of profiles. */
+  async spawnAndStartAll(profiles: AgentProfile[], staggerMs: number = 500): Promise<void> {
+    this.stopped = false;
+    for (let i = 0; i < profiles.length; i++) {
+      const profile = profiles[i];
+      if (this.agents.has(profile.name)) {
+        // Already spawned — just make sure runner is started
+        this.agents.get(profile.name)!.runner.start();
+        continue;
+      }
+      try {
+        const spawned = await this.spawnAgent(profile);
+        spawned.runner.start();
+        this.logger.info(`Spawned+started agent ${i + 1}/${profiles.length}: ${profile.name}`);
+      } catch (error) {
+        this.logger.error(`Failed to spawn ${profile.name}:`, error);
+      }
+      if (i < profiles.length - 1) await new Promise(r => setTimeout(r, staggerMs));
+    }
+    this.logger.info(`All agents spawned+started. Active: ${this.agents.size}/${profiles.length}`);
+  }
+
   private scheduleReconnect(profile: AgentProfile, attempt = 1): void {
+    if (this.stopped) {
+      this.logger.info(`${profile.name}: skipping reconnect — simulation stopped`);
+      return;
+    }
     const maxAttempts = 10;
     if (attempt > maxAttempts) {
       this.logger.error(`${profile.name}: giving up after ${maxAttempts} reconnect attempts`);
@@ -225,7 +320,9 @@ export class Spawner {
     const delayMs = Math.min(5000 * Math.pow(2, attempt - 1), 60_000);
     this.logger.info(`${profile.name}: reconnecting in ${delayMs / 1000}s (attempt ${attempt}/${maxAttempts})...`);
 
-    setTimeout(async () => {
+    const timer = setTimeout(async () => {
+      this.reconnectTimers.delete(timer);
+      if (this.stopped) return; // Check again after delay
       try {
         this.agents.delete(profile.name);
         this.commBus.unregisterAgent(profile.name);
@@ -238,11 +335,17 @@ export class Spawner {
         this.scheduleReconnect(profile, attempt + 1);
       }
     }, delayMs);
+    this.reconnectTimers.add(timer);
   }
 
   stopAll(): void {
+    this.stopped = true;
+    // Cancel all pending reconnect timers
+    for (const timer of this.reconnectTimers) { clearTimeout(timer); }
+    this.reconnectTimers.clear();
     for (const agent of this.agents.values()) { agent.runner.stop(); agent.bot.quit(); }
-    this.logger.info('Stopped all agents');
+    this.agents.clear();
+    this.logger.info('Stopped all agents and cancelled pending reconnects');
   }
 
   getAgent(name: string): SpawnedAgent | undefined { return this.agents.get(name); }

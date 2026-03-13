@@ -29,6 +29,12 @@ export interface ModuleContext {
   simTime: number;
   /** Agent name shortcut */
   agentName: string;
+  /** Per-agent LLM provider override (if set, context.llm.chat dispatches to this provider) */
+  agentProvider?: 'cerebras' | 'ollama';
+  /** Per-agent LLM model override (pass as options.model to LLM calls) */
+  agentModel?: string;
+  /** Per-agent LLM host override (e.g. different Ollama instance URL) */
+  agentHost?: string;
 }
 
 /**
@@ -220,6 +226,10 @@ export class ModuleRunner {
 
   getMutableState(): AgentState {
     return this.state;
+  }
+
+  getContext(): ModuleContext {
+    return this.context;
   }
 
   getModuleStats(): Record<string, {

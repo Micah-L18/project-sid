@@ -1,8 +1,8 @@
 /**
- * LLM Client — Unified interface to local LLMs via Ollama (OpenAI-compatible API).
- * Supports chat completions and embeddings. Model is configurable per-call.
+ * LLM Client — Cerebras (OpenAI-compatible) for chat, Ollama for embeddings.
  */
 
+import OpenAI from 'openai';
 import { Ollama } from 'ollama';
 import { Logger } from '../utils/Logger';
 
@@ -15,17 +15,17 @@ export interface ChatMessage {
 
 export interface ChatOptions {
   model?: string;
+  /** Override provider for this call (per-agent routing) */
+  provider?: LLMProvider;
+  /** Override host URL for this call (per-agent Ollama/Cerebras instance) */
+  host?: string;
   temperature?: number;
   maxTokens?: number;
-  /** If true, return a JSON object (model must support structured output) */
+  /** If true, return a JSON object */
   json?: boolean;
   /** Stop sequences */
   stop?: string[];
-  /**
-   * Set to false to suppress <think> blocks on reasoning models (e.g. qwen3, andy-lite).
-   * Defaults to true (thinking enabled) for plain chat; promptJSON overrides to false
-   * so the model doesn't exhaust its token budget before writing JSON.
-   */
+  /** Kept for backward compat — ignored for Cerebras (no think blocks). */
   think?: boolean;
 }
 
@@ -42,84 +42,176 @@ export interface EmbeddingOptions {
   model?: string;
 }
 
+export type LLMProvider = 'cerebras' | 'ollama';
+
 export interface LLMConfig {
-  host: string;        // e.g. "http://localhost:11434"
-  defaultModel: string; // e.g. "qwen3.5:9b"
-  embeddingModel: string; // e.g. "nomic-embed-text"
+  /** Cerebras API base URL */
+  host: string;
+  /** Cerebras API key (env fallback: CEREBRAS_API_KEY) */
+  apiKey: string;
+  defaultModel: string;
+  /** Ollama host — used for embeddings and optionally chat */
+  ollamaHost: string;
+  embeddingModel: string;
   defaultTemperature: number;
   defaultMaxTokens: number;
-  /** Max concurrent requests */
   maxConcurrency: number;
-  /** Timeout per request in ms */
   timeoutMs: number;
+  /** Which provider to use for chat: 'cerebras' or 'ollama' */
+  provider: LLMProvider;
 }
 
 // ── Defaults ─────────────────────────────────────────────────────────────────
 
 export const DEFAULT_LLM_CONFIG: LLMConfig = {
-  host: 'http://192.168.0.219:11434',
-  defaultModel: 'qwen3.5:9b',
+  host: 'https://api.cerebras.ai/v1',
+  apiKey: '',
+  defaultModel: 'gpt-oss-120b',
+  ollamaHost: 'http://192.168.0.219:11434',
   embeddingModel: 'nomic-embed-text',
   defaultTemperature: 0.7,
-  defaultMaxTokens: 2024,
+  defaultMaxTokens: 5048,
   maxConcurrency: 8,
   timeoutMs: 60_000,
+  provider: 'cerebras',
 };
 
 // ── Client ───────────────────────────────────────────────────────────────────
 
 export class LLMClient {
+  private openai: OpenAI;
   private ollama: Ollama;
   private config: LLMConfig;
   private logger: Logger;
   private inflight = 0;
   private queue: Array<() => void> = [];
 
-  // Metrics
+  /** Cached per-host Ollama clients */
+  private ollamaHosts: Map<string, Ollama> = new Map();
+  /** Cached per-host OpenAI clients */
+  private openaiHosts: Map<string, OpenAI> = new Map();
+
   public totalCalls = 0;
   public totalTokens = 0;
   public totalDurationMs = 0;
 
   constructor(config: Partial<LLMConfig> = {}) {
     this.config = { ...DEFAULT_LLM_CONFIG, ...config };
-    this.ollama = new Ollama({ host: this.config.host });
+
+    // Resolve API key: explicit config > env > empty
+    if (!this.config.apiKey) {
+      this.config.apiKey = process.env.CEREBRAS_API_KEY ?? '';
+    }
+
+    this.openai = new OpenAI({
+      apiKey: this.config.apiKey,
+      baseURL: this.config.host,
+    });
+    this.ollama = new Ollama({ host: this.config.ollamaHost });
     this.logger = new Logger('LLMClient');
   }
 
-  // ── Chat Completion ──────────────────────────────────────────────────────
+  // ── Provider / Model Switching ──────────────────────────────────────────
+
+  getProvider(): LLMProvider { return this.config.provider; }
+  getModel(): string { return this.config.defaultModel; }
+  getConfig(): Readonly<LLMConfig> { return this.config; }
+
+  setProvider(provider: LLMProvider): void {
+    this.config.provider = provider;
+    this.logger.info(`Switched chat provider to: ${provider}`);
+  }
+
+  setModel(model: string): void {
+    this.config.defaultModel = model;
+    this.logger.info(`Switched default model to: ${model}`);
+  }
+
+  /** List models available from Cerebras */
+  async listCerebrasModels(): Promise<string[]> {
+    try {
+      const response = await this.openai.models.list();
+      return response.data.map(m => m.id);
+    } catch {
+      return ['gpt-oss-120b'];
+    }
+  }
+
+  /** List models available from Ollama */
+  async listOllamaModels(): Promise<string[]> {
+    try {
+      const response = await this.ollama.list();
+      return response.models.map(m => m.name);
+    } catch {
+      return [];
+    }
+  }
+
+  // ── Per-host client accessors (cached) ──────────────────────────────────
+
+  private getOllamaClient(host?: string): Ollama {
+    if (!host || host === this.config.ollamaHost) return this.ollama;
+    let client = this.ollamaHosts.get(host);
+    if (!client) {
+      client = new Ollama({ host });
+      this.ollamaHosts.set(host, client);
+      this.logger.info(`Created Ollama client for host: ${host}`);
+    }
+    return client;
+  }
+
+  private getOpenAIClient(host?: string): OpenAI {
+    if (!host || host === this.config.host) return this.openai;
+    let client = this.openaiHosts.get(host);
+    if (!client) {
+      client = new OpenAI({ apiKey: this.config.apiKey, baseURL: host });
+      this.openaiHosts.set(host, client);
+      this.logger.info(`Created OpenAI client for host: ${host}`);
+    }
+    return client;
+  }
+
+  // ── Chat Completion (dispatches to Cerebras or Ollama) ──────────────────
 
   async chat(messages: ChatMessage[], options: ChatOptions = {}): Promise<ChatResponse> {
+    const effectiveProvider = options.provider ?? this.config.provider;
+    if (effectiveProvider === 'ollama') {
+      return this.chatOllama(messages, options);
+    }
+    return this.chatCerebras(messages, options);
+  }
+
+  private async chatCerebras(messages: ChatMessage[], options: ChatOptions): Promise<ChatResponse> {
     const model = options.model ?? this.config.defaultModel;
-    const maxRetries = 2; // up to 3 total attempts for transient errors
+    const maxRetries = 2;
 
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
       await this.acquireConcurrency();
       const start = Date.now();
 
       try {
+        const client = this.getOpenAIClient(options.host);
         const response = await this.withTimeout(
-          this.ollama.chat({
+          client.chat.completions.create({
             model,
             messages,
-            options: {
-              temperature: options.temperature ?? this.config.defaultTemperature,
-              num_predict: options.maxTokens ?? this.config.defaultMaxTokens,
-              stop: options.stop,
-            },
-            think: options.think,
-            format: options.json ? 'json' : undefined,
+            temperature: options.temperature ?? this.config.defaultTemperature,
+            max_completion_tokens: options.maxTokens ?? this.config.defaultMaxTokens,
+            stop: options.stop ?? undefined,
+            response_format: options.json ? { type: 'json_object' } : undefined,
           }),
           this.config.timeoutMs,
           `Chat call to ${model}`
         );
 
         const durationMs = Date.now() - start;
+        const choice = response.choices?.[0];
         const result: ChatResponse = {
-          content: response.message.content,
+          content: choice?.message?.content ?? '',
           model,
-          promptTokens: response.prompt_eval_count ?? 0,
-          completionTokens: response.eval_count ?? 0,
-          totalTokens: (response.prompt_eval_count ?? 0) + (response.eval_count ?? 0),
+          promptTokens: response.usage?.prompt_tokens ?? 0,
+          completionTokens: response.usage?.completion_tokens ?? 0,
+          totalTokens: response.usage?.total_tokens ?? 0,
           durationMs,
         };
 
@@ -135,7 +227,8 @@ export class LLMClient {
         const isTransient = error instanceof Error &&
           (error.message.includes('timeout') || error.message.includes('ECONNRESET') ||
            error.message.includes('EHOSTDOWN') || error.message.includes('ECONNREFUSED') ||
-           error.message.includes('socket hang up') || error.message.includes('fetch failed'));
+           error.message.includes('socket hang up') || error.message.includes('fetch failed') ||
+           error.message.includes('429') || error.message.includes('rate'));
 
         if (isTransient && attempt < maxRetries) {
           const backoffMs = 2000 * (attempt + 1);
@@ -147,8 +240,67 @@ export class LLMClient {
         throw error;
       }
     }
-    // Should never reach here
     throw new Error(`Chat exhausted all retries for ${model}`);
+  }
+
+  private async chatOllama(messages: ChatMessage[], options: ChatOptions): Promise<ChatResponse> {
+    const model = options.model ?? this.config.defaultModel;
+    const maxRetries = 2;
+
+    for (let attempt = 0; attempt <= maxRetries; attempt++) {
+      await this.acquireConcurrency();
+      const start = Date.now();
+
+      try {
+        const client = this.getOllamaClient(options.host);
+        const response = await this.withTimeout(
+          client.chat({
+            model,
+            messages: messages.map(m => ({ role: m.role, content: m.content })),
+            format: options.json ? 'json' : undefined,
+            options: {
+              temperature: options.temperature ?? this.config.defaultTemperature,
+              num_predict: options.maxTokens ?? this.config.defaultMaxTokens,
+            },
+          }),
+          this.config.timeoutMs,
+          `Ollama chat to ${model}`
+        );
+
+        const durationMs = Date.now() - start;
+        const result: ChatResponse = {
+          content: response.message?.content ?? '',
+          model,
+          promptTokens: response.prompt_eval_count ?? 0,
+          completionTokens: response.eval_count ?? 0,
+          totalTokens: (response.prompt_eval_count ?? 0) + (response.eval_count ?? 0),
+          durationMs,
+        };
+
+        this.totalCalls++;
+        this.totalTokens += result.totalTokens;
+        this.totalDurationMs += durationMs;
+
+        this.logger.debug(`Ollama chat completed: ${model} (${result.totalTokens} tokens, ${durationMs}ms)`);
+        this.releaseConcurrency();
+        return result;
+      } catch (error) {
+        this.releaseConcurrency();
+        const isTransient = error instanceof Error &&
+          (error.message.includes('timeout') || error.message.includes('ECONNRESET') ||
+           error.message.includes('ECONNREFUSED') || error.message.includes('fetch failed'));
+
+        if (isTransient && attempt < maxRetries) {
+          const backoffMs = 2000 * (attempt + 1);
+          this.logger.warn(`Ollama chat attempt ${attempt + 1}/${maxRetries + 1} failed (${error instanceof Error ? error.message.substring(0, 80) : error}), retrying in ${backoffMs}ms...`);
+          await new Promise(r => setTimeout(r, backoffMs));
+          continue;
+        }
+        this.logger.error(`Ollama chat failed: ${model}`, error);
+        throw error;
+      }
+    }
+    throw new Error(`Ollama chat exhausted all retries for ${model}`);
   }
 
   // ── Convenience: single prompt → string ──────────────────────────────────
@@ -173,7 +325,6 @@ export class LLMClient {
     let lastError: Error = new Error('Unknown error');
 
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-      // On retries append an explicit JSON reminder so the model doesn't produce only a think block
       const effectiveUserPrompt = attempt === 1
         ? userPrompt
         : `${userPrompt}\n\n[IMPORTANT: Your previous response contained no JSON. You MUST reply with ONLY a valid JSON object, nothing else.]`;
@@ -183,28 +334,23 @@ export class LLMClient {
         raw = await this.prompt(systemPrompt, effectiveUserPrompt, {
           ...options,
           json: true,
-          think: options.think ?? false, // disable think block by default — avoids exhausting token budget before JSON is written
           maxTokens: options.maxTokens ?? 2048,
         });
       } catch (err) {
-        // Wrap network/timeout errors into the retry loop instead of throwing immediately
         lastError = err instanceof Error ? err : new Error(String(err));
         this.logger.warn(`Attempt ${attempt}/${maxAttempts}: prompt call failed (${lastError.message.substring(0, 80)}), retrying...`);
         continue;
       }
 
-      // Strip thinking model artifacts (<think>...</think>) before any parse attempt.
-      // Also handle unclosed think tags (model ran out of tokens mid-think).
+      // Strip any residual think blocks (shouldn't happen with Cerebras, but safe)
       let stripped = raw.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
       if (!stripped && raw.includes('<think>')) {
-        // Think block was never closed — strip everything from <think> onward
         stripped = raw.replace(/<think>[\s\S]*/gi, '').trim();
       }
 
-      // If the model returned only a think block with no JSON, retry immediately.
       if (!stripped) {
-        this.logger.warn(`Attempt ${attempt}/${maxAttempts}: model returned only think block, retrying...`);
-        lastError = new Error('Model returned only think block with no JSON content');
+        this.logger.warn(`Attempt ${attempt}/${maxAttempts}: empty response, retrying...`);
+        lastError = new Error('Model returned empty response');
         continue;
       }
 
@@ -213,30 +359,27 @@ export class LLMClient {
       } catch {
         this.logger.warn(`Failed to parse JSON response, attempting extraction...`);
         this.logger.warn(`Raw response (first 500 chars): ${raw.substring(0, 500)}`);
-        this.logger.warn(`Stripped response (first 500 chars): ${stripped.substring(0, 500)}`);
-        // Strategy 1: Extract from markdown code blocks
+        // Strategy 1: code blocks
         const codeBlock = stripped.match(/```(?:json)?\s*([\s\S]*?)```/);
         if (codeBlock) {
           try { return JSON.parse(codeBlock[1].trim()) as T; } catch { /* continue */ }
         }
-        // Strategy 2: Find first { ... } or [ ... ] in the response
+        // Strategy 2: brace match
         const braceMatch = stripped.match(/(\{[\s\S]*\})/);
         if (braceMatch) {
           try { return JSON.parse(braceMatch[1]) as T; } catch { /* continue */ }
         }
+        // Strategy 3: bracket match
         const bracketMatch = stripped.match(/(\[[\s\S]*\])/);
         if (bracketMatch) {
           try { return JSON.parse(bracketMatch[1]) as T; } catch { /* continue */ }
         }
-        // Strategy 3: Strip leading/trailing non-JSON text from the already-cleaned string
-        const cleaned = stripped
-          .replace(/^[^{[]*/, '')
-          .replace(/[^}\]]*$/, '')
-          .trim();
+        // Strategy 4: strip non-JSON prefix/suffix
+        const cleaned = stripped.replace(/^[^{[]*/, '').replace(/[^}\]]*$/, '').trim();
         if (cleaned) {
           try { return JSON.parse(cleaned) as T; } catch { /* continue */ }
         }
-        // Strategy 4: Repair truncated JSON by closing open structures
+        // Strategy 5: repair truncated JSON
         const repaired = this.repairTruncatedJSON(stripped);
         if (repaired) {
           try { return JSON.parse(repaired) as T; } catch { /* continue */ }
@@ -250,23 +393,15 @@ export class LLMClient {
     throw lastError;
   }
 
-  /**
-   * Attempt to repair truncated JSON by closing unclosed structures.
-   * Handles the common case where token limit cuts off the response mid-JSON.
-   */
   private repairTruncatedJSON(raw: string): string | null {
-    // Find where the JSON starts
     const jsonStart = raw.search(/[{\[]/);
     if (jsonStart === -1) return null;
 
     let json = raw.substring(jsonStart);
+    json = json.replace(/,\s*"[^"]*$/s, '');
+    json = json.replace(/:\s*"[^"]*$/s, ': ""');
+    json = json.replace(/,\s*$/s, '');
 
-    // Remove any trailing incomplete string value (cut mid-word)
-    json = json.replace(/,\s*"[^"]*$/s, '');          // trailing incomplete key
-    json = json.replace(/:\s*"[^"]*$/s, ': ""');      // trailing incomplete string value
-    json = json.replace(/,\s*$/s, '');                  // trailing comma
-
-    // Count open/close brackets and braces
     let inString = false;
     let escape = false;
     const stack: string[] = [];
@@ -281,7 +416,6 @@ export class LLMClient {
       else if (ch === '}' || ch === ']') stack.pop();
     }
 
-    // Close any unclosed structures
     if (stack.length > 0) {
       json += stack.reverse().join('');
       return json;
@@ -289,7 +423,7 @@ export class LLMClient {
     return null;
   }
 
-  // ── Embeddings ───────────────────────────────────────────────────────────
+  // ── Embeddings (Ollama) ──────────────────────────────────────────────────
 
   async embed(text: string, options: EmbeddingOptions = {}): Promise<number[]> {
     const model = options.model ?? this.config.embeddingModel;
@@ -325,7 +459,11 @@ export class LLMClient {
 
   async isAvailable(): Promise<boolean> {
     try {
-      await this.ollama.list();
+      if (this.config.provider === 'ollama') {
+        await this.ollama.list();
+      } else {
+        await this.openai.models.list();
+      }
       return true;
     } catch {
       return false;
@@ -333,8 +471,10 @@ export class LLMClient {
   }
 
   async listModels(): Promise<string[]> {
-    const response = await this.ollama.list();
-    return response.models.map(m => m.name);
+    if (this.config.provider === 'ollama') {
+      return this.listOllamaModels();
+    }
+    return this.listCerebrasModels();
   }
 
   // ── Timeout Helper ────────────────────────────────────────────────────────
@@ -376,6 +516,8 @@ export class LLMClient {
 
   getStats() {
     return {
+      provider: this.config.provider,
+      model: this.config.defaultModel,
       totalCalls: this.totalCalls,
       totalTokens: this.totalTokens,
       totalDurationMs: this.totalDurationMs,

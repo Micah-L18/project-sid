@@ -47,7 +47,7 @@ IMPORTANT — Minecraft tech-tree constraints:
 - Only generate goals that are achievable given your current tools and resources.
 - If tech tier is 0-2, your FIRST survival goal must always be wood → crafting_table → wooden_pickaxe.
 - Do NOT generate goals like "mine iron_ore" if you don’t have a stone_pickaxe yet.
-- goal steps should reference the actual Minecraft item names (e.g. oak_log, oak_planks, crafting_table, wooden_pickaxe).
+- goal steps should reference actual Minecraft item names. For wood, use whatever log type is visible nearby (oak_log, birch_log, spruce_log, etc.) — don't always default to oak.
 
 Respond with ONLY a JSON object:
 {
@@ -69,7 +69,7 @@ export const GoalGenerationModule: PianoModule = async (
 ): Promise<Partial<AgentState>> => {
   // Gather context for the LLM
   const perception = summarizePerception(state.perception);
-  const progression = getProgressionStatus(state.perception.inventory);
+  const progression = getProgressionStatus(state.perception.inventory, state.perception.nearbyBlocks);
   const social = summarizeSocial(state.social);
 
   const currentGoals = state.goals.currentGoals
@@ -109,7 +109,7 @@ export const GoalGenerationModule: PianoModule = async (
     }>(
       'You are an AI goal generation system. Respond with valid JSON only.',
       prompt,
-      { maxTokens: 1024, temperature: 0.8 }
+      { maxTokens: 1024, temperature: 0.8, model: context.agentModel, provider: context.agentProvider, host: context.agentHost }
     );
 
     // Mark old goals as inactive

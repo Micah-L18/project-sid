@@ -1,0 +1,1003 @@
+{
+  "id": "2026-03-13T10-38-07-857Z",
+  "startedAt": "2026-03-13T10:38:07.857Z",
+  "endedAt": "2026-03-13T10:40:08.190Z",
+  "agentNames": [
+    "Alice"
+  ],
+  "durationMs": 120333,
+  "finalBenchmark": {
+    "timestamp": 1773398348276,
+    "elapsed": 65.647,
+    "specialization": {
+      "roleDistribution": {
+        "crafter": 1
+      },
+      "shannonEntropy": 0,
+      "maxEntropy": 0,
+      "normalizedEntropy": 0
+    },
+    "collectiveRules": {
+      "complianceRate": 1,
+      "totalAmendments": 0,
+      "passedAmendments": 0,
+      "taxRate": 0.1
+    },
+    "culturalTransmission": {
+      "trackedMemes": [
+        {
+          "keyword": "pastafarian",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "flying spaghetti",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "fsm",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "noodle",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pasta",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "ramen",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "colander",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pirate",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "community",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "constitution",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        }
+      ],
+      "averageSpread": 0
+    },
+    "progression": {
+      "agentTiers": {
+        "Alice": 1
+      },
+      "maxTier": 1,
+      "averageTier": 1,
+      "highestItem": "wooden_axe"
+    }
+  },
+  "config": {
+    "agents": [
+      {
+        "name": "Alice",
+        "traits": [
+          "industrious",
+          "friendly",
+          "loves mining"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [
+    {
+      "timestamp": 1773398293281,
+      "elapsed": 10.647,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773398348276,
+      "elapsed": 65.647,
+      "specialization": {
+        "roleDistribution": {
+          "crafter": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_axe"
+      }
+    }
+  ],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [],
+      "ratifiedAt": 1773398282629
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [],
+    "stats": {
+      "simulationStarted": 1773398282629,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 1,
+      "tickCount": 0
+    }
+  },
+  "agents": [
+    {
+      "name": "Alice",
+      "traits": [
+        "industrious",
+        "friendly",
+        "loves mining"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      },
+      "inventory": [
+        {
+          "name": "stick",
+          "count": 15,
+          "slot": 9
+        },
+        {
+          "name": "wooden_axe",
+          "count": 1,
+          "slot": 10
+        },
+        {
+          "name": "jungle_log",
+          "count": 1,
+          "slot": 12
+        },
+        {
+          "name": "wooden_pickaxe",
+          "count": 1,
+          "slot": 36
+        },
+        {
+          "name": "crafting_table",
+          "count": 1,
+          "slot": 38
+        },
+        {
+          "name": "bamboo",
+          "count": 1,
+          "slot": 39
+        },
+        {
+          "name": "oak_sapling",
+          "count": 2,
+          "slot": 40
+        },
+        {
+          "name": "dirt",
+          "count": 3,
+          "slot": 41
+        },
+        {
+          "name": "wooden_pickaxe",
+          "count": 1,
+          "slot": 43
+        },
+        {
+          "name": "oak_planks",
+          "count": 1,
+          "slot": 44
+        }
+      ],
+      "goals": [
+        {
+          "id": "e0677687-b25d-46f3-86ee-6d9bcc07ac12",
+          "category": "survival",
+          "description": "Mine stone and coal ore to craft a stone pickaxe for better mining capability",
+          "priority": 9,
+          "steps": [
+            "move to coal_ore location",
+            "mine coal_ore with wooden_pickaxe",
+            "collect at least 3 coal",
+            "move to stone location",
+            "mine stone blocks with wooden_pickaxe",
+            "collect at least 20 stone",
+            "craft stone_pickaxe using 3 cobblestone and 2 stick"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773398382374
+        },
+        {
+          "id": "8da26b93-c25e-44a7-99f1-314bcc5ae7cd",
+          "category": "economic",
+          "description": "Secure a sustainable wood supply by gathering oak logs, crafting oak planks, and replanting oak saplings",
+          "priority": 8,
+          "steps": [
+            "chop oak_log using wooden_axe",
+            "collect at least 5 oak_log",
+            "craft oak_planks from oak_log (4 planks per log)",
+            "plant oak_sapling at suitable ground",
+            "repeat until oak_sapling inventory has at least 2 saplings"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773398382374
+        },
+        {
+          "id": "25b1d970-d801-456e-8ef7-8ff86e07150d",
+          "category": "civic",
+          "description": "Donate excess oak planks to the community chest to support shared resources",
+          "priority": 7,
+          "steps": [
+            "travel to community chest at (100, 64, 95)",
+            "open chest inventory",
+            "deposit oak_planks into chest"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773398382374
+        },
+        {
+          "id": "09c8d9c6-b0e1-4365-8bb2-ef9abf58e2e2",
+          "category": "social",
+          "description": "Strengthen relationship with DeGoldenLLama by sharing mined resources and proposing a joint mining expedition",
+          "priority": 6,
+          "steps": [
+            "approach DeGoldenLLama at nearby position",
+            "offer 4 coal and 10 stone as sharing gesture",
+            "suggest a joint mining trip to the eastern iron ore area",
+            "agree on resource sharing plan"
+          ],
+          "completed": false,
+          "active": true,
+          "createdAt": 1773398382374
+        }
+      ],
+      "shortTermMemory": [
+        {
+          "id": "b289d49c-5ae5-4c33-8100-d5077117d9d4",
+          "type": "action",
+          "content": "Failed to craft oak planks due to missing ingredient",
+          "timestamp": 1773398297700,
+          "importance": 2
+        },
+        {
+          "id": "59b6f2ce-dde7-4c1b-bc3d-929d052543b1",
+          "type": "action",
+          "content": "Failed to place a crafting table due to a block update timeout error.",
+          "timestamp": 1773398307964,
+          "importance": 2
+        },
+        {
+          "id": "34062d2e-6b74-4071-b41f-3482e26ebf87",
+          "type": "observation",
+          "content": "Nearby agents: DeGoldenLLama at position (-357, 59, -695)",
+          "timestamp": 1773398308606,
+          "importance": 3,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -356.6234071406744,
+            "y": 59,
+            "z": -695.329516233764
+          }
+        },
+        {
+          "id": "537a46e6-39d3-4b9d-9615-1b8c9a10efa8",
+          "type": "action",
+          "content": "Crafted a wooden axe",
+          "timestamp": 1773398333776,
+          "importance": 3
+        },
+        {
+          "id": "5462b2f8-bae0-44b7-8ba5-f9f25dd08d4c",
+          "type": "action",
+          "content": "Failed to place crafting table due to block update timeout",
+          "timestamp": 1773398345827,
+          "importance": 2
+        },
+        {
+          "id": "e8d43c60-1834-4b0f-bee8-6f1ebe1e9a1a",
+          "type": "action",
+          "content": "Attempted move: Moved to (-362, 65, -699)",
+          "timestamp": 1773398355578,
+          "importance": 1
+        },
+        {
+          "id": "37455453-b5a7-4d54-bf80-ec45506da333",
+          "type": "observation",
+          "content": "Nearby agents: DeGoldenLLama at position (-363, 63, -696)",
+          "timestamp": 1773398377666,
+          "importance": 2,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -362.5001137712464,
+            "y": 63,
+            "z": -696.5
+          }
+        },
+        {
+          "id": "f82d8fa7-4498-4383-aa6c-5eea008369ec",
+          "type": "observation",
+          "content": "Nearby agents: DeGoldenLLama at position (-363, 63, -696)",
+          "timestamp": 1773398388070,
+          "importance": 2,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -362.5001137712464,
+            "y": 63,
+            "z": -696.5
+          }
+        }
+      ],
+      "relationships": {
+        "DeGoldenLLama": {
+          "agentName": "DeGoldenLLama",
+          "sentiment": 5,
+          "summary": "No notable interactions observed between Alice and DeGoldenLLama.",
+          "lastInteraction": 1773398397632,
+          "knownTraits": []
+        }
+      },
+      "lastDecision": {
+        "reasoning": "I failed to mine coal because I need a stone pickaxe. To craft a stone pickaxe I need cobblestone, which I can get by mining stone with my wooden pickaxe. So my next step is to mine stone.",
+        "action": {
+          "type": "mine",
+          "params": {
+            "blockName": "stone"
+          }
+        },
+        "speech": "I'll mine some stone to get cobblestone for a stone pickaxe.",
+        "timestamp": 1773398404606
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 120,
+          "errorCount": 0,
+          "lastDurationMs": 7,
+          "lastRunAt": 1773398408182,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 11,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773398400858,
+          "lastError": null,
+          "isRunning": false
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 8,
+          "errorCount": 0,
+          "lastDurationMs": 281,
+          "lastRunAt": 1773398397632,
+          "lastError": null,
+          "isRunning": false
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 4,
+          "errorCount": 0,
+          "lastDurationMs": 530,
+          "lastRunAt": 1773398382374,
+          "lastError": null,
+          "isRunning": false
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 28,
+          "errorCount": 0,
+          "lastDurationMs": 758,
+          "lastRunAt": 1773398404606,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 18,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773398357585,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 60,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773398407010,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    }
+  ],
+  "chatLog": [
+    {
+      "sender": "Alice",
+      "message": "Time to head underground and find some stone and coal!",
+      "timestamp": 1773398290912,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -356.493949073678,
+        "y": 63,
+        "z": -696.5822572229062
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Time to craft some planks for my axe!",
+      "timestamp": 1773398294913,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -356.6234071406744,
+        "y": 61,
+        "z": -695.329516233764
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll craft some sticks for my axe!",
+      "timestamp": 1773398300916,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -356.6234071406744,
+        "y": 59,
+        "z": -695.329516233764
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll place a crafting table so I can craft an axe.",
+      "timestamp": 1773398302920,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -356.6234071406744,
+        "y": 59,
+        "z": -695.329516233764
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Time to craft a wooden axe for faster chopping!",
+      "timestamp": 1773398306923,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -356.6234071406744,
+        "y": 59,
+        "z": -695.329516233764
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Time to craft a wooden axe for faster chopping!",
+      "timestamp": 1773398310924,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -356.6234071406744,
+        "y": 59.41999998688698,
+        "z": -695.329516233764
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll set down a crafting table so I can make a wooden axe.",
+      "timestamp": 1773398314927,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -356.6234071406744,
+        "y": 60,
+        "z": -695.329516233764
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll set down a crafting table so I can craft my axe.",
+      "timestamp": 1773398318928,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -356.6234071406744,
+        "y": 60.7967356006687,
+        "z": -695.329516233764
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll set down my crafting table so I can forge a wooden axe.",
+      "timestamp": 1773398322931,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -356.6234071406744,
+        "y": 62.17675927506424,
+        "z": -695.329516233764
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll set down a crafting table so I can craft an axe.",
+      "timestamp": 1773398332936,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5,
+        "y": 69,
+        "z": -698.6338361153297
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Heading down to gather stone for a stone pickaxe!",
+      "timestamp": 1773398336943,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5,
+        "y": 69,
+        "z": -698.6338361153297
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll set up a crafting table so I can make a stone pickaxe.",
+      "timestamp": 1773398340944,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5,
+        "y": 69,
+        "z": -698.6338361153297
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll set up a crafting table so we can make a stone pickaxe.",
+      "timestamp": 1773398344950,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5,
+        "y": 69,
+        "z": -698.6338361153297
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Heading down to the stone layer to start gathering cobblestone!",
+      "timestamp": 1773398346951,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5,
+        "y": 69,
+        "z": -698.6338361153297
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll mine some coal to start gathering stone for a stone pickaxe.",
+      "timestamp": 1773398350955,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5,
+        "y": 69,
+        "z": -698.6338361153297
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll head down to find some stone for a stone pickaxe.",
+      "timestamp": 1773398354966,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.49985399810987,
+        "y": 69,
+        "z": -698.0745355852563
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Going down to collect some stone for a stone pickaxe!",
+      "timestamp": 1773398358969,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.50028745885163,
+        "y": 65.23152379758702,
+        "z": -696.0056851907199
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Crafting a stone pickaxe so I can mine coal!",
+      "timestamp": 1773398362970,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Time to get some stone for a better pickaxe!",
+      "timestamp": 1773398368973,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Heading down to find stone for a stone pickaxe!",
+      "timestamp": 1773398372976,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Time to dig down and gather stone for a stone pickaxe!",
+      "timestamp": 1773398376981,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Time to grab some stone for a sturdier pickaxe!",
+      "timestamp": 1773398380986,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Time to gather cobblestone for a stone pickaxe!",
+      "timestamp": 1773398384993,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Heading down to gather stone for a stone pickaxe.",
+      "timestamp": 1773398388998,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Gathering stone for a better pickaxe!",
+      "timestamp": 1773398393002,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Heading down to dig for stone!",
+      "timestamp": 1773398399005,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Time to gather some coal for torches!",
+      "timestamp": 1773398401006,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "I'll mine some stone to get cobblestone for a stone pickaxe.",
+      "timestamp": 1773398405009,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -362.5001137712464,
+        "y": 63,
+        "z": -696.5
+      }
+    }
+  ],
+  "llmStats": {
+    "totalCalls": 56,
+    "totalTokens": 104693,
+    "totalDurationMs": 34647,
+    "avgTokensPerCall": 1870,
+    "avgDurationMs": 619,
+    "inflight": 1,
+    "queued": 0
+  }
+}

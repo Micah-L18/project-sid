@@ -5,13 +5,15 @@
     "version": "1.21.11"
   },
   "llm": {
-    "host": "http://192.168.0.219:11434",
-    "defaultModel": "Sweaterdog/Andy-4:micro-q3_k_m",
+    "host": "https://api.cerebras.ai/v1",
+    "apiKey": "",
+    "defaultModel": "gpt-oss-120b",
+    "ollamaHost": "http://192.168.0.219:11434",
     "embeddingModel": "nomic-embed-text",
     "defaultTemperature": 0.7,
-    "defaultMaxTokens": 3048,
-    "maxConcurrency": 2,
-    "timeoutMs": 300000
+    "defaultMaxTokens": 10240,
+    "maxConcurrency": 4,
+    "timeoutMs": 90000
   },
   "simulation": {
     "hearingRadius": 32,
@@ -23,19 +25,24 @@
   },
   "agents": [
     {
-      "name": "Alice",
-      "traits": ["industrious", "friendly", "loves mining"],
-      "backstory": "Alice is an experienced miner who believes in hard work and community. She always contributes her fair share.",
-      "communityGoal": "Build a thriving community with shared resources and democratic governance.",
-      "spawnLocation": { "x": 100, "y": 64, "z": 100 },
+      "name": "Steve",
+      "provider": "ollama",
+      "model": "Sweaterdog/Andy-4:micro-q3_k_m",
+      "traits": ["survivalist", "practical", "cautious", "hardworking"],
+      "backstory": "Steve is a no-nonsense survivalist. His first priority is always shelter — four walls and a roof overhead before anything else. Once safe, he focuses on setting up crafting and storage to be self-sufficient.",
+      "communityGoal": "Build a sturdy shelter and set up essential crafting and storage to survive.",
+      "spawnLocation": { "x": 110, "y": 64, "z": 110 },
       "locationMemories": [
-        { "description": "Community chest near the town center", "position": { "x": 100, "y": 64, "z": 95 }, "category": "structure" },
-        { "description": "Rich iron ore deposit in a cave to the east", "position": { "x": 140, "y": 50, "z": 110 }, "category": "resource" }
+        { "description": "Shelter build site — flat ground for a 5x5 walled shelter", "position": { "x": 110, "y": 64, "z": 110 }, "category": "structure" },
+        { "description": "Nearby trees for gathering wood", "position": { "x": 110, "y": 64, "z": 95 }, "category": "resource" }
       ],
       "startingGoals": [
-        { "category": "survival", "description": "Punch oak_log with bare hands to get wood", "priority": 10, "steps": ["find oak_log nearby", "mine oak_log (no tool needed)"] },
-        { "category": "survival", "description": "Craft a crafting_table from wood planks", "priority": 9, "steps": ["craft oak_planks from oak_log", "craft crafting_table from 4 planks", "place crafting_table"] },
-        { "category": "survival", "description": "Craft a wooden_pickaxe so I can mine stone and coal", "priority": 8, "steps": ["craft sticks", "craft wooden_pickaxe at crafting_table"] }
+        { "category": "survival", "description": "Gather wood from nearby trees to get building materials", "priority": 10, "steps": ["look around for any log type", "mine at least 20 logs", "craft planks from the logs"] },
+        { "category": "survival", "description": "Craft basic tools: crafting_table, wooden_pickaxe, wooden_axe", "priority": 9, "steps": ["craft planks from logs", "craft crafting_table from 4 planks", "place crafting_table", "craft sticks", "craft wooden_pickaxe", "craft wooden_axe"] },
+        { "category": "survival", "description": "Mine cobblestone for stronger shelter walls", "priority": 8, "steps": ["use wooden_pickaxe to mine stone", "collect at least 60 cobblestone blocks", "bring cobblestone back to shelter site"] },
+        { "category": "building", "description": "Build a 5x5 shelter with 3-block-high walls and a roof", "priority": 7, "steps": ["go to the shelter build site at (110, 64, 110)", "build a 5x5 ring of cobblestone walls 3 blocks high", "place cobblestone or plank blocks on top as a flat roof covering the inside"] },
+        { "category": "building", "description": "Place a crafting table and chest inside the shelter", "priority": 6, "steps": ["craft a crafting_table if not already done", "craft a chest from 8 planks", "go inside the shelter", "place crafting_table on the floor", "place chest on the floor next to it"] },
+        { "category": "building", "description": "Add a door to the shelter wall for entry", "priority": 5, "steps": ["craft a wooden door (oak_door) from 6 planks", "pick a wall of the shelter facing outward", "break one block at ground level in the wall to make an opening", "place the door in the opening"] }
       ]
     }
   ]

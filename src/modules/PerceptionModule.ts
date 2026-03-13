@@ -193,7 +193,7 @@ export function summarizePerception(perception: AgentPerception): string {
   }
 
   // Progression status — tells the CC what it can and cannot do right now
-  lines.push(getProgressionStatus(perception.inventory));
+  lines.push(getProgressionStatus(perception.inventory, perception.nearbyBlocks));
 
   if (perception.recentChat.length > 0) {
     const recentMessages = perception.recentChat
@@ -227,22 +227,24 @@ function describeDirection(from: Vec3, to: Vec3): string {
  * Computes a human-readable Minecraft tech-tree status from the current inventory.
  * Exported so CognitiveController can also inject it directly.
  */
-export function getProgressionStatus(inventory: { name: string; count: number }[]): string {
+export function getProgressionStatus(inventory: { name: string; count: number }[], nearbyBlocks?: { name: string }[]): string {
   const inv = new Set(inventory.map(i => i.name));
-  const has = (...items: string[]) => items.some(it => inv.has(it));
+  const nearbySet = new Set((nearbyBlocks || []).map(b => b.name));
+  const has = (...items: string[]) => items.some(it => inv.has(it) || nearbySet.has(it));
+  const hasInv = (...items: string[]) => items.some(it => inv.has(it)); // inventory-only check
 
   const hasAxe      = has('wooden_axe','stone_axe','iron_axe','diamond_axe','golden_axe','netherite_axe');
-  const hasPick1    = has('wooden_pickaxe');
-  const hasPick2    = has('stone_pickaxe','iron_pickaxe','diamond_pickaxe','golden_pickaxe','netherite_pickaxe');
-  const hasPick3    = has('iron_pickaxe','diamond_pickaxe','netherite_pickaxe');
-  const hasWood     = has('oak_log','spruce_log','birch_log','jungle_log','acacia_log','dark_oak_log',
+  const hasPick1    = hasInv('wooden_pickaxe');
+  const hasPick2    = hasInv('stone_pickaxe','iron_pickaxe','diamond_pickaxe','golden_pickaxe','netherite_pickaxe');
+  const hasPick3    = hasInv('iron_pickaxe','diamond_pickaxe','netherite_pickaxe');
+  const hasWood     = hasInv('oak_log','spruce_log','birch_log','jungle_log','acacia_log','dark_oak_log',
                           'oak_planks','spruce_planks','birch_planks');
-  const hasPlanks   = has('oak_planks','spruce_planks','birch_planks','jungle_planks','acacia_planks','dark_oak_planks');
-  const hasTable    = has('crafting_table');
-  const hasCoal     = has('coal');
-  const hasIronOre  = has('iron_ore','deepslate_iron_ore','raw_iron');
-  const hasIronIngot= has('iron_ingot');
-  const hasFurnace  = has('furnace');
+  const hasPlanks   = hasInv('oak_planks','spruce_planks','birch_planks','jungle_planks','acacia_planks','dark_oak_planks');
+  const hasTable    = has('crafting_table'); // can be in inventory OR placed nearby
+  const hasCoal     = hasInv('coal');
+  const hasIronOre  = hasInv('iron_ore','deepslate_iron_ore','raw_iron');
+  const hasIronIngot= hasInv('iron_ingot');
+  const hasFurnace  = has('furnace'); // can be in inventory OR placed nearby
 
   // Determine tier
   let tier = 0;
@@ -260,9 +262,9 @@ export function getProgressionStatus(inventory: { name: string; count: number }[
   const needs: string[] = [];
 
   if (!hasWood) {
-    needs.push('punch oak_log with bare hands to get wood (no tool needed)');
+    needs.push('punch any nearby log (oak_log, birch_log, spruce_log, etc.) with bare hands to get wood (no tool needed)');
   } else if (!hasPlanks) {
-    canDo.push('craft oak_planks from logs (4 per log, no table needed)');
+    canDo.push('craft planks from your logs (any log → 4 planks, no table needed)');
   } else if (!hasTable) {
     canDo.push('craft crafting_table from 4 planks (no table needed)');
   } else if (!hasPick1) {

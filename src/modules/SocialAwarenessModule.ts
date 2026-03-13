@@ -141,7 +141,7 @@ export const SocialAwarenessModule: PianoModule = async (
         sentiment: number;
         summary: string;
         knownTraits: string[];
-      }>(prompt, interactionContext, { maxTokens: 256, temperature: 0.4 });
+      }>(prompt, interactionContext, { maxTokens: 256, temperature: 0.4, model: context.agentModel, provider: context.agentProvider, host: context.agentHost });
 
       const relationship: SocialRelationship = {
         agentName,
@@ -191,7 +191,7 @@ export const SocialAwarenessModule: PianoModule = async (
       }>(
         'You are a social goal generator. Respond with valid JSON only.',
         prompt,
-        { maxTokens: 512, temperature: 0.7 }
+        { maxTokens: 512, temperature: 0.7, model: context.agentModel, provider: context.agentProvider, host: context.agentHost }
       );
 
       // Deactivate old social goals

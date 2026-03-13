@@ -1,37 +1,43 @@
 /**
  * ActionModule — Translates CognitiveController decisions into Mineflayer
  * commands. Tracks action outcomes for the ActionAwareness feedback loop.
- * Runs every ~1-2 seconds.
+ * Advances the TaskPlan on success, increments failure count on failure,
+ * and clears the plan after repeated failures.
  *
  * Uses a skill library of predefined functions wrapping Mineflayer APIs.
+ * Runs every ~1-2 seconds.
  */
 
-import { AgentState, ActionAwareness, ActionIntent, ActionResult, ActionType } from '../agent/AgentState';
+import { AgentState, ActionAwareness, ActionIntent, ActionResult, ActionType, TaskPlan } from '../agent/AgentState';
 import { PianoModule, ModuleContext } from '../agent/ModuleRunner';
 import { Skills } from '../skills/Skills';
 import { Logger } from '../utils/Logger';
 
 const MAX_RECENT_RESULTS = 20;
 const ACTION_TIMEOUT_MS = 30_000; // 30s timeout for any action
+const MAX_STEP_FAILURES = 2;      // clear plan after this many consecutive failures
+
+/** Patterns that indicate a skill returned a failure message instead of throwing. */
+const FAILURE_PATTERNS = /^(Could not find|CANNOT |Cannot craft|No recipe found|Unknown item|Don't have|No (?:chest|furnace|food|block surface|building material)|Failed to|No food in inventory|No building materials)/i;
 
 // ── Module Factory ───────────────────────────────────────────────────────────
 
 export function createActionModule(): PianoModule {
   const logger = new Logger('ActionModule');
-  let currentAction: Promise<string> | null = null;
-  let actionStartTime = 0;
   let lastProcessedDecisionTs = 0;
 
   return async (
     state: Readonly<AgentState>,
     context: ModuleContext
   ): Promise<Partial<AgentState>> => {
-    const { cognitiveDecision, actionAwareness } = state;
+    const { cognitiveDecision, actionAwareness, taskPlan } = state;
 
     // If busy, check if action timed out
     if (actionAwareness.isBusy && actionAwareness.busySince) {
       if (Date.now() - actionAwareness.busySince > ACTION_TIMEOUT_MS) {
         logger.warn(`Action timed out after ${ACTION_TIMEOUT_MS}ms`);
+        // Timeout counts as a failure — update plan
+        const updatedPlan = handleStepFailure(taskPlan, 'Action timed out', logger);
         return {
           actionAwareness: {
             ...actionAwareness,
@@ -46,6 +52,7 @@ export function createActionModule(): PianoModule {
             },
             recentResults: [...actionAwareness.recentResults].slice(-MAX_RECENT_RESULTS),
           },
+          taskPlan: updatedPlan,
         };
       }
       // Still executing, don't start new action
@@ -95,7 +102,12 @@ export function createActionModule(): PianoModule {
       return {};
     }
     lastProcessedDecisionTs = cognitiveDecision.timestamp;
-    logger.info(`Executing action: ${action.type} (params: ${JSON.stringify(action.params).substring(0, 80)})`);
+
+    if (taskPlan) {
+      logger.info(`Executing plan "${taskPlan.goal}" step ${taskPlan.currentStepIndex + 1}/${taskPlan.steps.length}: ${action.type} (${JSON.stringify(action.params).substring(0, 80)})`);
+    } else {
+      logger.info(`Executing action: ${action.type} (params: ${JSON.stringify(action.params).substring(0, 80)})`);
+    }
 
     // ── Execute the action ─────────────────────────────────────────────────
 
@@ -106,11 +118,18 @@ export function createActionModule(): PianoModule {
       busySince: Date.now(),
     };
 
-    // Start action asynchronously
     const startTime = Date.now();
+    let updatedPlan = taskPlan;
 
     try {
       const outcome = await executeAction(action, context);
+
+      // Skills return descriptive failure strings instead of throwing.
+      // Detect these and promote them to errors so the plan doesn't
+      // silently advance past actions that never actually happened.
+      if (FAILURE_PATTERNS.test(outcome)) {
+        throw new Error(outcome);
+      }
 
       const result: ActionResult = {
         action,
@@ -124,6 +143,9 @@ export function createActionModule(): PianoModule {
       awareness.recentResults.push(result);
       awareness.isBusy = false;
       awareness.busySince = null;
+
+      // ── Advance plan on success ─────────────────────────────────────
+      updatedPlan = handleStepSuccess(taskPlan, logger);
 
       logger.debug(`Action ${action.type} succeeded: ${outcome}`);
     } catch (error) {
@@ -142,6 +164,9 @@ export function createActionModule(): PianoModule {
       awareness.isBusy = false;
       awareness.busySince = null;
 
+      // ── Handle plan failure ─────────────────────────────────────────
+      updatedPlan = handleStepFailure(taskPlan, errMsg, logger);
+
       logger.debug(`Action ${action.type} failed: ${errMsg}`);
     }
 
@@ -150,7 +175,70 @@ export function createActionModule(): PianoModule {
       awareness.recentResults = awareness.recentResults.slice(-MAX_RECENT_RESULTS);
     }
 
-    return { actionAwareness: awareness };
+    return { actionAwareness: awareness, taskPlan: updatedPlan };
+  };
+}
+
+// ── Plan advancement helpers ─────────────────────────────────────────────────
+
+function handleStepSuccess(plan: TaskPlan | null, logger: Logger): TaskPlan | null {
+  if (!plan) return null;
+
+  const nextIndex = plan.currentStepIndex + 1;
+  if (nextIndex >= plan.steps.length) {
+    logger.info(`Plan "${plan.goal}" COMPLETED (all ${plan.steps.length} steps done)`);
+    return null; // Plan exhausted — CC will create a new one
+  }
+
+  logger.info(`Plan "${plan.goal}" advancing to step ${nextIndex + 1}/${plan.steps.length}: ${plan.steps[nextIndex].description}`);
+  return {
+    ...plan,
+    currentStepIndex: nextIndex,
+    failureCount: 0, // reset failure count on successful step
+  };
+}
+
+function handleStepFailure(plan: TaskPlan | null, reason: string, logger: Logger): TaskPlan | null {
+  if (!plan) return null;
+
+  const currentStep = plan.steps[plan.currentStepIndex];
+  const newFailureCount = plan.failureCount + 1;
+
+  // If a mine step failed because the resource wasn't nearby, inject an
+  // explore step before it so the agent goes looking instead of re-planning
+  if (
+    currentStep &&
+    currentStep.action.type === 'mine' &&
+    newFailureCount === 1 &&
+    /could not find|no nearby|not found|cannot find/i.test(reason)
+  ) {
+    const blockName = currentStep.action.params.blockName ?? 'resources';
+    logger.info(
+      `Plan "${plan.goal}" step ${plan.currentStepIndex + 1} can't find ${blockName} — inserting explore step`
+    );
+    const exploreStep = {
+      description: `Explore to find ${blockName}`,
+      action: { type: 'explore' as const, params: {} },
+    };
+    // Insert the explore step at the current index, pushing the failed mine step forward
+    const newSteps = [...plan.steps];
+    newSteps.splice(plan.currentStepIndex, 0, exploreStep);
+    return {
+      ...plan,
+      steps: newSteps,
+      failureCount: 0, // reset — the explore step is new
+    };
+  }
+
+  if (newFailureCount >= MAX_STEP_FAILURES) {
+    logger.warn(`Plan "${plan.goal}" ABANDONED after ${newFailureCount} failures at step ${plan.currentStepIndex + 1}: ${reason}`);
+    return null; // Clear plan — CC will re-plan with failure context
+  }
+
+  logger.warn(`Plan "${plan.goal}" step ${plan.currentStepIndex + 1} failed (${newFailureCount}/${MAX_STEP_FAILURES}): ${reason}`);
+  return {
+    ...plan,
+    failureCount: newFailureCount,
   };
 }
 

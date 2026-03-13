@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc && cp -r src/config dist/config",
-    "start": "node dist/index.js",
+    "start": "rm -rf dist && npx tsc && cp -r src/config dist/config && node dist/index.js",
     "dev": "ts-node src/index.ts",
     "dev:watch": "nodemon --exec ts-node src/index.ts",
     "lint": "eslint src/",

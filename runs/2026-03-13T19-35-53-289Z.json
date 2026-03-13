@@ -1,0 +1,202 @@
+{
+  "id": "2026-03-13T19-35-53-289Z",
+  "startedAt": "2026-03-13T19:35:53.289Z",
+  "endedAt": "2026-03-13T19:39:33.748Z",
+  "agentNames": [
+    "Lofty",
+    "Blueprint",
+    "Timber",
+    "Cobble",
+    "Mason"
+  ],
+  "durationMs": 220459,
+  "finalBenchmark": null,
+  "config": {
+    "agents": [
+      {
+        "name": "Lofty",
+        "traits": [
+          "ambitious",
+          "resourceful",
+          "visionary builder",
+          "strategic planner"
+        ],
+        "communityGoal": "Plan and build a complete village with houses, storage, and community spaces using gathered resources."
+      },
+      {
+        "name": "Blueprint",
+        "traits": [
+          "analytical",
+          "detail-oriented",
+          "creative designer",
+          "patient teacher"
+        ],
+        "communityGoal": "Design building plans and coordinate the team — tell gatherers what resources to collect, and instruct the builder on what to construct."
+      },
+      {
+        "name": "Timber",
+        "traits": [
+          "hardworking",
+          "tireless",
+          "focused",
+          "nature-lover"
+        ],
+        "communityGoal": "Gather wood from nearby forests and deposit it into the community resource chests for the builders to use."
+      },
+      {
+        "name": "Cobble",
+        "traits": [
+          "persistent",
+          "methodical",
+          "strong",
+          "reliable"
+        ],
+        "communityGoal": "Mine stone, cobblestone, and ores then deposit them into community resource chests for construction."
+      },
+      {
+        "name": "Mason",
+        "traits": [
+          "creative",
+          "precise",
+          "diligent",
+          "team-player"
+        ],
+        "communityGoal": "Build structures as directed by Blueprint — withdraw materials from resource chests and construct houses, walls, and other village buildings."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [],
+      "ratifiedAt": 1773430544361
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [],
+    "stats": {
+      "simulationStarted": 1773430544361,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 5,
+      "tickCount": 0
+    }
+  },
+  "agents": [],
+  "chatLog": [
+    {
+      "sender": "Cobble",
+      "message": "I need to find some trees first.",
+      "timestamp": 1773430607544,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -598.5003414039085,
+        "y": 70,
+        "z": -470.5
+      }
+    },
+    {
+      "sender": "Timber",
+      "message": "Got planks, time for a crafting table!",
+      "timestamp": 1773430619702,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -619.8775800485517,
+        "y": 74,
+        "z": -587.1647425902112
+      }
+    },
+    {
+      "sender": "Timber",
+      "message": "I need more wood to build a better house. Let's collect some oak logs! !collectBlocks(oak_log, 10)",
+      "timestamp": 1773430667857,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -616.5,
+        "y": 75,
+        "z": -584.6336800221188
+      }
+    },
+    {
+      "sender": "Timber",
+      "message": "Time to craft some planks and get a crafting table set up!",
+      "timestamp": 1773430714096,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -678.5,
+        "y": 73,
+        "z": -537.5
+      }
+    },
+    {
+      "sender": "Timber",
+      "message": "Time to craft some planks and get a crafting table set up!",
+      "timestamp": 1773430760141,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -678.5,
+        "y": 73,
+        "z": -537.5
+      }
+    }
+  ],
+  "llmStats": {
+    "provider": "ollama",
+    "model": "Sweaterdog/Andy-4:micro-q3_k_m",
+    "totalCalls": 39,
+    "totalTokens": 28068,
+    "totalDurationMs": 414094,
+    "avgTokensPerCall": 720,
+    "avgDurationMs": 10618,
+    "inflight": 4,
+    "queued": 1
+  }
+}

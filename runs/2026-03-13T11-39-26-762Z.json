@@ -1,0 +1,2277 @@
+{
+  "id": "2026-03-13T11-39-26-762Z",
+  "startedAt": "2026-03-13T11:39:26.762Z",
+  "endedAt": "2026-03-13T11:53:55.123Z",
+  "agentNames": [
+    "Alice",
+    "Bob"
+  ],
+  "durationMs": 868361,
+  "finalBenchmark": {
+    "timestamp": 1773402807914,
+    "elapsed": 851.935,
+    "specialization": {
+      "roleDistribution": {
+        "miner": 2
+      },
+      "shannonEntropy": 0,
+      "maxEntropy": 0,
+      "normalizedEntropy": 0
+    },
+    "collectiveRules": {
+      "complianceRate": 0.5,
+      "totalAmendments": 2,
+      "passedAmendments": 0,
+      "taxRate": 0.1
+    },
+    "culturalTransmission": {
+      "trackedMemes": [
+        {
+          "keyword": "pastafarian",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "flying spaghetti",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "fsm",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "noodle",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pasta",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "ramen",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "colander",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pirate",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "community",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "constitution",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        }
+      ],
+      "averageSpread": 0
+    },
+    "progression": {
+      "agentTiers": {
+        "Bob": 0,
+        "Alice": 1
+      },
+      "maxTier": 1,
+      "averageTier": 0.5,
+      "highestItem": "wooden_axe"
+    }
+  },
+  "config": {
+    "agents": [
+      {
+        "name": "Alice",
+        "traits": [
+          "industrious",
+          "friendly",
+          "loves mining"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      },
+      {
+        "name": "Bob",
+        "traits": [
+          "methodical",
+          "creative",
+          "skilled builder"
+        ],
+        "communityGoal": "Design and construct a safe, comfortable shelter for the community, ensuring everyone has a place to stay."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [
+    {
+      "timestamp": 1773401972925,
+      "elapsed": 16.946,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 1,
+          "Bob": 0
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402027928,
+      "elapsed": 71.949,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Alice": 1,
+          "Bob": 0
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402087928,
+      "elapsed": 131.949,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402147930,
+      "elapsed": 191.951,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402207930,
+      "elapsed": 251.951,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402267932,
+      "elapsed": 311.953,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402327937,
+      "elapsed": 371.958,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1,
+          "crafter": 1
+        },
+        "shannonEntropy": 1,
+        "maxEntropy": 1,
+        "normalizedEntropy": 1
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402387940,
+      "elapsed": 431.961,
+      "specialization": {
+        "roleDistribution": {
+          "crafter": 1,
+          "miner": 1
+        },
+        "shannonEntropy": 1,
+        "maxEntropy": 1,
+        "normalizedEntropy": 1
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402447940,
+      "elapsed": 491.961,
+      "specialization": {
+        "roleDistribution": {
+          "crafter": 1,
+          "miner": 1
+        },
+        "shannonEntropy": 1,
+        "maxEntropy": 1,
+        "normalizedEntropy": 1
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402507941,
+      "elapsed": 551.962,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402567942,
+      "elapsed": 611.963,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0.5,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402627942,
+      "elapsed": 671.963,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0.5,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402687943,
+      "elapsed": 731.964,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0.5,
+        "totalAmendments": 2,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402747923,
+      "elapsed": 791.944,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0.5,
+        "totalAmendments": 2,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    },
+    {
+      "timestamp": 1773402807914,
+      "elapsed": 851.935,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 2
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0.5,
+        "totalAmendments": 2,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Bob": 0,
+          "Alice": 1
+        },
+        "maxTier": 1,
+        "averageTier": 0.5,
+        "highestItem": "wooden_axe"
+      }
+    }
+  ],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [
+        {
+          "id": 1,
+          "description": "Goal for community: Merge our resources into a shared chest for efficient planning and coordination. We'll organize items and protect them from interference.",
+          "proposedBy": "ElectionManager",
+          "votesFor": [
+            "Bob"
+          ],
+          "votesAgainst": [
+            "Alice"
+          ],
+          "passed": false,
+          "timestamp": 1773402681349
+        },
+        {
+          "id": 2,
+          "description": "Aim for diversity in resource collection: 50 oak logs, 30 birch logs, and 20 other blocks for future projects. We'll share them with the community chest for collaborative use.",
+          "proposedBy": "ElectionManager",
+          "votesFor": [],
+          "votesAgainst": [],
+          "passed": false,
+          "timestamp": 1773402681349
+        }
+      ],
+      "ratifiedAt": 1773401955979
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [],
+    "stats": {
+      "simulationStarted": 1773401955979,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 2,
+      "tickCount": 0
+    }
+  },
+  "agents": [
+    {
+      "name": "Bob",
+      "traits": [
+        "methodical",
+        "creative",
+        "skilled builder"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -509.6954487679435,
+        "y": 83,
+        "z": -647.5
+      },
+      "inventory": [
+        {
+          "name": "dirt",
+          "count": 31,
+          "slot": 36
+        }
+      ],
+      "goals": [],
+      "shortTermMemory": [
+        {
+          "id": "a0f28659-5329-4abd-b454-a357e40ee94a",
+          "type": "action",
+          "content": "Attempted mine: Could not find any oak_log nearby",
+          "timestamp": 1773402092581,
+          "importance": 1
+        },
+        {
+          "id": "02b7fee8-dbb3-4179-b97d-9d582a300a86",
+          "type": "action",
+          "content": "Attempted mine: Could not find any oak_log nearby",
+          "timestamp": 1773402111746,
+          "importance": 1
+        },
+        {
+          "id": "24e60c8a-c6e4-478b-9cad-84ba3ac19afd",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402121845,
+          "importance": null
+        },
+        {
+          "id": "80f8426a-fa8d-4a05-a881-dc0ef88440eb",
+          "type": "conversation",
+          "content": "<one-line summary>",
+          "timestamp": 1773402133177,
+          "importance": 1,
+          "agents": [
+            "DeGoldenLLama"
+          ]
+        },
+        {
+          "id": "08a56c00-aa0a-4fb1-bf19-62a9aed6bf61",
+          "type": "action",
+          "content": "Attempted mine: Mined 1 dirt",
+          "timestamp": 1773402139528,
+          "importance": 1
+        },
+        {
+          "id": "59581069-7d8d-4dff-ad9b-f2e106063770",
+          "type": "action",
+          "content": "<one-line summary>",
+          "timestamp": 1773402177629,
+          "importance": 1
+        },
+        {
+          "id": "72a1e1ed-cc18-4cea-8d04-c04e295b590e",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft crafting_table — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402204049,
+          "importance": null
+        },
+        {
+          "id": "f2dc5841-30e4-488f-b278-039f21b67c82",
+          "type": "observation",
+          "content": "<one-line summary>",
+          "timestamp": 1773402218282,
+          "importance": 1,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -507.49957352013894,
+            "y": 82,
+            "z": -643.5
+          }
+        },
+        {
+          "id": "4addc07c-bfd1-4ce5-81bd-1714014396d6",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402265334,
+          "importance": null
+        },
+        {
+          "id": "429be116-9d38-4dbd-ae6b-13737a94f736",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402295828,
+          "importance": null
+        },
+        {
+          "id": "8e000497-ec7b-415b-9b6c-5964a7c54eaa",
+          "type": "observation",
+          "content": "Nearby agents: DeGoldenLLama at position (-507, 82, -643)",
+          "timestamp": 1773402302897,
+          "importance": null,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -507.49957352013894,
+            "y": 82,
+            "z": -643.5
+          }
+        },
+        {
+          "id": "ad8277a4-a90e-41db-a7fb-8d08c0967b95",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft torch — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402350215,
+          "importance": null
+        },
+        {
+          "id": "3d107855-8615-48ae-b0ec-13fa582fcbb4",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402452019,
+          "importance": null
+        },
+        {
+          "id": "b0fadb76-663a-4924-8212-f732ab5d2b83",
+          "type": "action",
+          "content": "Attempted mine: Mined 1 dirt",
+          "timestamp": 1773402487806,
+          "importance": 1
+        },
+        {
+          "id": "2aa0cad0-e7fe-4131-bb55-306310927892",
+          "type": "observation",
+          "content": "Nearby agents: DeGoldenLLama at position (-509, 82, -645)",
+          "timestamp": 1773402488338,
+          "importance": null,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -508.6954487679435,
+            "y": 82,
+            "z": -645.5
+          }
+        },
+        {
+          "id": "dc501e85-1d36-4604-acdd-fb4416b645c5",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft wooden_pickaxe — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402498922,
+          "importance": null
+        },
+        {
+          "id": "28db00fc-e547-4e36-903b-fe5e70dd8737",
+          "type": "observation",
+          "content": "<one-line summary>",
+          "timestamp": 1773402516946,
+          "importance": 1,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -508.6954487679435,
+            "y": 83.17675927506424,
+            "z": -645.5
+          }
+        },
+        {
+          "id": "09f65f6c-c9c5-4b1c-a049-ed7c5153adce",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402541597,
+          "importance": null
+        },
+        {
+          "id": "925cacce-bbd1-4184-a45c-c80f8b07d2a4",
+          "type": "observation",
+          "content": "<one-line summary>",
+          "timestamp": 1773402564539,
+          "importance": 1,
+          "agents": [
+            "DeGoldenLLama"
+          ],
+          "location": {
+            "x": -509.6954487679435,
+            "y": 83,
+            "z": -647.5
+          }
+        },
+        {
+          "id": "cfd258b0-84bb-4d1c-9383-d18679664d01",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402571701,
+          "importance": null
+        }
+      ],
+      "relationships": {
+        "DeGoldenLLama": {
+          "agentName": "DeGoldenLLama",
+          "sentiment": null,
+          "summary": "DeGoldenLLama is coming to me, but I'm in the middle of fighting an enderman. I need to prioritize my survival over helping him. My health is critically low, and I'm in a bad spot. I should eat something and get out of danger. !consume(",
+          "lastInteraction": 1773402724546,
+          "knownTraits": [
+            "<trait1>",
+            "<trait2>"
+          ]
+        }
+      },
+      "lastDecision": {
+        "reasoning": "Following plan \"unnamed plan\" — step 2: Craft crafting_table",
+        "action": {
+          "type": "craft",
+          "params": {
+            "itemName": "crafting_table",
+            "count": 1
+          }
+        },
+        "speech": null,
+        "timestamp": 1773402744157
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 743,
+          "errorCount": 0,
+          "lastDurationMs": 3,
+          "lastRunAt": 1773402835069,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 16,
+          "errorCount": 0,
+          "lastDurationMs": 53254,
+          "lastRunAt": 1773402674679,
+          "lastError": null,
+          "isRunning": true
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 14,
+          "errorCount": 0,
+          "lastDurationMs": 62225,
+          "lastRunAt": 1773402752406,
+          "lastError": null,
+          "isRunning": true
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 13,
+          "errorCount": 0,
+          "lastDurationMs": 35401,
+          "lastRunAt": 1773402763283,
+          "lastError": null,
+          "isRunning": true
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 45,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773402744157,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 715,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773402835069,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 374,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773402833418,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    },
+    {
+      "name": "Alice",
+      "traits": [
+        "industrious",
+        "friendly",
+        "loves mining"
+      ],
+      "isAlive": true,
+      "position": {
+        "x": -398.4903697066774,
+        "y": 63,
+        "z": -538.3696975769557
+      },
+      "inventory": [
+        {
+          "name": "jungle_log",
+          "count": 1,
+          "slot": 9
+        },
+        {
+          "name": "oak_planks",
+          "count": 1,
+          "slot": 10
+        },
+        {
+          "name": "oak_sapling",
+          "count": 2,
+          "slot": 11
+        },
+        {
+          "name": "diorite",
+          "count": 2,
+          "slot": 12
+        },
+        {
+          "name": "furnace",
+          "count": 2,
+          "slot": 13
+        },
+        {
+          "name": "coal",
+          "count": 18,
+          "slot": 14
+        },
+        {
+          "name": "crafting_table",
+          "count": 4,
+          "slot": 15
+        },
+        {
+          "name": "torch",
+          "count": 8,
+          "slot": 16
+        },
+        {
+          "name": "stick",
+          "count": 19,
+          "slot": 17
+        },
+        {
+          "name": "wooden_axe",
+          "count": 1,
+          "slot": 39
+        },
+        {
+          "name": "leaf_litter",
+          "count": 1,
+          "slot": 40
+        },
+        {
+          "name": "cobblestone",
+          "count": 52,
+          "slot": 41
+        },
+        {
+          "name": "bamboo",
+          "count": 1,
+          "slot": 43
+        },
+        {
+          "name": "wooden_pickaxe",
+          "count": 1,
+          "slot": 44
+        }
+      ],
+      "goals": [],
+      "shortTermMemory": [
+        {
+          "id": "a9fd1033-7e1d-414f-b722-1fc6316caf0d",
+          "type": "action",
+          "content": "Attempted craft: Crafted 1 torch",
+          "timestamp": 1773402104578,
+          "importance": null
+        },
+        {
+          "id": "984ab0bc-dc32-461b-bddc-6c961bdf5bc1",
+          "type": "action",
+          "content": "Attempted explore: Took to long to decide path to goal!",
+          "timestamp": 1773402117622,
+          "importance": null
+        },
+        {
+          "id": "f006ca5e-0bc1-4302-accf-1468c3c46b8c",
+          "type": "conversation",
+          "content": "<one-line summary>",
+          "timestamp": 1773402133178,
+          "importance": 1,
+          "agents": [
+            "DeGoldenLLama"
+          ]
+        },
+        {
+          "id": "229763e8-b927-4f02-97d2-76fcf081b84e",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402127784,
+          "importance": 1
+        },
+        {
+          "id": "06fa3f9a-e99e-46e1-a563-54cbee27f37a",
+          "type": "conversation",
+          "content": "<one-line summary>",
+          "timestamp": 1773402133178,
+          "importance": 1,
+          "agents": [
+            "DeGoldenLLama"
+          ]
+        },
+        {
+          "id": "1d723257-5626-4699-8e77-f1e00d42d1d4",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft wooden_pickaxe — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402187821,
+          "importance": null
+        },
+        {
+          "id": "29109573-cd50-48b6-bcc9-c31b958b758e",
+          "type": "action",
+          "content": "Attempted mine: CANNOT mine stone — need at least a stone_pickaxe. Craft one: 3 planks + 2 sticks at a crafting_table. Craft tools first!",
+          "timestamp": 1773402229580,
+          "importance": null
+        },
+        {
+          "id": "f2c5af6c-4764-4dbb-bd3a-0616246a1987",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft wooden_pickaxe — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402232698,
+          "importance": null
+        },
+        {
+          "id": "ab0eab0b-58a8-407e-80dd-df56e6c80aef",
+          "type": "action",
+          "content": "Attempted mine: CANNOT mine stone — need at least a stone_pickaxe. Craft one: 3 planks + 2 sticks at a crafting_table. Craft tools first!",
+          "timestamp": 1773402274702,
+          "importance": null
+        },
+        {
+          "id": "753bbdba-c4b6-4ee9-b1e4-61facbce2464",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft wooden_pickaxe — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402306707,
+          "importance": null
+        },
+        {
+          "id": "38d7ed7b-a191-466c-b830-cd5d30787dc0",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402336771,
+          "importance": null
+        },
+        {
+          "id": "7352674f-3490-4489-8229-ef92bf7ad771",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft crafting_table — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402466401,
+          "importance": null
+        },
+        {
+          "id": "fb7b59cb-5a8d-44c4-9cc1-31b4ceb8ef10",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402487578,
+          "importance": null
+        },
+        {
+          "id": "0330dcfd-45af-49c7-97a3-e2510a0a264e",
+          "type": "action",
+          "content": "<one-line summary>",
+          "timestamp": 1773402501632,
+          "importance": 1
+        },
+        {
+          "id": "cba7bd24-a9f6-472b-945c-0372a7f95611",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402523799,
+          "importance": 1
+        },
+        {
+          "id": "9b3c96ae-e3f3-4486-b65e-42fb160b14b5",
+          "type": "action",
+          "content": "Attempted craft: Crafted 1 torch",
+          "timestamp": 1773402544028,
+          "importance": 1
+        },
+        {
+          "id": "f7125f7b-aaae-475b-8840-751c114a385b",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft crafting_table — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402605397,
+          "importance": null
+        },
+        {
+          "id": "17d462a9-c78b-498a-920e-ae6d6b317141",
+          "type": "action",
+          "content": "Attempted mine: CANNOT mine iron_ore — need at least a iron_pickaxe. Craft one: 3 cobblestone + 2 sticks at a crafting_table. Craft tools first!",
+          "timestamp": 1773402670897,
+          "importance": null
+        },
+        {
+          "id": "4f51c6ed-4d36-4a2b-9ae4-2d96c8f8fd50",
+          "type": "action",
+          "content": "Attempted craft: Cannot craft oak_planks — need a crafting_table nearby. Place one first!",
+          "timestamp": 1773402707230,
+          "importance": null
+        }
+      ],
+      "relationships": {
+        "DeGoldenLLama": {
+          "agentName": "DeGoldenLLama",
+          "sentiment": null,
+          "summary": "<one-line description of the relationship>",
+          "lastInteraction": 1773402715296,
+          "knownTraits": [
+            "<trait1>"
+          ]
+        }
+      },
+      "lastDecision": {
+        "reasoning": "New plan: \"unnamed plan\" — starting step 1: Mine stone",
+        "action": {
+          "type": "mine",
+          "params": {
+            "blockName": "stone"
+          }
+        },
+        "speech": null,
+        "timestamp": 1773402749554
+      },
+      "moduleStats": {
+        "Perception": {
+          "enabled": true,
+          "runCount": 741,
+          "errorCount": 0,
+          "lastDurationMs": 5,
+          "lastRunAt": 1773402834733,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Memory": {
+          "enabled": true,
+          "runCount": 20,
+          "errorCount": 0,
+          "lastDurationMs": 34954,
+          "lastRunAt": 1773402750239,
+          "lastError": null,
+          "isRunning": true
+        },
+        "SocialAwareness": {
+          "enabled": true,
+          "runCount": 15,
+          "errorCount": 0,
+          "lastDurationMs": 26240,
+          "lastRunAt": 1773402715296,
+          "lastError": null,
+          "isRunning": true
+        },
+        "GoalGeneration": {
+          "enabled": true,
+          "runCount": 11,
+          "errorCount": 0,
+          "lastDurationMs": 38984,
+          "lastRunAt": 1773402737355,
+          "lastError": null,
+          "isRunning": true
+        },
+        "CognitiveController": {
+          "enabled": true,
+          "runCount": 37,
+          "errorCount": 0,
+          "lastDurationMs": 40084,
+          "lastRunAt": 1773402749554,
+          "lastError": null,
+          "isRunning": true
+        },
+        "Action": {
+          "enabled": true,
+          "runCount": 718,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773402835069,
+          "lastError": null,
+          "isRunning": false
+        },
+        "Talking": {
+          "enabled": true,
+          "runCount": 373,
+          "errorCount": 0,
+          "lastDurationMs": 0,
+          "lastRunAt": 1773402833418,
+          "lastError": null,
+          "isRunning": false
+        }
+      }
+    }
+  ],
+  "chatLog": [
+    {
+      "sender": "Bob",
+      "message": "oak_planks",
+      "timestamp": 1773401987037,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -507.49957352013894,
+        "y": 82,
+        "z": -643.5
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Let me figure out what to do next...",
+      "timestamp": 1773402113472,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -399.6331585599701,
+        "y": 83,
+        "z": -566.6330750540017
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "Time to get to work!",
+      "timestamp": 1773402143631,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -402.21857493663595,
+        "y": 74.41564586078748,
+        "z": -556.4999454552271
+      }
+    },
+    {
+      "sender": "Alice",
+      "message": "DeGoldenLLama, I'm stuck in a loop: can't mine stone without a pickaxe, but I do have oak logs. Let me make planks first! !craftRecipe(\"oak_planks\", 1)",
+      "timestamp": 1773402485238,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -398.4903697066774,
+        "y": 63,
+        "z": -538.3696975769557
+      }
+    },
+    {
+      "sender": "Bob",
+      "message": "DeGoldenLLama, I'm having trouble gathering resources and keeping myself alive. You want me to prioritize shelter over mining? I can't mine without a pickaxe. What's your move now? !stats",
+      "timestamp": 1773402499242,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -508.6954487679435,
+        "y": 82,
+        "z": -645.5
+      }
+    }
+  ],
+  "llmStats": {
+    "provider": "ollama",
+    "model": "Sweaterdog/Andy-4:latest",
+    "totalCalls": 183,
+    "totalTokens": 170818,
+    "totalDurationMs": 2562902,
+    "avgTokensPerCall": 933,
+    "avgDurationMs": 14005,
+    "inflight": 4,
+    "queued": 6
+  }
+}

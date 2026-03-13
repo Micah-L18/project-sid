@@ -17,6 +17,12 @@ export interface AgentIdentity {
   spawnLocation: Vec3;
   /** Agent's biography / backstory, generated or configured */
   backstory: string;
+  /** Per-agent LLM provider override */
+  provider?: 'cerebras' | 'ollama';
+  /** Per-agent LLM model override */
+  model?: string;
+  /** Per-agent LLM host override */
+  host?: string;
 }
 
 // ── Memory ───────────────────────────────────────────────────────────────────
@@ -166,6 +172,28 @@ export interface AgentGoals {
   completedGoals: Goal[];
 }
 
+// ── Task Plan ────────────────────────────────────────────────────────────────
+
+export interface PlannedStep {
+  /** Short description of what this step accomplishes */
+  description: string;
+  /** The action to execute */
+  action: ActionIntent;
+}
+
+export interface TaskPlan {
+  /** High-level goal this plan achieves */
+  goal: string;
+  /** Ordered list of steps (index 0 = next to execute) */
+  steps: PlannedStep[];
+  /** Index of the step currently being executed */
+  currentStepIndex: number;
+  /** When this plan was created */
+  createdAt: number;
+  /** How many consecutive failures on the current step */
+  failureCount: number;
+}
+
 // ── Cognitive Decision ───────────────────────────────────────────────────────
 
 export interface CognitiveDecision {
@@ -249,6 +277,8 @@ export interface AgentState {
   cognitiveDecision: CognitiveDecision;
   actionAwareness: ActionAwareness;
   locationMemories: LocationMemory[];
+  /** Multi-step task plan currently being followed (null = no active plan) */
+  taskPlan: TaskPlan | null;
 
   /** Simulation tick counter */
   tick: number;
@@ -307,6 +337,7 @@ export function createDefaultAgentState(identity: AgentIdentity): AgentState {
       busySince: null,
     },
     locationMemories: [],
+    taskPlan: null,
     tick: 0,
     createdAt: now,
     isAlive: true,
