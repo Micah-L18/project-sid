@@ -14,7 +14,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "PAPER"
-      VERSION: "1.20.4"
+      VERSION: "1.21.1"
       ONLINE_MODE: "false"
       MAX_PLAYERS: 30
       VIEW_DISTANCE: 8
@@ -63,8 +63,8 @@ services:
     command:
       - |
         sleep 10
-        echo "Pulling qwen3.5:9b..."
-        ollama pull qwen3.5:9b
+        echo "Pulling Sweaterdog/Andy-4:micro-q3_k_m ..."
+        ollama pull Sweaterdog/Andy-4:micro-q3_k_m
         echo "Pulling nomic-embed-text..."
         ollama pull nomic-embed-text
         echo "Models ready!"

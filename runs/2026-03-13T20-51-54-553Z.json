@@ -1,0 +1,7189 @@
+{
+  "id": "2026-03-13T20-51-54-553Z",
+  "startedAt": "2026-03-13T20:51:54.553Z",
+  "endedAt": "2026-03-13T22:07:46.623Z",
+  "agentNames": [
+    "Steve"
+  ],
+  "durationMs": 4552070,
+  "finalBenchmark": {
+    "timestamp": 1773439640716,
+    "elapsed": 4559.672,
+    "specialization": {
+      "roleDistribution": {
+        "miner": 1
+      },
+      "shannonEntropy": 0,
+      "maxEntropy": 0,
+      "normalizedEntropy": 0
+    },
+    "collectiveRules": {
+      "complianceRate": 0,
+      "totalAmendments": 0,
+      "passedAmendments": 0,
+      "taxRate": 0.1
+    },
+    "culturalTransmission": {
+      "trackedMemes": [
+        {
+          "keyword": "pastafarian",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "flying spaghetti",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "fsm",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "noodle",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pasta",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "ramen",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "colander",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pirate",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "community",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "constitution",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        }
+      ],
+      "averageSpread": 0
+    },
+    "progression": {
+      "agentTiers": {
+        "Steve": 0
+      },
+      "maxTier": 0,
+      "averageTier": 0,
+      "highestItem": "none"
+    }
+  },
+  "config": {
+    "agents": [
+      {
+        "name": "Steve",
+        "traits": [
+          "survivalist",
+          "practical",
+          "cautious",
+          "hardworking"
+        ],
+        "communityGoal": "Build a sturdy shelter and set up essential crafting and storage to survive."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [
+    {
+      "timestamp": 1773435145534,
+      "elapsed": 64.49,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435200534,
+      "elapsed": 119.49,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435260535,
+      "elapsed": 179.491,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435320536,
+      "elapsed": 239.492,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435380537,
+      "elapsed": 299.493,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435440548,
+      "elapsed": 359.504,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435500553,
+      "elapsed": 419.509,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435560554,
+      "elapsed": 479.51,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435620555,
+      "elapsed": 539.511,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435680555,
+      "elapsed": 599.51,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435740556,
+      "elapsed": 659.512,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435800595,
+      "elapsed": 719.551,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435860597,
+      "elapsed": 779.553,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 1
+        },
+        "maxTier": 1,
+        "averageTier": 1,
+        "highestItem": "wooden_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435920598,
+      "elapsed": 839.554,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 2
+        },
+        "maxTier": 2,
+        "averageTier": 2,
+        "highestItem": "stone_pickaxe"
+      }
+    },
+    {
+      "timestamp": 1773435980600,
+      "elapsed": 899.556,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436040602,
+      "elapsed": 959.558,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436100604,
+      "elapsed": 1019.56,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436160606,
+      "elapsed": 1079.562,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436220607,
+      "elapsed": 1139.563,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436280610,
+      "elapsed": 1199.566,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436340612,
+      "elapsed": 1259.568,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436400613,
+      "elapsed": 1319.569,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436460615,
+      "elapsed": 1379.571,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436520616,
+      "elapsed": 1439.572,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436580618,
+      "elapsed": 1499.574,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436640619,
+      "elapsed": 1559.575,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436700621,
+      "elapsed": 1619.577,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436760623,
+      "elapsed": 1679.579,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436820625,
+      "elapsed": 1739.581,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436880625,
+      "elapsed": 1799.581,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773436940628,
+      "elapsed": 1859.584,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437000629,
+      "elapsed": 1919.585,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437060631,
+      "elapsed": 1979.587,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437120634,
+      "elapsed": 2039.59,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437180637,
+      "elapsed": 2099.593,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437240638,
+      "elapsed": 2159.594,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437300608,
+      "elapsed": 2219.564,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437360608,
+      "elapsed": 2279.564,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437420611,
+      "elapsed": 2339.567,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437480611,
+      "elapsed": 2399.567,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437540612,
+      "elapsed": 2459.568,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437600611,
+      "elapsed": 2519.567,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437660614,
+      "elapsed": 2579.57,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437720615,
+      "elapsed": 2639.571,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437780618,
+      "elapsed": 2699.574,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437840619,
+      "elapsed": 2759.575,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437900621,
+      "elapsed": 2819.577,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773437960623,
+      "elapsed": 2879.579,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438020626,
+      "elapsed": 2939.582,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438080626,
+      "elapsed": 2999.582,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438140628,
+      "elapsed": 3059.584,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438200628,
+      "elapsed": 3119.584,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438260629,
+      "elapsed": 3179.585,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438320630,
+      "elapsed": 3239.586,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438380631,
+      "elapsed": 3299.587,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438440633,
+      "elapsed": 3359.589,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438500634,
+      "elapsed": 3419.59,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438560635,
+      "elapsed": 3479.591,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438620636,
+      "elapsed": 3539.592,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438680638,
+      "elapsed": 3599.594,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438740657,
+      "elapsed": 3659.613,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438800671,
+      "elapsed": 3719.627,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438860674,
+      "elapsed": 3779.63,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438920676,
+      "elapsed": 3839.632,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773438980678,
+      "elapsed": 3899.634,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439040688,
+      "elapsed": 3959.644,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439100696,
+      "elapsed": 4019.652,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439160698,
+      "elapsed": 4079.654,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439220700,
+      "elapsed": 4139.656,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439280704,
+      "elapsed": 4199.66,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439340707,
+      "elapsed": 4259.663,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439400709,
+      "elapsed": 4319.665,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439460711,
+      "elapsed": 4379.667,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439520714,
+      "elapsed": 4439.67,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439580715,
+      "elapsed": 4499.671,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773439640716,
+      "elapsed": 4559.672,
+      "specialization": {
+        "roleDistribution": {
+          "miner": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 0,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Steve": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    }
+  ],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [],
+      "ratifiedAt": 1773435081044
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [],
+    "stats": {
+      "simulationStarted": 1773435081044,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 1,
+      "tickCount": 0
+    }
+  },
+  "agents": [],
+  "chatLog": [
+    {
+      "sender": "Steve",
+      "message": "Time to upgrade to a stone pickaxe!",
+      "timestamp": 1773435317224,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -326.49968526300864,
+        "y": 84,
+        "z": 683.5
+      }
+    },
+    {
+      "sender": "Steve",
+      "message": "Need to craft a stone pickaxe first before I can mine cobblestone.",
+      "timestamp": 1773435437299,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -326.4998075147428,
+        "y": 84,
+        "z": 684.3149777954186
+      }
+    },
+    {
+      "sender": "Steve",
+      "message": "Need to craft a stone pickaxe first!",
+      "timestamp": 1773435583435,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -326.49987003984825,
+        "y": 84,
+        "z": 684.418022285775
+      }
+    },
+    {
+      "sender": "Steve",
+      "message": "Time to mine stone for cobblestone!",
+      "timestamp": 1773435643466,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -326.49987003984825,
+        "y": 82,
+        "z": 684.418022285775
+      }
+    },
+    {
+      "sender": "Steve",
+      "message": "Need to craft a stone pickaxe first!",
+      "timestamp": 1773435687499,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -326.49987003984825,
+        "y": 82,
+        "z": 684.418022285775
+      }
+    },
+    {
+      "sender": "Steve",
+      "message": "Need to craft a stone pickaxe first!",
+      "timestamp": 1773435775623,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -327.7,
+        "y": 71.25220334025373,
+        "z": 684.5662516664866
+      }
+    },
+    {
+      "sender": "Steve",
+      "message": "Need to get down to mine cobblestone and craft more planks.",
+      "timestamp": 1773435917696,
+      "isProximity": true,
+      "receivedBy": [],
+      "position": {
+        "x": -310.50013619650395,
+        "y": 69,
+        "z": 670.371275352792
+      }
+    }
+  ],
+  "llmStats": {
+    "provider": "ollama",
+    "model": "Sweaterdog/Andy-4:latest",
+    "totalCalls": 64,
+    "totalTokens": 103894,
+    "totalDurationMs": 1919695,
+    "avgTokensPerCall": 1623,
+    "avgDurationMs": 29995,
+    "inflight": 0,
+    "queued": 0
+  }
+}

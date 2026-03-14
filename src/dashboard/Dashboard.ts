@@ -746,6 +746,20 @@ export class Dashboard {
       document.getElementById('headerStats').textContent = 'Disconnected';
     };
 
+    // ── Incremental update: skip rebuilding panels that contain focused inputs ──
+    function _elFocused(container) {
+      if (!container) return false;
+      const a = document.activeElement;
+      return a && container.contains(a) && (a.tagName === 'SELECT' || a.tagName === 'INPUT');
+    }
+
+    function _flashSaved(el) {
+      if (!el) return;
+      el.style.borderColor = '#4caf50';
+      el.style.boxShadow = '0 0 6px rgba(76,175,80,.3)';
+      setTimeout(() => { el.style.borderColor = ''; el.style.boxShadow = ''; }, 1200);
+    }
+
     function setUiState(state) {
       lastState = state;
       const pill = document.getElementById('statePill');
@@ -959,7 +973,7 @@ export class Dashboard {
       // Render spawned panel agent cards
       if (data.simulationState === 'spawned' || data.simulationState === 'running') {
         const spawnedBody = document.getElementById('spawnedBody');
-        if (spawnedBody && data.simulationState === 'spawned') {
+        if (spawnedBody && data.simulationState === 'spawned' && !_elFocused(spawnedBody)) {
           spawnedBody.innerHTML = (data.agents || []).map(a => {
             const safeName = a.name.replace(/"/g, '&quot;');
             const isConnected = a.connected;
@@ -988,19 +1002,20 @@ export class Dashboard {
               <div class="sc-traits">\${traits}</div>
               <div class="sc-row">
                 <label>Provider:</label>
-                <select onchange="switchSpawnProvider('\${safeName}',this.value)" \${configDisabled}>
+                <select class="sc-prov" onchange="switchSpawnProvider('\${safeName}',this.value,this)" \${configDisabled}>
                   <option value="cerebras" \${a.provider==='cerebras'?'selected':''}>Cerebras</option>
                   <option value="ollama" \${a.provider==='ollama'?'selected':''}>Ollama</option>
                 </select>
               </div>
               <div class="sc-row">
                 <label>Model:</label>
-                <select class="spawn-model-sel" data-agent="\${safeName}" onchange="switchSpawnModel('\${safeName}',this.value)" \${configDisabled}>
+                <select class="spawn-model-sel" data-agent="\${safeName}" onchange="switchSpawnModel('\${safeName}',this.value,this)" \${configDisabled}>
+                  <option value="\${a.model || ''}" selected>\${a.model || '(loading…)'}</option>
                 </select>
               </div>
               <div class="sc-row">
                 <label>Host:</label>
-                <input type="text" class="spawn-host-input" data-agent="\${safeName}" value="\${a.host || ''}" placeholder="default (use global)" onchange="switchSpawnHost('\${safeName}',this.value)" \${configDisabled} />
+                <input type="text" class="spawn-host-input" data-agent="\${safeName}" value="\${a.host || ''}" placeholder="default (use global)" onchange="switchSpawnHost('\${safeName}',this.value,this)" \${configDisabled} />
               </div>
               \${a.position ? \`<div class="sc-traits">Position: (\${a.position.x}, \${a.position.y}, \${a.position.z}) | HP: \${a.health}/20</div>\` : ''}
               <div class="sc-actions">
@@ -1025,8 +1040,9 @@ export class Dashboard {
           ? \`Run: \${data.currentRunId || ''} | Agents: \${data.agentCount} | LLM calls: \${data.llmStats?.totalCalls || 0} | Tokens: \${(data.llmStats?.totalTokens || 0).toLocaleString()}\`
           : '';
 
-      // Agent list
+      // Agent list — skip full rebuild while user is editing model selects
       const agentList = document.getElementById('agentList');
+      if (!_elFocused(agentList)) {
       agentList.innerHTML = (data.agents || []).map(a => {
         const invItems = (a.inventory || []).map(i =>
           \`<span class="inv-item"><span class="inv-name">\${i.name.replace(/_/g,' ')}</span><span class="inv-count">\u00d7\${i.count}</span></span>\`
@@ -1039,12 +1055,13 @@ export class Dashboard {
         const modelPanel = \`<div class="agent-model-panel" style="margin-top:8px;padding-top:8px;border-top:1px solid #222;">
           <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
             <label style="font-size:10px;color:#888;">Provider:</label>
-            <select class="agent-provider-sel" data-agent="\${safeName}" onchange="switchAgentProvider('\${safeName}',this.value)" style="background:#1a1a1a;color:#e0e0e0;border:1px solid #333;border-radius:3px;padding:2px 6px;font-size:10px;font-family:inherit;">
+            <select class="agent-provider-sel" data-agent="\${safeName}" onchange="switchAgentProvider('\${safeName}',this.value,this)" style="background:#1a1a1a;color:#e0e0e0;border:1px solid #333;border-radius:3px;padding:2px 6px;font-size:10px;font-family:inherit;">
               <option value="cerebras" \${a.provider==='cerebras'?'selected':''}>Cerebras</option>
               <option value="ollama" \${a.provider==='ollama'?'selected':''}>Ollama</option>
             </select>
             <label style="font-size:10px;color:#888;">Model:</label>
-            <select class="agent-model-sel" data-agent="\${safeName}" onchange="switchAgentModel('\${safeName}',this.value)" style="background:#1a1a1a;color:#e0e0e0;border:1px solid #333;border-radius:3px;padding:2px 6px;font-size:10px;font-family:inherit;max-width:180px;">
+            <select class="agent-model-sel" data-agent="\${safeName}" onchange="switchAgentModel('\${safeName}',this.value,this)" style="background:#1a1a1a;color:#e0e0e0;border:1px solid #333;border-radius:3px;padding:2px 6px;font-size:10px;font-family:inherit;max-width:180px;">
+              <option value="\${a.model || ''}" selected>\${a.model || '?'}</option>
             </select>
           </div>
         </div>\`;
@@ -1070,6 +1087,7 @@ export class Dashboard {
         const models = prov === 'cerebras' ? _allModels.cerebras : _allModels.ollama;
         sel.innerHTML = models.map(m => '<option value="' + m + '"' + (m === agentData.model ? ' selected' : '') + '>' + m + '</option>').join('');
       });
+      }
 
       // Map
       const map = document.getElementById('map');
@@ -1233,19 +1251,19 @@ export class Dashboard {
     }
 
     // ── Per-agent model/provider switching ──────────────────────────────
-    async function switchAgentProvider(agentName, provider) {
-      // Update model list for this agent's provider
+    async function switchAgentProvider(agentName, provider, el) {
       const models = provider === 'cerebras' ? _allModels.cerebras : _allModels.ollama;
       const firstModel = models[0] || '';
-      // Update the agent's model select
       document.querySelectorAll('.agent-model-sel[data-agent="' + agentName + '"]').forEach(sel => {
         sel.innerHTML = models.map(m => '<option value="' + m + '"' + (m === firstModel ? ' selected' : '') + '>' + m + '</option>').join('');
       });
       await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, provider, model: firstModel}) });
+      _flashSaved(el);
     }
 
-    async function switchAgentModel(agentName, model) {
+    async function switchAgentModel(agentName, model, el) {
       await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, model}) });
+      _flashSaved(el);
     }
 
     // ── Spawned-state controls ─────────────────────────────────────────
@@ -1272,21 +1290,24 @@ export class Dashboard {
       await fetch('/api/start-agent/' + encodeURIComponent(name), { method: 'POST' });
     }
 
-    async function switchSpawnProvider(agentName, provider) {
+    async function switchSpawnProvider(agentName, provider, el) {
       const models = provider === 'cerebras' ? _allModels.cerebras : _allModels.ollama;
       const firstModel = models[0] || '';
       document.querySelectorAll('.spawn-model-sel[data-agent="' + agentName + '"]').forEach(sel => {
         sel.innerHTML = models.map(m => '<option value="' + m + '"' + (m === firstModel ? ' selected' : '') + '>' + m + '</option>').join('');
       });
       await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, provider, model: firstModel}) });
+      _flashSaved(el);
     }
 
-    async function switchSpawnModel(agentName, model) {
+    async function switchSpawnModel(agentName, model, el) {
       await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, model}) });
+      _flashSaved(el);
     }
 
-    async function switchSpawnHost(agentName, host) {
+    async function switchSpawnHost(agentName, host, el) {
       await fetch('/api/agent-model', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agentName, host}) });
+      _flashSaved(el);
     }
 
     // Load LLM config + models on page load

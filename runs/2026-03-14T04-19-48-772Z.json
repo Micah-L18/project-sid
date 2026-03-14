@@ -1,0 +1,371 @@
+{
+  "id": "2026-03-14T04-19-48-772Z",
+  "startedAt": "2026-03-14T04:19:48.772Z",
+  "endedAt": "2026-03-14T04:21:38.572Z",
+  "agentNames": [
+    "Lofty"
+  ],
+  "durationMs": 109800,
+  "finalBenchmark": {
+    "timestamp": 1773462052487,
+    "elapsed": 73.736,
+    "specialization": {
+      "roleDistribution": {
+        "idle": 1
+      },
+      "shannonEntropy": 0,
+      "maxEntropy": 0,
+      "normalizedEntropy": 0
+    },
+    "collectiveRules": {
+      "complianceRate": 1,
+      "totalAmendments": 0,
+      "passedAmendments": 0,
+      "taxRate": 0.1
+    },
+    "culturalTransmission": {
+      "trackedMemes": [
+        {
+          "keyword": "pastafarian",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "flying spaghetti",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "fsm",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "noodle",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pasta",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "ramen",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "colander",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "pirate",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "community",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        },
+        {
+          "keyword": "constitution",
+          "uniqueAgentsMentioned": 0,
+          "totalMentions": 0,
+          "spreadRatio": 0
+        }
+      ],
+      "averageSpread": 0
+    },
+    "progression": {
+      "agentTiers": {
+        "Lofty": 0
+      },
+      "maxTier": 0,
+      "averageTier": 0,
+      "highestItem": "none"
+    }
+  },
+  "config": {
+    "agents": [
+      {
+        "name": "Lofty",
+        "traits": [
+          "resourceful",
+          "survival-focused",
+          "strategic thinker",
+          "likes to establish a home base",
+          "methodical"
+        ],
+        "communityGoal": "Build a thriving community with shared resources and democratic governance."
+      }
+    ],
+    "server": {
+      "host": "192.168.0.224",
+      "port": 25565,
+      "version": "1.21.11"
+    }
+  },
+  "benchmarkHistory": [
+    {
+      "timestamp": 1773461997488,
+      "elapsed": 18.737,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Lofty": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    },
+    {
+      "timestamp": 1773462052487,
+      "elapsed": 73.736,
+      "specialization": {
+        "roleDistribution": {
+          "idle": 1
+        },
+        "shannonEntropy": 0,
+        "maxEntropy": 0,
+        "normalizedEntropy": 0
+      },
+      "collectiveRules": {
+        "complianceRate": 1,
+        "totalAmendments": 0,
+        "passedAmendments": 0,
+        "taxRate": 0.1
+      },
+      "culturalTransmission": {
+        "trackedMemes": [
+          {
+            "keyword": "pastafarian",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "flying spaghetti",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "fsm",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "noodle",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pasta",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "ramen",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "colander",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "pirate",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "community",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          },
+          {
+            "keyword": "constitution",
+            "uniqueAgentsMentioned": 0,
+            "totalMentions": 0,
+            "spreadRatio": 0
+          }
+        ],
+        "averageSpread": 0
+      },
+      "progression": {
+        "agentTiers": {
+          "Lofty": 0
+        },
+        "maxTier": 0,
+        "averageTier": 0,
+        "highestItem": "none"
+      }
+    }
+  ],
+  "world": {
+    "constitution": {
+      "preamble": "We, the agents of this community, establish this constitution to govern our shared society.",
+      "articles": [
+        {
+          "id": 1,
+          "title": "Community Purpose",
+          "text": "All agents shall work together toward the community goal of mutual prosperity and growth."
+        },
+        {
+          "id": 2,
+          "title": "Resource Sharing",
+          "text": "Agents shall contribute a fair share of gathered resources to the community chest."
+        },
+        {
+          "id": 3,
+          "title": "Respect",
+          "text": "All agents shall treat each other with respect and resolve disputes through dialogue."
+        },
+        {
+          "id": 4,
+          "title": "Taxation",
+          "text": "Each agent shall deposit 10% of gathered resources into the community chest."
+        },
+        {
+          "id": 5,
+          "title": "Governance",
+          "text": "Laws may be amended by majority vote of all active agents."
+        }
+      ],
+      "amendments": [],
+      "ratifiedAt": 1773461978751
+    },
+    "tax": {
+      "rate": 0.1,
+      "chestLocations": [
+        {
+          "x": 100,
+          "y": 64,
+          "z": 95
+        }
+      ],
+      "depositLog": []
+    },
+    "memes": [],
+    "stats": {
+      "simulationStarted": 1773461978751,
+      "totalChatMessages": 0,
+      "totalActionsPerformed": 0,
+      "totalLLMCalls": 0,
+      "agentsAlive": 1,
+      "tickCount": 0
+    }
+  },
+  "agents": [],
+  "chatLog": [],
+  "llmStats": {
+    "provider": "ollama",
+    "model": "qwen3.5:9b",
+    "totalCalls": 0,
+    "totalTokens": 0,
+    "totalDurationMs": 0,
+    "avgTokensPerCall": 0,
+    "avgDurationMs": 0,
+    "inflight": 3,
+    "queued": 0
+  }
+}
